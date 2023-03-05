@@ -31,7 +31,7 @@ FileName: E:\Code\RunTime\CLIENT\Data\UI\Target.cpp
 #include "core/Name.h"
 #include "ScreenInfoManager.h"
 #include "MessageDefine.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 //#include "Launcher/DataLauncher.h"
 #include "Common.h"
 #include "Create.h"         //added by ZhuoMeng.Hu		[9/19/2010]
