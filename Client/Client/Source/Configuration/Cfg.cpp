@@ -13,7 +13,7 @@
 #include "wsCamera.h"
 #include "Common.h"
 #include "ShowScreenText.h"
-#include "MeUtility/tstring.h"
+#include "tstring.h"
 #include "MovieManager.h"
 
 extern int SCREEN_WIDTH;

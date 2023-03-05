@@ -319,7 +319,7 @@
 #include "ScenePlay.h"
 #include "Gut.h"
 #include "SeeBasePropertyBGFrame.h"
-#include "network/network.h"
+#include "network.h"
 #include "ItemHero.h"
 #include "TPHJManger.h"
 #include "NetWorkParameterDefine.h"
