@@ -1,0 +1,9 @@
+
+*.obj
+*.idb
+*.pdb
+Client/Client2005.ncb
+Client/Client2005.suo
+*.htm
+Client/temp/Client/Debug/vc80.idb
+Client/temp/Client/Debug/vc80.pdb
