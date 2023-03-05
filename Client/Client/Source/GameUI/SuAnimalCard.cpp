@@ -41,7 +41,7 @@
 #include "GameDefineChar.h"
 #include "MeTerrain/SwGlobal.h"
 #include "MeTerrain/World.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 //#include "Launcher/DataLauncher.h"
 CUI_ID_FRAME_SuAnimalCard s_CUI_ID_FRAME_SuAnimalCard;
 MAP_FRAME_RUN( s_CUI_ID_FRAME_SuAnimalCard, OnFrameRun )
