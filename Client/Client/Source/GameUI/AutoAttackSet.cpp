@@ -27,7 +27,7 @@
 #include "RapidXml/MeRapidXml.h"
 #include "Common.h"
 #include "ScreenInfoManager.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 #include "Group_DeBuffUI.h"
 #include "ui/Target.h"
 #include "ui/Team.h"

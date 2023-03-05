@@ -41,7 +41,7 @@
 #include "MessageDefine.h"
 #include "objbase.h"
 #include "color_config.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 //#include "Launcher/DataLauncher.h"
 #include "color_config.h"
 #include "ItemDetailConfig.h"

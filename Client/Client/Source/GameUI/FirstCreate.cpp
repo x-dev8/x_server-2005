@@ -3,7 +3,7 @@
 #include "FirstCREATE.h"
 #include "SystemSetting.h"
 #include "d3dapp.h"
-#include "Browser/Browser.h"
+#include "Browser.h"
 #include "MeTerrain/SwDebug.h"
 #include "MeTerrain/NiColor.h"
 #include "MeTerrain/SwType.h"

@@ -3,7 +3,7 @@
 #include <vector>
 #include "tga.h"
 #include "FuncPerformanceLog.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 //#include "MemoryManager.h"	// ÄÚ´æ¹ÜÀí
 //#include "Launcher/DataLauncher.h"
 

@@ -22,7 +22,7 @@ FileName: D:\My Documents\×ÀÃæ\bullsys\BullSystem.cpp
 #include "wsCamera.h"
 #include "Meui/ExpressionManager.h"
 #include "MeFont/MeFontSystem.h"
-#include "MeUtility/tstring.h"
+#include "tstring.h"
 
 extern GAME_STATE g_GameState;
 CUI_ID_FRAME_BullSystem s_CUI_ID_FRAME_BullSystem;

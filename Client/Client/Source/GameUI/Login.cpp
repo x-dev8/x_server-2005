@@ -48,7 +48,7 @@
 #include "Me3d/Model/Mex2.h"
 #include "register.h"
 #include "ui/PasswordProtect.h"
-#include "Browser/Browser.h"
+#include "Browser.h"
 #include "Common.h"							//added by zhuomeng.hu		[8/25/2010]
 #include "RapidXml/MeRapidXml.h"
 #include "SoundConfig.h"

@@ -18,7 +18,7 @@ FileName: E:\Work\HeroRuntime\Client\UI\escdlg.cpp
 #include "core/Name.h"
 #include "ScreenInfoManager.h"
 #include "MeTerrain/WorldPrecompiled.hpp"
-#include "MeCommon/MapConfig.h"
+#include "MapConfig.h"
 #include "CountryConfig.h"
 #include "IntroductionManager.h"
 #include <time.h>

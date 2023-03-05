@@ -33,7 +33,7 @@ FileName: E:\Code\RunTime\CLIENT\Data\UI\Group_Me.cpp
 #include "ui/exmain.h"
 #include "ui/Skill.h"
 #include "ui/Protect.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 //#include "Launcher/DataLauncher.h"
 #include "wsCamera.h"
 #include "Create.h"                 //added by ZhuoMeng.Hu		[9/19/2010]

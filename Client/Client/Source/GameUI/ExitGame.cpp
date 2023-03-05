@@ -21,7 +21,7 @@ FileName: E:\Code\RunTime\CLIENT\Data\UI\ExitGame.cpp
 #include "GameSettingUI.h"
 #include "SystemSettingUI.h"
 #include "core/Name.h"
-#include "Browser/Browser.h"
+#include "Browser.h"
 #include "Resource/Resource.h"
 #include "Cfg.h"
 #include "ui/DemandItem.h"
