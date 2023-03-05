@@ -21,7 +21,7 @@
 #include "MeTerrain/stdafx.h"
 #include "color_config.h"
 #include "ui/MiniMapUI.h"
-#include "/packet_interface.h"
+#include "packet_interface.h"
 //#include "Launcher/DataLauncher.h"
 #include "Common.h"
 #include "Create.h"
