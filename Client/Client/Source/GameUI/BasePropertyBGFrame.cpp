@@ -10,7 +10,7 @@
 #include "OtherInfo.h"
 #include "baseProperty.h"
 #include "HeroInfo.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 #include "RankTitle.h"
 
 CUI_ID_FRAME_BasePropertyBGFrame s_CUI_ID_FRAME_BasePropertyBGFrame;
