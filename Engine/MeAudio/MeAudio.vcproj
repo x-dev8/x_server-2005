@@ -44,7 +44,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)/Include/&quot;;&quot;$(ProjectDir)/../../Contrib/Include/MeCommon&quot;;&quot;$(ProjectDir)/../../Contrib/Include/&quot;;&quot;$(ProjectDir)/../../Engine/MeFoundation/Include/&quot;;&quot;$(ProjectDir)/../../Engine/Me3d/Include/&quot;;&quot;$(ProjectDir)/../../Contrib/Include/MeUtility&quot;"
+				AdditionalIncludeDirectories="&quot;E:\Dev\x_server-2005\Contrib\Include&quot;;&quot;$(ProjectDir)/Include/&quot;;&quot;$(ProjectDir)/../../Contrib/Include/MeCommon&quot;;&quot;$(ProjectDir)/../../Contrib/Include/&quot;;&quot;$(ProjectDir)/../../Engine/MeFoundation/Include/&quot;;&quot;$(ProjectDir)/../../Engine/Me3d/Include/&quot;;&quot;$(ProjectDir)/../../Contrib/Include/MeUtility&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;DATA_LAUNCHER;MEDEBUG;MEPROFILE"
 				MinimalRebuild="true"
 				ExceptionHandling="2"

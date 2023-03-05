@@ -26,7 +26,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
-				CommandLine=""
+				CommandLine="$(ProjectDir)/../../Contrib/bin/tolua++/tolua++ -1 -H Implement.h -o Implement.cpp Compile ToLua.pkg"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"

@@ -396,7 +396,7 @@ void CUIMgr::ShowUIInTimeOfLoadMap(bool bVisible)
 	s_CUI_ID_FRAME_ActivityTrack.SetVisable(bVisible);
 	s_CUI_ID_FRAME_MAIN.SetVisable(bVisible);
 	s_CUI_ID_FRAME_ExMenu.SetVisable(false);
-	s_CUI_ID_FRAME_WebActive.SetVisable(bVisible);
+//	s_CUI_ID_FRAME_WebActive.SetVisable(bVisible);
 
 	s_CUI_ID_FRAME_TimeLimitTask._SetVisable(false);
 }

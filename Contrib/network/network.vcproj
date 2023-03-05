@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".\Include;.\src\buf;.\src\sock;.\src\event;.\src\threadpool;&quot;$(SolutionDir)/../common&quot;;&quot;$(ProjectDir)..\..\Contrib\Include\MeUtility\&quot;;&quot;$(SolutionDir)/../common/msg&quot;;&quot;$(ProjectDir)/&quot;;&quot;$(SolutionDir)/../common/exact_time&quot;"
+				AdditionalIncludeDirectories=".\Include;.\src\buf;.\src\sock;.\src\event;.\src\threadpool;&quot;$(SolutionDir)/../common&quot;;&quot;E:\Dev\x_server-2005\Contrib\MeUtility\Include&quot;;&quot;$(ProjectDir)..\..\Contrib\Include\MeUtility\&quot;;&quot;$(SolutionDir)/../common/msg&quot;;&quot;$(ProjectDir)/&quot;;&quot;$(SolutionDir)/../common/exact_time&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"

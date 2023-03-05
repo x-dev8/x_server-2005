@@ -23,7 +23,7 @@
 #include "color_config.h"
 #include "CRC32.h"
 #include "Cfg.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 //#include "Launcher/DataLauncher.h"
 
 std::string	GuildIcon::LocalPath;

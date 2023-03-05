@@ -351,7 +351,7 @@
 #include "ui/CountryBaseInfo.h"
 
 #include "ThreeDayConfig.h"
-#include "YuanBaoTotleConfig.h"
+//#include "YuanBaoTotleConfig.h"
 #include "MountMoveStarConfig.h"
 #include "PetSpeakConfig.h"
 #include "TextHyberOtherConfig.h"
@@ -8799,12 +8799,12 @@ void CHeroGame::LoadConfigProc()
 		MessageBox(hWndSplash, strErrorMsg, "Error", MB_OK);
 	}
 
-	if(!YuanBaoTotleConfig::Instance().LoadYuanBaoTotleConfig(YUANBAOCONFIGPATH))
+/*	if(!YuanBaoTotleConfig::Instance().LoadYuanBaoTotleConfig(YUANBAOCONFIGPATH))
 	{
 		MeSprintf_s(strErrorMsg, sizeof(strErrorMsg)-1, "YuanBaoTotleStates %s", strErrorFmt);
 		MessageBox(hWndSplash, strErrorMsg, "Error", MB_OK);
 	}
-
+*/
 	if (!MountMoveStarConfig::Instance().LoadMountMoveStarConfig(MOUNTMOVESTAR_FILEPATH_CONFIG))
 	{
 		MeSprintf_s(strErrorMsg, sizeof(strErrorMsg)-1, "MountMoveStarConfig %s", strErrorFmt);

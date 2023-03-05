@@ -1,6 +1,6 @@
 #include "script_manager.h"
 #include "client_tolua.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 
 //#include "Cipher/cipher_factory.h"
 //#include "Launcher/DataLauncher.h"

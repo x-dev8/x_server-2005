@@ -2768,7 +2768,7 @@ BOOL CD3DApplication::SetProcessPriority( BOOL bAboveNormal )
     }
     return ret;
 }
-#include "Browser/Browser.h"
+#include "Browser.h"
 //-----------------------------------------------------------------------------
 // Name: HelpWndProc()
 // Desc: Static msg handler which passes messages to the Help class.

@@ -1,0 +1,119 @@
+#pragma once
+
+#include "MeRTLibs.h"
+#include "NamedObject.h"
+
+using namespace std;
+
+#define XML_FILE_NOT_FOUND  0x0001
+#define XML_SUCCESS         0x0002   
+#define XML_FAILED          0x0004
+#define XML_READY           0x0008
+#define XML_MATCH           0x0010
+#define XML_BUFFER_OVERFLOW 0x0020
+
+class RawData
+{
+  public:
+    bool  skipDelete;
+    char *data;
+    int   byteCount;
+
+    RawData();
+    RawData(const RawData &copy);
+    RawData &operator=(const RawData &copy);
+   ~RawData();
+    void destroy();
+};
+
+class XMLElement;
+
+class XMLTree
+{
+  protected:
+    vector<XMLElement*> children;
+
+  public:
+   ~XMLTree();
+
+    void        addChild(XMLElement *child);
+    XMLElement *getChildByName(const char *name);
+    XMLElement *getChild(size_t index);
+    size_t      getChildrenCount();
+    void        flush();
+    void        print();
+};
+
+class XMLElement : public XMLTree, public NamedObject
+{
+  private:
+    string  value;
+  public:
+    XMLElement();
+   ~XMLElement();
+
+    XMLElement(const XMLElement &copy);
+    XMLElement &operator =(const XMLElement &copy);
+
+    //static void loadRX_GY_BZ_AWi(XMLElement &element, Tuple4i &container);
+    //static void loadRX_GY_BZ_AWf(XMLElement &element, Tuple4f &container);
+
+    //static void loadRX_GY_BZi(XMLElement &element, Tuple3i &container);
+    //static void loadRX_GY_BZf(XMLElement &element, Tuple3f &container);
+
+    //static void loadRX_GYi(XMLElement &element, Tuple2i &container);
+    //static void loadRX_GYf(XMLElement &element, Tuple2f &container);
+
+    void setValue(string &val);
+    void print();
+    void flush(); 
+    
+    const string  &getValue ();
+    const double   getValued();
+    const float    getValuef();
+    const char*    getValuec();
+    const int      getValuei();
+	const bool	   getValueb();
+	string		   getValues();
+
+
+    RawData rawData;
+};
+
+class XMLStack : public XMLTree
+{
+  public:
+    XMLStack(char *xmlFilePath = NULL, bool loggerOn = true);    
+    XMLStack(const XMLStack &copy);
+   ~XMLStack();
+    XMLStack &operator =(const XMLStack &copy);
+
+    void   print();
+    void   flush();
+    int    loadXMLFile(const char *xmlFilePath);
+	int	   loadXMLBuffer( const char *pszBuffer, int nBufferSize );
+
+  private:
+    void   writeFatalLogInfoList(const char* format,...);
+    void   writeFatalLogInfo(const char* string);
+
+	void   getStreamedValue(char **stream, string&);
+	void   getStringValue  (char **stream, string&);
+	void   getIdentifier   (char **stream, string&);
+
+    bool   moveAndCheckProgress(int jump = 1);
+    bool   consumeWhiteSpaces(char **stream);
+    bool   consumeXMLHeader(char **stream);
+    bool   consumeComment(char **stream);
+    bool   fillRawData(char **stream, RawData *dataStruct, int count = -1);
+    char*  parseXMLStream(char *stream, XMLElement *parent);
+    int    getRemainingBytes();
+
+    string encoding,
+           logFilePath;
+    float  XMLVersion;
+    bool   loggerOn;
+    int    bufferProgress,
+           bufferSize,
+           state;
+};

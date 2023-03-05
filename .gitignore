@@ -9,3 +9,5 @@ Client/temp/Client/Debug/vc80.idb
 Client/temp/Client/Debug/vc80.pdb
 *.rsp
 *.bat
+*.ncb
+*.suo

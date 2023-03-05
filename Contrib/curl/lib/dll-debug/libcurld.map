@@ -1,0 +1,1317 @@
+ libcurld
+
+ Timestamp is 64049ea1 (Sun Mar 05 20:52:33 2023)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0004e7beH .text                   CODE
+ 0002:00000000 000002d0H .idata$5                DATA
+ 0002:000002d0 00000004H .CRT$XCA                DATA
+ 0002:000002d4 00000004H .CRT$XCZ                DATA
+ 0002:000002d8 00000004H .CRT$XIA                DATA
+ 0002:000002dc 00000004H .CRT$XIAA               DATA
+ 0002:000002e0 00000004H .CRT$XIC                DATA
+ 0002:000002e4 00000004H .CRT$XIZ                DATA
+ 0002:000002f0 000013a0H .rdata                  DATA
+ 0002:00001690 00000055H .rdata$debug            DATA
+ 0002:000016f0 00000004H .rdata$sxdata           DATA
+ 0002:000016f4 00000004H .rtc$IAA                DATA
+ 0002:000016f8 0000010cH .rtc$IMZ                DATA
+ 0002:00001804 00000004H .rtc$IZZ                DATA
+ 0002:00001808 00000004H .rtc$TAA                DATA
+ 0002:0000180c 0000010cH .rtc$TMZ                DATA
+ 0002:00001918 00000004H .rtc$TZZ                DATA
+ 0002:00001920 000000c4H .xdata$x                DATA
+ 0002:000019e4 00000050H .idata$2                DATA
+ 0002:00001a34 00000014H .idata$3                DATA
+ 0002:00001a48 000002d0H .idata$4                DATA
+ 0002:00001d18 00000776H .idata$6                DATA
+ 0002:00002490 0000064aH .edata                  DATA
+ 0003:00000000 000074d8H .data                   DATA
+ 0003:000074d8 000004d0H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 000003b0H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0000:00000000       ___ImageBase               10000000     <linker-defined>
+ 0001:00000000       _Curl_resolver_global_init 10001000 f   asyn-thread.obj
+ 0001:00000010       _Curl_resolver_global_cleanup 10001010 f   asyn-thread.obj
+ 0001:00000020       _Curl_resolver_init        10001020 f   asyn-thread.obj
+ 0001:00000030       _Curl_resolver_cleanup     10001030 f   asyn-thread.obj
+ 0001:00000040       _Curl_resolver_duphandle   10001040 f   asyn-thread.obj
+ 0001:00000050       _Curl_resolver_cancel      10001050 f   asyn-thread.obj
+ 0001:000001a0       _Curl_resolver_wait_resolv 100011a0 f   asyn-thread.obj
+ 0001:00000370       _Curl_resolver_is_resolved 10001370 f   asyn-thread.obj
+ 0001:00000500       _Curl_resolver_getsock     10001500 f   asyn-thread.obj
+ 0001:00000510       _Curl_resolver_getaddrinfo 10001510 f   asyn-thread.obj
+ 0001:00000a60       _Curl_set_dns_servers      10001a60 f   asyn-thread.obj
+ 0001:00000a70       _Curl_base64_decode        10001a70 f   base64.obj
+ 0001:00000d70       _Curl_base64_encode        10001d70 f   base64.obj
+ 0001:00001040       _Curl_timeleft             10002040 f   connect.obj
+ 0001:000011a0       _Curl_persistconninfo      100021a0 f   connect.obj
+ 0001:00001220       _Curl_updateconninfo       10002220 f   connect.obj
+ 0001:00001520       _Curl_is_connected         10002520 f   connect.obj
+ 0001:00001b10       _Curl_sndbufset            10002b10 f   connect.obj
+ 0001:00002980       _Curl_connecthost          10003980 f   connect.obj
+ 0001:00002bb0       _Curl_getconnectinfo       10003bb0 f   connect.obj
+ 0001:00002cc0       _Curl_closesocket          10003cc0 f   connect.obj
+ 0001:00002d40       _Curl_socket               10003d40 f   connect.obj
+ 0001:00002ec0       _Curl_cookie_loadfiles     10003ec0 f   cookie.obj
+ 0001:00002f70       _Curl_cookie_add           10003f70 f   cookie.obj
+ 0001:00004400       _Curl_cookie_init          10005400 f   cookie.obj
+ 0001:00004660       _Curl_cookie_getlist       10005660 f   cookie.obj
+ 0001:000049f0       _Curl_cookie_clearall      100059f0 f   cookie.obj
+ 0001:00004a30       _Curl_cookie_freelist      10005a30 f   cookie.obj
+ 0001:00004aa0       _Curl_cookie_clearsess     10005aa0 f   cookie.obj
+ 0001:00004b80       _Curl_cookie_cleanup       10005b80 f   cookie.obj
+ 0001:00004c10       _Curl_cookie_list          10005c10 f   cookie.obj
+ 0001:00004e30       _Curl_flush_cookies        10005e30 f   cookie.obj
+ 0001:000050c0       _Curl_freeaddrinfo         100060c0 f   curl_addrinfo.obj
+ 0001:00005160       _Curl_getaddrinfo_ex       10006160 f   curl_addrinfo.obj
+ 0001:00005420       _Curl_he2ai                10006420 f   curl_addrinfo.obj
+ 0001:00005640       _Curl_ip2addr              10006640 f   curl_addrinfo.obj
+ 0001:000057d0       _Curl_str2addr             100067d0 f   curl_addrinfo.obj
+ 0001:00005860       _WspiapiGetAddrInfo@16     10006860 f i curl_addrinfo.obj
+ 0001:000058d0       _WspiapiLoad@4             100068d0 f i curl_addrinfo.obj
+ 0001:00005c00       _WspiapiLegacyFreeAddrInfo@4 10006c00 f i curl_addrinfo.obj
+ 0001:00005ca0       _WspiapiLegacyGetAddrInfo@16 10006ca0 f i curl_addrinfo.obj
+ 0001:000060b0       _WspiapiStrdup@4           100070b0 f i curl_addrinfo.obj
+ 0001:00006140       _WspiapiParseV4Address@8   10007140 f i curl_addrinfo.obj
+ 0001:000061f0       _WspiapiNewAddrInfo@16     100071f0 f i curl_addrinfo.obj
+ 0001:000062d0       _WspiapiLookupNode@24      100072d0 f i curl_addrinfo.obj
+ 0001:000064d0       _WspiapiQueryDNS@24        100074d0 f i curl_addrinfo.obj
+ 0001:00006630       _WspiapiClone@8            10007630 f i curl_addrinfo.obj
+ 0001:000066d0       _WspiapiLegacyGetNameInfo@28 100076d0 f i curl_addrinfo.obj
+ 0001:00006a50       _WspiapiFreeAddrInfo@4     10007a50 f i curl_addrinfo.obj
+ 0001:00006a90       _Curl_fnmatch              10007a90 f   curl_fnmatch.obj
+ 0001:00007970       _Curl_gethostname          10008970 f   curl_gethostname.obj
+ 0001:00007a00       _Curl_memrchr              10008a00 f   curl_memrchr.obj
+ 0001:00007a60       _Curl_rand                 10008a60 f   curl_rand.obj
+ 0001:00007ab0       _Curl_srand                10008ab0 f   curl_rand.obj
+ 0001:00007b10       _Curl_thread_create        10008b10 f   curl_threads.obj
+ 0001:00007b70       _Curl_thread_destroy       10008b70 f   curl_threads.obj
+ 0001:00007ba0       _Curl_thread_join          10008ba0 f   curl_threads.obj
+ 0001:00008220       _curl_global_init          10009220 f   easy.obj
+ 0001:000083f0       _curl_global_init_mem      100093f0 f   easy.obj
+ 0001:00008490       _curl_global_cleanup       10009490 f   easy.obj
+ 0001:00008510       _curl_easy_init            10009510 f   easy.obj
+ 0001:000085b0       _curl_easy_setopt          100095b0 f   easy.obj
+ 0001:00008620       _curl_easy_perform         10009620 f   easy.obj
+ 0001:00008740       _curl_easy_cleanup         10009740 f   easy.obj
+ 0001:00008780       _Curl_easy_addmulti        10009780 f   easy.obj
+ 0001:000087b0       _Curl_easy_initHandleData  100097b0 f   easy.obj
+ 0001:000087f0       _curl_easy_getinfo         100097f0 f   easy.obj
+ 0001:00008850       _curl_easy_duphandle       10009850 f   easy.obj
+ 0001:00008be0       _curl_easy_reset           10009be0 f   easy.obj
+ 0001:00008d10       _curl_easy_pause           10009d10 f   easy.obj
+ 0001:00008f10       _curl_easy_recv            10009f10 f   easy.obj
+ 0001:00009070       _curl_easy_send            1000a070 f   easy.obj
+ 0001:00009160       _curl_escape               1000a160 f   escape.obj
+ 0001:00009180       _curl_unescape             1000a180 f   escape.obj
+ 0001:000091a0       _curl_easy_escape          1000a1a0 f   escape.obj
+ 0001:000093e0       _Curl_urldecode            1000a3e0 f   escape.obj
+ 0001:00009600       _curl_easy_unescape        1000a600 f   escape.obj
+ 0001:000096d0       _curl_free                 1000a6d0 f   escape.obj
+ 0001:0000a820       _Curl_fileinfo_alloc       1000b820 f   fileinfo.obj
+ 0001:0000a870       _Curl_fileinfo_dtor        1000b870 f   fileinfo.obj
+ 0001:0000a8e0       _curl_formadd              1000b8e0 f   formdata.obj
+ 0001:0000b990       _Curl_formclean            1000c990 f   formdata.obj
+ 0001:0000ba20       _curl_formget              1000ca20 f   formdata.obj
+ 0001:0000bc30       _curl_formfree             1000cc30 f   formdata.obj
+ 0001:0000bd40       _Curl_getformdata          1000cd40 f   formdata.obj
+ 0001:0000c920       _Curl_FormInit             1000d920 f   formdata.obj
+ 0001:0000ca80       _Curl_FormReader           1000da80 f   formdata.obj
+ 0001:0000cbd0       _Curl_formpostheader       1000dbd0 f   formdata.obj
+ 0001:0000cc30       _Curl_FormBoundary         1000dc30 f   formdata.obj
+ 0001:0000ccd0       _Curl_GetFTPResponse       1000dcd0 f   ftp.obj
+ 0001:00013a40       _Curl_ftpsendf             10014a40 f   ftp.obj
+ 0001:00014960       _Curl_ftp_parselist_data_alloc 10015960 f   ftplistparser.obj
+ 0001:00014990       _Curl_ftp_parselist_data_free 10015990 f   ftplistparser.obj
+ 0001:000149d0       _Curl_ftp_parselist_geterror 100159d0 f   ftplistparser.obj
+ 0001:000149e0       _Curl_ftp_parselist        100159e0 f   ftplistparser.obj
+ 0001:000166e0       _curl_getenv               100176e0 f   getenv.obj
+ 0001:00016800       _Curl_initinfo             10017800 f   getinfo.obj
+ 0001:00016910       _Curl_getinfo              10017910 f   getinfo.obj
+ 0001:000172f0       _Curl_hash_init            100182f0 f   hash.obj
+ 0001:00017510       _Curl_hash_alloc           10018510 f   hash.obj
+ 0001:000175b0       _Curl_hash_add             100185b0 f   hash.obj
+ 0001:000177b0       _Curl_hash_delete          100187b0 f   hash.obj
+ 0001:00017890       _Curl_hash_pick            10018890 f   hash.obj
+ 0001:00017950       _Curl_hash_clean           10018950 f   hash.obj
+ 0001:000179f0       _Curl_hash_clean_with_criterium 100189f0 f   hash.obj
+ 0001:00017ac0       _Curl_hash_destroy         10018ac0 f   hash.obj
+ 0001:00017b00       _Curl_hash_str             10018b00 f   hash.obj
+ 0001:00017b70       _Curl_str_key_compare      10018b70 f   hash.obj
+ 0001:00017be0       _Curl_HMAC_init            10018be0 f   hmac.obj
+ 0001:00017e40       _Curl_HMAC_update          10018e40 f   hmac.obj
+ 0001:00017e80       _Curl_HMAC_final           10018e80 f   hmac.obj
+ 0001:00017f40       _Curl_addrinfo_callback    10018f40 f   hostasyn.obj
+ 0001:00018030       _Curl_async_resolved       10019030 f   hostasyn.obj
+ 0001:000180a0       _Curl_getaddrinfo          100190a0 f   hostasyn.obj
+ 0001:000180d0       _Curl_global_host_cache_init 100190d0 f   hostip.obj
+ 0001:00018140       _Curl_global_host_cache_dtor 10019140 f   hostip.obj
+ 0001:00018170       _Curl_num_addresses        10019170 f   hostip.obj
+ 0001:000181b0       _Curl_printable_address    100191b0 f   hostip.obj
+ 0001:00018220       _Curl_hostcache_prune      10019220 f   hostip.obj
+ 0001:00018410       _Curl_cache_addr           10019410 f   hostip.obj
+ 0001:00018600       _Curl_resolv               10019600 f   hostip.obj
+ 0001:00018920       _Curl_resolv_timeout       10019920 f   hostip.obj
+ 0001:00018970       _Curl_resolv_unlock        10019970 f   hostip.obj
+ 0001:00018a70       _Curl_mk_dnscache          10019a70 f   hostip.obj
+ 0001:00018aa0       _Curl_hostcache_destroy    10019aa0 f   hostip.obj
+ 0001:00018b30       _Curl_loadhostpairs        10019b30 f   hostip.obj
+ 0001:00018de0       _Curl_ipvalid              10019de0 f   hostip4.obj
+ 0001:00018e00       _Curl_ipv4_resolve_r       10019e00 f   hostip4.obj
+ 0001:00018f80       _Curl_checkheaders         10019f80 f   http.obj
+ 0001:00019000       _Curl_http_auth_act        1001a000 f   http.obj
+ 0001:00019610       _Curl_http_output_auth     1001a610 f   http.obj
+ 0001:00019b50       _Curl_http_input_auth      1001ab50 f   http.obj
+ 0001:00019ea0       _Curl_add_buffer_init      1001aea0 f   http.obj
+ 0001:00019ed0       _Curl_add_buffer_send      1001aed0 f   http.obj
+ 0001:0001a3a0       _Curl_add_bufferf          1001b3a0 f   http.obj
+ 0001:0001a470       _Curl_add_buffer           1001b470 f   http.obj
+ 0001:0001a620       _Curl_compareheader        1001b620 f   http.obj
+ 0001:0001a770       _Curl_http_connect         1001b770 f   http.obj
+ 0001:0001a860       _Curl_http_done            1001b860 f   http.obj
+ 0001:0001aa40       _Curl_add_custom_headers   1001ba40 f   http.obj
+ 0001:0001acb0       _Curl_add_timecondition    1001bcb0 f   http.obj
+ 0001:0001ae40       _Curl_http                 1001be40 f   http.obj
+ 0001:0001d3b0       _Curl_http_readwrite_headers 1001e3b0 f   http.obj
+ 0001:0001ec60       _Curl_httpchunk_init       1001fc60 f   http_chunks.obj
+ 0001:0001eca0       _Curl_httpchunk_read       1001fca0 f   http_chunks.obj
+ 0001:0001f350       _Curl_input_digest         10020350 f   http_digest.obj
+ 0001:0001fae0       _Curl_output_digest        10020ae0 f   http_digest.obj
+ 0001:000205c0       _Curl_digest_cleanup       100215c0 f   http_digest.obj
+ 0001:000205f0       _Curl_proxy_connect        100215f0 f   http_proxy.obj
+ 0001:000206d0       _Curl_proxyCONNECT         100216d0 f   http_proxy.obj
+ 0001:000214a0       _Curl_if_is_interface_name 100224a0 f   if2ip.obj
+ 0001:000214b0       _Curl_if2ip                100224b0 f   if2ip.obj
+ 0001:00022830       _Curl_inet_ntop            10023830 f   inet_ntop.obj
+ 0001:000229a0       _Curl_inet_pton            100239a0 f   inet_pton.obj
+ 0001:00023ce0       _Curl_llist_alloc          10024ce0 f   llist.obj
+ 0001:00023d60       _Curl_llist_insert_next    10024d60 f   llist.obj
+ 0001:00023e70       _Curl_llist_remove         10024e70 f   llist.obj
+ 0001:00023f70       _Curl_llist_destroy        10024f70 f   llist.obj
+ 0001:00023fc0       _Curl_llist_count          10024fc0 f   llist.obj
+ 0001:00023fd0       _Curl_llist_move           10024fd0 f   llist.obj
+ 0001:00025330       _Curl_md5it                10026330 f   md5.obj
+ 0001:000253e0       _Curl_MD5_init             100263e0 f   md5.obj
+ 0001:00025490       _Curl_MD5_update           10026490 f   md5.obj
+ 0001:000254d0       _Curl_MD5_final            100264d0 f   md5.obj
+ 0001:00025530       _curl_mvsnprintf           10026530 f   mprintf.obj
+ 0001:00027510       _curl_msnprintf            10028510 f   mprintf.obj
+ 0001:00027560       _curl_maprintf             10028560 f   mprintf.obj
+ 0001:00027770       _curl_mvaprintf            10028770 f   mprintf.obj
+ 0001:00027860       _curl_msprintf             10028860 f   mprintf.obj
+ 0001:00027900       _curl_mprintf              10028900 f   mprintf.obj
+ 0001:00027960       _curl_mfprintf             10028960 f   mprintf.obj
+ 0001:000279b0       _curl_mvsprintf            100289b0 f   mprintf.obj
+ 0001:000279f0       _curl_mvprintf             100289f0 f   mprintf.obj
+ 0001:00027a30       _curl_mvfprintf            10028a30 f   mprintf.obj
+ 0001:00027a60       _curl_multi_init           10028a60 f   multi.obj
+ 0001:00027c60       _curl_multi_add_handle     10028c60 f   multi.obj
+ 0001:00028040       _curl_multi_remove_handle  10029040 f   multi.obj
+ 0001:000283c0       _Curl_multi_canPipeline    100293c0 f   multi.obj
+ 0001:000283d0       _Curl_multi_handlePipeBreak 100293d0 f   multi.obj
+ 0001:00028400       _curl_multi_fdset          10029400 f   multi.obj
+ 0001:00028800       _curl_multi_perform        10029800 f   multi.obj
+ 0001:00029e50       _curl_multi_cleanup        1002ae50 f   multi.obj
+ 0001:0002a090       _curl_multi_info_read      1002b090 f   multi.obj
+ 0001:0002a750       _curl_multi_setopt         1002b750 f   multi.obj
+ 0001:0002a890       _curl_multi_socket         1002b890 f   multi.obj
+ 0001:0002ac50       _curl_multi_socket_action  1002bc50 f   multi.obj
+ 0001:0002aca0       _curl_multi_socket_all     1002bca0 f   multi.obj
+ 0001:0002acf0       _curl_multi_timeout        1002bcf0 f   multi.obj
+ 0001:0002b480       _Curl_expire               1002c480 f   multi.obj
+ 0001:0002b7f0       _curl_multi_assign         1002c7f0 f   multi.obj
+ 0001:0002baf0       _Curl_parsenetrc           1002caf0 f   netrc.obj
+ 0001:0002bed0       _curlx_nonblock            1002ced0 f   nonblock.obj
+ 0001:0002bf50       _curl_getdate              1002cf50 f   parsedate.obj
+ 0001:0002ca90       _Curl_gmtime               1002da90 f   parsedate.obj
+ 0001:0002cb10       _Curl_pp_state_timeout     1002db10 f   pingpong.obj
+ 0001:0002cc00       _Curl_pp_multi_statemach   1002dc00 f   pingpong.obj
+ 0001:0002cd20       _Curl_pp_easy_statemach    1002dd20 f   pingpong.obj
+ 0001:0002ce80       _Curl_pp_init              1002de80 f   pingpong.obj
+ 0001:0002cee0       _Curl_pp_vsendf            1002dee0 f   pingpong.obj
+ 0001:0002d100       _Curl_pp_sendf             1002e100 f   pingpong.obj
+ 0001:0002d150       _Curl_pp_readresp          1002e150 f   pingpong.obj
+ 0001:0002d5a0       _Curl_pp_getsock           1002e5a0 f   pingpong.obj
+ 0001:0002d5f0       _Curl_pp_flushsend         1002e5f0 f   pingpong.obj
+ 0001:0002d710       _Curl_pp_disconnect        1002e710 f   pingpong.obj
+ 0001:0002e8a0       _Curl_pop3_write           1002f8a0 f   pop3.obj
+ 0001:0002eb50       _Curl_pgrsDone             1002fb50 f   progress.obj
+ 0001:0002ebd0       _Curl_pgrsResetTimesSizes  1002fbd0 f   progress.obj
+ 0001:0002ec30       _Curl_pgrsTime             1002fc30 f   progress.obj
+ 0001:0002ee20       _Curl_pgrsStartNow         1002fe20 f   progress.obj
+ 0001:0002ee70       _Curl_pgrsSetDownloadCounter 1002fe70 f   progress.obj
+ 0001:0002ee90       _Curl_pgrsSetUploadCounter 1002fe90 f   progress.obj
+ 0001:0002eeb0       _Curl_pgrsSetDownloadSize  1002feb0 f   progress.obj
+ 0001:0002ef10       _Curl_pgrsSetUploadSize    1002ff10 f   progress.obj
+ 0001:0002ef70       _Curl_pgrsUpdate           1002ff70 f   progress.obj
+ 0001:000300e0       _Curl_raw_toupper          100310e0 f   rawstr.obj
+ 0001:000301f0       _Curl_raw_equal            100311f0 f   rawstr.obj
+ 0001:00030280       _Curl_raw_nequal           10031280 f   rawstr.obj
+ 0001:00030330       _Curl_strntoupper          10031330 f   rawstr.obj
+ 0001:000303c0       _Curl_rtsp_connisdead      100313c0 f   rtsp.obj
+ 0001:000316b0       _Curl_rtsp_parseheader     100326b0 f   rtsp.obj
+ 0001:00031a00       _Curl_wait_ms              10032a00 f   select.obj
+ 0001:00031a70       _Curl_socket_check         10032a70 f   select.obj
+ 0001:00032120       _Curl_poll                 10033120 f   select.obj
+ 0001:000327a0       _Curl_infof                100337a0 f   sendf.obj
+ 0001:00032880       _Curl_failf                10033880 f   sendf.obj
+ 0001:00032990       _Curl_sendf                10033990 f   sendf.obj
+ 0001:00032ae0       _Curl_write                10033ae0 f   sendf.obj
+ 0001:00032bd0       _Curl_send_plain           10033bd0 f   sendf.obj
+ 0001:00032cb0       _Curl_write_plain          10033cb0 f   sendf.obj
+ 0001:00032d50       _Curl_recv_plain           10033d50 f   sendf.obj
+ 0001:00032e20       _Curl_client_write         10033e20 f   sendf.obj
+ 0001:00033160       _Curl_read_plain           10034160 f   sendf.obj
+ 0001:000331e0       _Curl_read                 100341e0 f   sendf.obj
+ 0001:00033470       _Curl_debug                10034470 f   sendf.obj
+ 0001:000336e0       _curl_share_init           100346e0 f   share.obj
+ 0001:00033730       _curl_share_setopt         10034730 f   share.obj
+ 0001:00033990       _curl_share_cleanup        10034990 f   share.obj
+ 0001:00033aa0       _Curl_share_lock           10034aa0 f   share.obj
+ 0001:00033b20       _Curl_share_unlock         10034b20 f   share.obj
+ 0001:00033b90       _curl_slist_append         10034b90 f   slist.obj
+ 0001:00033ca0       _Curl_slist_duplicate      10034ca0 f   slist.obj
+ 0001:00033d10       _curl_slist_free_all       10034d10 f   slist.obj
+ 0001:00037230       _Curl_smtp_escape_eob      10038230 f   smtp.obj
+ 0001:00037460       _Curl_blockread_all        10038460 f   socks.obj
+ 0001:000375a0       _Curl_SOCKS4               100385a0 f   socks.obj
+ 0001:00037ca0       _Curl_SOCKS5               10038ca0 f   socks.obj
+ 0001:00038800       _Curl_speedinit            10039800 f   speedcheck.obj
+ 0001:00038830       _Curl_speedcheck           10039830 f   speedcheck.obj
+ 0001:000389b0       _Curl_splay                100399b0 f   splay.obj
+ 0001:00038c40       _Curl_splayinsert          10039c40 f   splay.obj
+ 0001:00038e30       _Curl_splaygetbest         10039e30 f   splay.obj
+ 0001:00039020       _Curl_splayremovebyaddr    1003a020 f   splay.obj
+ 0001:000391c0       _Curl_ssl_config_matches   1003a1c0 f   sslgen.obj
+ 0001:000392f0       _Curl_clone_ssl_config     1003a2f0 f   sslgen.obj
+ 0001:00039480       _Curl_free_ssl_config      1003a480 f   sslgen.obj
+ 0001:00039580       _curl_strequal             1003a580 f   strequal.obj
+ 0001:000395b0       _curl_strnequal            1003a5b0 f   strequal.obj
+ 0001:000395f0       _Curl_strlcat              1003a5f0 f   strequal.obj
+ 0001:00039710       _curl_easy_strerror        1003a710 f   strerror.obj
+ 0001:00039b90       _curl_multi_strerror       1003ab90 f   strerror.obj
+ 0001:00039c20       _curl_share_strerror       1003ac20 f   strerror.obj
+ 0001:00039c90       _Curl_strerror             1003ac90 f   strerror.obj
+ 0001:0003a250       _Curl_strtok_r             1003b250 f   strtok.obj
+ 0001:0003fdb0       _curlx_tvnow               10040db0 f   timeval.obj
+ 0001:0003fe40       _curlx_tvdiff              10040e40 f   timeval.obj
+ 0001:0003fe70       _curlx_tvdiff_secs         10040e70 f   timeval.obj
+ 0001:0003fed0       _Curl_tvlong               10040ed0 f   timeval.obj
+ 0001:0003fee0       _Curl_fillreadbuffer       10040ee0 f   transfer.obj
+ 0001:00040170       _Curl_readrewind           10041170 f   transfer.obj
+ 0001:00040310       _Curl_meets_timecondition  10041310 f   transfer.obj
+ 0001:00040410       _Curl_readwrite            10041410 f   transfer.obj
+ 0001:00041960       _Curl_single_getsock       10042960 f   transfer.obj
+ 0001:00041aa0       _Curl_sleep_time           10042aa0 f   transfer.obj
+ 0001:00041c10       _Curl_pretransfer          10042c10 f   transfer.obj
+ 0001:00041dd0       _Curl_posttransfer         10042dd0 f   transfer.obj
+ 0001:00041de0       _Curl_follow               10042de0 f   transfer.obj
+ 0001:00042770       _Curl_reconnect_request    10043770 f   transfer.obj
+ 0001:000428c0       _Curl_retry_request        100438c0 f   transfer.obj
+ 0001:00042a10       _Curl_perform              10043a10 f   transfer.obj
+ 0001:00043490       _Curl_setup_transfer       10044490 f   transfer.obj
+ 0001:00043650       _Curl_freeset              10044650 f   url.obj
+ 0001:00043730       _Curl_dupset               10044730 f   url.obj
+ 0001:00043860       _Curl_close                10044860 f   url.obj
+ 0001:00043cb0       _Curl_mk_connc             10044cb0 f   url.obj
+ 0001:00043da0       _Curl_ch_connc             10044da0 f   url.obj
+ 0001:00043f10       _Curl_rm_connc             10044f10 f   url.obj
+ 0001:00043fd0       _Curl_init_userdefined     10044fd0 f   url.obj
+ 0001:00044230       _Curl_open                 10045230 f   url.obj
+ 0001:00044420       _Curl_setopt               10045420 f   url.obj
+ 0001:00047490       _Curl_disconnect           10048490 f   url.obj
+ 0001:000476e0       _Curl_isPipeliningEnabled  100486e0 f   url.obj
+ 0001:00047720       _Curl_addHandleToPipeline  10048720 f   url.obj
+ 0001:00047750       _Curl_removeHandleFromPipeline 10048750 f   url.obj
+ 0001:000477b0       _Curl_getoff_all_pipelines 100487b0 f   url.obj
+ 0001:00047ae0       _Curl_connected_proxy      10048ae0 f   url.obj
+ 0001:00047bd0       _Curl_verboseconnect       10048bd0 f   url.obj
+ 0001:00047c50       _Curl_protocol_getsock     10048c50 f   url.obj
+ 0001:00047ca0       _Curl_doing_getsock        10048ca0 f   url.obj
+ 0001:00047cf0       _Curl_protocol_connecting  10048cf0 f   url.obj
+ 0001:00047d70       _Curl_protocol_doing       10048d70 f   url.obj
+ 0001:00047df0       _Curl_protocol_connect     10048df0 f   url.obj
+ 0001:00047f10       _Curl_setup_conn           10048f10 f   url.obj
+ 0001:000482e0       _Curl_connect              100492e0 f   url.obj
+ 0001:0004bb60       _Curl_done                 1004cb60 f   url.obj
+ 0001:0004bf40       _Curl_do                   1004cf40 f   url.obj
+ 0001:0004c0c0       _Curl_do_more              1004d0c0 f   url.obj
+ 0001:0004c140       _Curl_reset_reqproto       1004d140 f   url.obj
+ 0001:0004c1c0       _curl_version              1004d1c0 f   version.obj
+ 0001:0004c270       _curl_version_info         1004d270 f   version.obj
+ 0001:0004c280       _curlx_ultous              1004d280 f   warnless.obj
+ 0001:0004c2a0       _curlx_ultouc              1004d2a0 f   warnless.obj
+ 0001:0004c2c0       _curlx_ultosi              1004d2c0 f   warnless.obj
+ 0001:0004c2e0       _curlx_uztosi              1004d2e0 f   warnless.obj
+ 0001:0004c300       _curlx_uztoul              1004d300 f   warnless.obj
+ 0001:0004c310       _curlx_uztoui              1004d310 f   warnless.obj
+ 0001:0004c320       _curlx_sltosi              1004d320 f   warnless.obj
+ 0001:0004c340       _curlx_sltoui              1004d340 f   warnless.obj
+ 0001:0004c350       _curlx_sltous              1004d350 f   warnless.obj
+ 0001:0004c370       _curlx_uztosz              1004d370 f   warnless.obj
+ 0001:0004c390       _curlx_sotouz              1004d390 f   warnless.obj
+ 0001:0004c3b0       _curlx_sztosi              1004d3b0 f   warnless.obj
+ 0001:0004c3d0       _curlx_sitouz              1004d3d0 f   warnless.obj
+ 0001:0004c3e0       _Curl_wildcard_init        1004d3e0 f   wildcard.obj
+ 0001:0004c420       _Curl_wildcard_dtor        1004d420 f   wildcard.obj
+ 0001:0004c504       _WSAGetLastError@0         1004d504 f   ws2_32:WS2_32.dll
+ 0001:0004c50a       _getsockname@12            1004d50a f   ws2_32:WS2_32.dll
+ 0001:0004c510       _getpeername@12            1004d510 f   ws2_32:WS2_32.dll
+ 0001:0004c516       _ntohs@4                   1004d516 f   ws2_32:WS2_32.dll
+ 0001:0004c51c       _WSASetLastError@4         1004d51c f   ws2_32:WS2_32.dll
+ 0001:0004c522       _getsockopt@20             1004d522 f   ws2_32:WS2_32.dll
+ 0001:0004c528       _setsockopt@20             1004d528 f   ws2_32:WS2_32.dll
+ 0001:0004c52e       _connect@12                1004d52e f   ws2_32:WS2_32.dll
+ 0001:0004c534       _bind@12                   1004d534 f   ws2_32:WS2_32.dll
+ 0001:0004c53a       _htons@4                   1004d53a f   ws2_32:WS2_32.dll
+ 0001:0004c540       _recv@16                   1004d540 f   ws2_32:WS2_32.dll
+ 0001:0004c546       _closesocket@4             1004d546 f   ws2_32:WS2_32.dll
+ 0001:0004c54c       _socket@12                 1004d54c f   ws2_32:WS2_32.dll
+ 0001:0004c552       _inet_ntoa@4               1004d552 f   ws2_32:WS2_32.dll
+ 0001:0004c558       _htonl@4                   1004d558 f   ws2_32:WS2_32.dll
+ 0001:0004c55e       _getservbyname@8           1004d55e f   ws2_32:WS2_32.dll
+ 0001:0004c564       _inet_addr@4               1004d564 f   ws2_32:WS2_32.dll
+ 0001:0004c56a       _gethostbyname@4           1004d56a f   ws2_32:WS2_32.dll
+ 0001:0004c570       _gethostbyaddr@12          1004d570 f   ws2_32:WS2_32.dll
+ 0001:0004c576       _getservbyport@8           1004d576 f   ws2_32:WS2_32.dll
+ 0001:0004c57c       _gethostname@8             1004d57c f   ws2_32:WS2_32.dll
+ 0001:0004c582       _WSACleanup@0              1004d582 f   ws2_32:WS2_32.dll
+ 0001:0004c588       _WSAStartup@8              1004d588 f   ws2_32:WS2_32.dll
+ 0001:0004c58e       _listen@8                  1004d58e f   ws2_32:WS2_32.dll
+ 0001:0004c594       _accept@12                 1004d594 f   ws2_32:WS2_32.dll
+ 0001:0004c59a       _ioctlsocket@12            1004d59a f   ws2_32:WS2_32.dll
+ 0001:0004c5a0       ___WSAFDIsSet@8            1004d5a0 f   ws2_32:WS2_32.dll
+ 0001:0004c5a6       _select@20                 1004d5a6 f   ws2_32:WS2_32.dll
+ 0001:0004c5ac       _send@16                   1004d5ac f   ws2_32:WS2_32.dll
+ 0001:0004c5b2       _sendto@24                 1004d5b2 f   ws2_32:WS2_32.dll
+ 0001:0004c5b8       _recvfrom@24               1004d5b8 f   ws2_32:WS2_32.dll
+ 0001:0004c5be       _ldap_unbind_s             1004d5be f   wldap32:WLDAP32.dll
+ 0001:0004c5c4       _ldap_msgfree              1004d5c4 f   wldap32:WLDAP32.dll
+ 0001:0004c5ca       _ber_free                  1004d5ca f   wldap32:WLDAP32.dll
+ 0001:0004c5d0       _ldap_memfree              1004d5d0 f   wldap32:WLDAP32.dll
+ 0001:0004c5d6       _ldap_value_free_len       1004d5d6 f   wldap32:WLDAP32.dll
+ 0001:0004c5dc       _ldap_get_values_len       1004d5dc f   wldap32:WLDAP32.dll
+ 0001:0004c5e2       _ldap_next_attribute       1004d5e2 f   wldap32:WLDAP32.dll
+ 0001:0004c5e8       _ldap_first_attribute      1004d5e8 f   wldap32:WLDAP32.dll
+ 0001:0004c5ee       _ldap_get_dn               1004d5ee f   wldap32:WLDAP32.dll
+ 0001:0004c5f4       _ldap_next_entry           1004d5f4 f   wldap32:WLDAP32.dll
+ 0001:0004c5fa       _ldap_first_entry          1004d5fa f   wldap32:WLDAP32.dll
+ 0001:0004c600       _ldap_search_s             1004d600 f   wldap32:WLDAP32.dll
+ 0001:0004c606       _ldap_simple_bind_s        1004d606 f   wldap32:WLDAP32.dll
+ 0001:0004c60c       _ldap_init                 1004d60c f   wldap32:WLDAP32.dll
+ 0001:0004c612       _ldap_set_option           1004d612 f   wldap32:WLDAP32.dll
+ 0001:0004c618       _ldap_err2string           1004d618 f   wldap32:WLDAP32.dll
+ 0001:0004c61e       _DeleteCriticalSection@4   1004d61e f   kernel32:KERNEL32.dll
+ 0001:0004c624       _LeaveCriticalSection@4    1004d624 f   kernel32:KERNEL32.dll
+ 0001:0004c62a       _EnterCriticalSection@4    1004d62a f   kernel32:KERNEL32.dll
+ 0001:0004c630       _GetLastError@0            1004d630 f   kernel32:KERNEL32.dll
+ 0001:0004c636       _SetLastError@4            1004d636 f   kernel32:KERNEL32.dll
+ 0001:0004c63c       _InitializeCriticalSection@4 1004d63c f   kernel32:KERNEL32.dll
+ 0001:0004c642       _SleepEx@8                 1004d642 f   kernel32:KERNEL32.dll
+ 0001:0004c648       _FreeLibrary@4             1004d648 f   kernel32:KERNEL32.dll
+ 0001:0004c64e       _GetProcAddress@8          1004d64e f   kernel32:KERNEL32.dll
+ 0001:0004c654       _LoadLibraryA@4            1004d654 f   kernel32:KERNEL32.dll
+ 0001:0004c65a       _GetSystemDirectoryA@8     1004d65a f   kernel32:KERNEL32.dll
+ 0001:0004c660       _CloseHandle@4             1004d660 f   kernel32:KERNEL32.dll
+ 0001:0004c666       _WaitForSingleObject@8     1004d666 f   kernel32:KERNEL32.dll
+ 0001:0004c66c       _ExpandEnvironmentStringsA@12 1004d66c f   kernel32:KERNEL32.dll
+ 0001:0004c672       _Sleep@4                   1004d672 f   kernel32:KERNEL32.dll
+ 0001:0004c678       _FormatMessageA@28         1004d678 f   kernel32:KERNEL32.dll
+ 0001:0004c67e       _ReadFile@20               1004d67e f   kernel32:KERNEL32.dll
+ 0001:0004c684       _PeekNamedPipe@24          1004d684 f   kernel32:KERNEL32.dll
+ 0001:0004c68a       _WaitForMultipleObjects@16 1004d68a f   kernel32:KERNEL32.dll
+ 0001:0004c690       _GetFileType@4             1004d690 f   kernel32:KERNEL32.dll
+ 0001:0004c696       _GetStdHandle@4            1004d696 f   kernel32:KERNEL32.dll
+ 0001:0004c69c       _GetTickCount@0            1004d69c f   kernel32:KERNEL32.dll
+ 0001:0004c6b0       __RTC_InitBase             1004d6b0 f   MSVCRTD:init.obj
+ 0001:0004c6e0       __RTC_Shutdown             1004d6e0 f   MSVCRTD:init.obj
+ 0001:0004c700       __RTC_CheckEsp             1004d700 f   MSVCRTD:stack.obj
+ 0001:0004c730       @_RTC_CheckStackVars@8     1004d730 f   MSVCRTD:stack.obj
+ 0001:0004c790       @_RTC_AllocaHelper@12      1004d790 f   MSVCRTD:stack.obj
+ 0001:0004c7c0       @_RTC_CheckStackVars2@12   1004d7c0 f   MSVCRTD:stack.obj
+ 0001:0004c896       _memset                    1004d896 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8a0       @__security_check_cookie@4 1004d8a0 f   MSVCRTD:secchk.obj
+ 0001:0004c8b0       __errno                    1004d8b0 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8b6       _strlen                    1004d8b6 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8bc       _memcpy                    1004d8bc f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8c2       _strncmp                   1004d8c2 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8c8       __strtoi64                 1004d8c8 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8ce       _strcmp                    1004d8ce f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8d4       _strrchr                   1004d8d4 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8da       _strtol                    1004d8da f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8e0       _sscanf                    1004d8e0 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8e6       _strchr                    1004d8e6 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8ec       __time64                   1004d8ec f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8f2       _fclose                    1004d8f2 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8f8       _fgets                     1004d8f8 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c8fe       _fopen                     1004d8fe f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c904       ___iob_func                1004d904 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c90a       _qsort                     1004d90a f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c910       _fputs                     1004d910 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c916       _strcat_s                  1004d916 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c91c       _strcpy_s                  1004d91c f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c922       _free                      1004d922 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c928       _strtoul                   1004d928 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c92e       _calloc                    1004d92e f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c934       _strncpy_s                 1004d934 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c93a       _sprintf_s                 1004d93a f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c940       _isgraph                   1004d940 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c946       _islower                   1004d946 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c94c       _isupper                   1004d94c f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c952       _isspace                   1004d952 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c958       _isxdigit                  1004d958 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c95e       _isdigit                   1004d95e f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c964       _isalpha                   1004d964 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c96a       _isalnum                   1004d96a f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c970       _isprint                   1004d970 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c976       __beginthreadex            1004d976 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c97c       _malloc                    1004d97c f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c982       _realloc                   1004d982 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c988       __lseeki64                 1004d988 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c98e       __fstat64                  1004d98e f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c994       _fwrite                    1004d994 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c9a0       __chkstk                   1004d9a0 f   MSVCRTD:chkstk.obj
+ 0001:0004c9a0       __alloca_probe             1004d9a0     MSVCRTD:chkstk.obj
+ 0001:0004c9cc       _fread                     1004d9cc f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c9d2       __stat64                   1004d9d2 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c9d8       _strcpy                    1004d9d8 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c9de       _strncpy                   1004d9de f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c9e4       _strstr                    1004d9e4 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c9ea       _strcat                    1004d9ea f   MSVCRTD:MSVCR80D.dll
+ 0001:0004c9f0       _getenv                    1004d9f0 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004ca00       _memcmp                    1004da00 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004ca06       _tolower                   1004da06 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004ca0c       _memmove                   1004da0c f   MSVCRTD:MSVCR80D.dll
+ 0001:0004ca12       _memchr                    1004da12 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004ca18       _sprintf                   1004da18 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004ca20       __aulldiv                  1004da20 f   MSVCRTD:ulldiv.obj
+ 0001:0004ca90       __aullrem                  1004da90 f   MSVCRTD:ullrem.obj
+ 0001:0004cb06       _fputc                     1004db06 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004cb10       __allmul                   1004db10 f   MSVCRTD:llmul.obj
+ 0001:0004cb44       __gmtime64                 1004db44 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004cb4a       _fflush                    1004db4a f   MSVCRTD:MSVCR80D.dll
+ 0001:0004cb50       __alldiv                   1004db50 f   MSVCRTD:lldiv.obj
+ 0001:0004cc00       __ftol2_sse                1004dc00 f   MSVCRTD:ftol2.obj
+ 0001:0004cc09       __ftol2_pentium4           1004dc09 f   MSVCRTD:ftol2.obj
+ 0001:0004cc1c       __ftol2_sse_excpt          1004dc1c f   MSVCRTD:ftol2.obj
+ 0001:0004cc36       __ftol2                    1004dc36 f   MSVCRTD:ftol2.obj
+ 0001:0004ccb0       __allrem                   1004dcb0 f   MSVCRTD:llrem.obj
+ 0001:0004cd62       _strerror                  1004dd62 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004cd68       ___sys_nerr                1004dd68 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004cd6e       _atoi                      1004dd6e f   MSVCRTD:MSVCR80D.dll
+ 0001:0004cd74       _fseek                     1004dd74 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004cd80       __allshr                   1004dd80 f   MSVCRTD:llshr.obj
+ 0001:0004ce30       __CRT_INIT@12              1004de30 f   MSVCRTD:crtdll.obj
+ 0001:0004d070       _NtCurrentTeb              1004e070 f i MSVCRTD:crtdll.obj
+ 0001:0004d080       __DllMainCRTStartup@12     1004e080 f   MSVCRTD:crtdll.obj
+ 0001:0004d270       __RTC_NumErrors            1004e270 f   MSVCRTD:userapi.obj
+ 0001:0004d280       __RTC_GetErrDesc           1004e280 f   MSVCRTD:userapi.obj
+ 0001:0004d2a0       __RTC_SetErrorType         1004e2a0 f   MSVCRTD:userapi.obj
+ 0001:0004d2d0       __RTC_SetErrorFunc         1004e2d0 f   MSVCRTD:userapi.obj
+ 0001:0004d2f0       __RTC_SetErrorFuncW        1004e2f0 f   MSVCRTD:userapi.obj
+ 0001:0004d310       ?_RTC_GetErrorFunc@@YAP6AHHPBDH00ZZPBX@Z 1004e310 f   MSVCRTD:userapi.obj
+ 0001:0004d320       ?_RTC_GetErrorFuncW@@YAP6AHHPB_WH00ZZPBX@Z 1004e320 f   MSVCRTD:userapi.obj
+ 0001:0004d326       __CRT_RTC_INITW            1004e326 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004d330       _DebuggerKnownHandle       1004e330 f   MSVCRTD:error.obj
+ 0001:0004d3d0       ?_RTC_Failure@@YAXPAXH@Z   1004e3d0 f   MSVCRTD:error.obj
+ 0001:0004d700       ?_RTC_StackFailure@@YAXPAXPBD@Z 1004e700 f   MSVCRTD:error.obj
+ 0001:0004d820       ?_RTC_AllocaFailure@@YAXPAXPAU_RTC_ALLOCA_NODE@@H@Z 1004e820 f   MSVCRTD:error.obj
+ 0001:0004d9e0       __RTC_UninitUse            1004e9e0 f   MSVCRTD:error.obj
+ 0001:0004daf0       ___report_gsfailure        1004eaf0 f   MSVCRTD:gs_report.obj
+ 0001:0004dc00       __get_sse2_info            1004ec00 f   MSVCRTD:cpu_disp.obj
+ 0001:0004dd20       ___sse2_available_init     1004ed20 f   MSVCRTD:cpu_disp.obj
+ 0001:0004dd40       ___clean_type_info_names   1004ed40 f   MSVCRTD:tncleanup.obj
+ 0001:0004dd60       __onexit                   1004ed60 f   MSVCRTD:atonexit.obj
+ 0001:0004de70       _atexit                    1004ee70 f   MSVCRTD:atonexit.obj
+ 0001:0004de90       __RTC_Initialize           1004ee90 f   MSVCRTD:initsect.obj
+ 0001:0004dec0       __RTC_Terminate            1004eec0 f   MSVCRTD:initsect.obj
+ 0001:0004dee6       __encode_pointer           1004eee6 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004deec       __malloc_dbg               1004eeec f   MSVCRTD:MSVCR80D.dll
+ 0001:0004def2       __free_dbg                 1004eef2 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004def8       __encoded_null             1004eef8 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004defe       __decode_pointer           1004eefe f   MSVCRTD:MSVCR80D.dll
+ 0001:0004df04       __CrtSetCheckCount         1004ef04 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004df10       __ValidateImageBase        1004ef10 f   MSVCRTD:pesect.obj
+ 0001:0004df70       __FindPESection            1004ef70 f   MSVCRTD:pesect.obj
+ 0001:0004dff0       __IsNonwritableInCurrentImage 1004eff0 f   MSVCRTD:pesect.obj
+ 0001:0004e100       __initterm                 1004f100 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e106       __initterm_e               1004f106 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e10c       __amsg_exit                1004f10c f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e120       ___security_init_cookie    1004f120 f   MSVCRTD:gs_support.obj
+ 0001:0004e1fa       ___CppXcptFilter           1004f1fa f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e200       _DllMain@12                1004f200 f   MSVCRTD:dllmain.obj
+ 0001:0004e230       __except_handler4          1004f230 f   MSVCRTD:chandler4gs.obj
+ 0001:0004e260       ?_RTC_GetSrcLine@@YAHPAEPA_WKPAH1K@Z 1004f260 f   MSVCRTD:pdblkup.obj
+ 0001:0004e6ec       __crt_debugger_hook        1004f6ec f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e6f2       ___clean_type_info_names_internal 1004f6f2 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e6f8       __unlock                   1004f6f8 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e6fe       ___dllonexit               1004f6fe f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e704       __lock                     1004f704 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e70a       __except_handler4_common   1004f70a f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e710       _InterlockedExchange@8     1004f710 f   kernel32:KERNEL32.dll
+ 0001:0004e716       _InterlockedCompareExchange@12 1004f716 f   kernel32:KERNEL32.dll
+ 0001:0004e71c       _RaiseException@16         1004f71c f   kernel32:KERNEL32.dll
+ 0001:0004e722       _DebugBreak@0              1004f722 f   kernel32:KERNEL32.dll
+ 0001:0004e728       _WideCharToMultiByte@32    1004f728 f   kernel32:KERNEL32.dll
+ 0001:0004e72e       _IsDebuggerPresent@0       1004f72e f   kernel32:KERNEL32.dll
+ 0001:0004e734       _MultiByteToWideChar@24    1004f734 f   kernel32:KERNEL32.dll
+ 0001:0004e73a       _lstrlenA@4                1004f73a f   kernel32:KERNEL32.dll
+ 0001:0004e740       _TerminateProcess@8        1004f740 f   kernel32:KERNEL32.dll
+ 0001:0004e746       _GetCurrentProcess@0       1004f746 f   kernel32:KERNEL32.dll
+ 0001:0004e74c       _UnhandledExceptionFilter@4 1004f74c f   kernel32:KERNEL32.dll
+ 0001:0004e752       _SetUnhandledExceptionFilter@4 1004f752 f   kernel32:KERNEL32.dll
+ 0001:0004e758       _QueryPerformanceCounter@4 1004f758 f   kernel32:KERNEL32.dll
+ 0001:0004e75e       _GetCurrentThreadId@0      1004f75e f   kernel32:KERNEL32.dll
+ 0001:0004e764       _GetCurrentProcessId@0     1004f764 f   kernel32:KERNEL32.dll
+ 0001:0004e76a       _GetSystemTimeAsFileTime@4 1004f76a f   kernel32:KERNEL32.dll
+ 0001:0004e770       _DisableThreadLibraryCalls@4 1004f770 f   kernel32:KERNEL32.dll
+ 0001:0004e776       _HeapFree@12               1004f776 f   kernel32:KERNEL32.dll
+ 0001:0004e77c       _HeapAlloc@12              1004f77c f   kernel32:KERNEL32.dll
+ 0001:0004e782       _GetProcessHeap@0          1004f782 f   kernel32:KERNEL32.dll
+ 0001:0004e788       _GetModuleFileNameW@12     1004f788 f   kernel32:KERNEL32.dll
+ 0001:0004e78e       _VirtualQuery@12           1004f78e f   kernel32:KERNEL32.dll
+ 0001:0004e794       __strdup                   1004f794 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e794       _strdup                    1004f794 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e79a       __open                     1004f79a f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e7a0       __close                    1004f7a0 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e7a6       __read                     1004f7a6 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e7ac       __fileno                   1004f7ac f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e7b2       __stricmp                  1004f7b2 f   MSVCRTD:MSVCR80D.dll
+ 0001:0004e7b8       __strnicmp                 1004f7b8 f   MSVCRTD:MSVCR80D.dll
+ 0002:00000000       __imp__GetStdHandle@4      10050000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__GetFileType@4       10050004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__WaitForMultipleObjects@16 10050008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__PeekNamedPipe@24    1005000c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__ReadFile@20         10050010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__FormatMessageA@28   10050014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__VirtualQuery@12     10050018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__GetModuleFileNameW@12 1005001c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__GetProcessHeap@0    10050020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__HeapAlloc@12        10050024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__HeapFree@12         10050028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__DisableThreadLibraryCalls@4 1005002c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__GetSystemTimeAsFileTime@4 10050030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__GetCurrentProcessId@0 10050034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__GetCurrentThreadId@0 10050038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__QueryPerformanceCounter@4 1005003c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__SetUnhandledExceptionFilter@4 10050040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__UnhandledExceptionFilter@4 10050044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__GetCurrentProcess@0 10050048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__TerminateProcess@8  1005004c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__lstrlenA@4          10050050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__MultiByteToWideChar@24 10050054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__IsDebuggerPresent@0 10050058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__WideCharToMultiByte@32 1005005c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__DebugBreak@0        10050060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__RaiseException@16   10050064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__InterlockedCompareExchange@12 10050068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__InterlockedExchange@8 1005006c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__Sleep@4             10050070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__ExpandEnvironmentStringsA@12 10050074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__WaitForSingleObject@8 10050078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__CloseHandle@4       1005007c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__GetSystemDirectoryA@8 10050080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__LoadLibraryA@4      10050084     kernel32:KERNEL32.dll
+ 0002:00000088       __imp__GetTickCount@0      10050088     kernel32:KERNEL32.dll
+ 0002:0000008c       __imp__GetProcAddress@8    1005008c     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__FreeLibrary@4       10050090     kernel32:KERNEL32.dll
+ 0002:00000094       __imp__SleepEx@8           10050094     kernel32:KERNEL32.dll
+ 0002:00000098       __imp__InitializeCriticalSection@4 10050098     kernel32:KERNEL32.dll
+ 0002:0000009c       __imp__SetLastError@4      1005009c     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp__GetLastError@0      100500a0     kernel32:KERNEL32.dll
+ 0002:000000a4       __imp__EnterCriticalSection@4 100500a4     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp__LeaveCriticalSection@4 100500a8     kernel32:KERNEL32.dll
+ 0002:000000ac       __imp__DeleteCriticalSection@4 100500ac     kernel32:KERNEL32.dll
+ 0002:000000b0       \177KERNEL32_NULL_THUNK_DATA 100500b0     kernel32:KERNEL32.dll
+ 0002:000000b4       __imp___free_dbg           100500b4     MSVCRTD:MSVCR80D.dll
+ 0002:000000b8       __imp___malloc_dbg         100500b8     MSVCRTD:MSVCR80D.dll
+ 0002:000000bc       __imp___encode_pointer     100500bc     MSVCRTD:MSVCR80D.dll
+ 0002:000000c0       __imp___CRT_RTC_INITW      100500c0     MSVCRTD:MSVCR80D.dll
+ 0002:000000c4       __imp___encoded_null       100500c4     MSVCRTD:MSVCR80D.dll
+ 0002:000000c8       __imp___decode_pointer     100500c8     MSVCRTD:MSVCR80D.dll
+ 0002:000000cc       __imp___CrtSetCheckCount   100500cc     MSVCRTD:MSVCR80D.dll
+ 0002:000000d0       __imp___initterm           100500d0     MSVCRTD:MSVCR80D.dll
+ 0002:000000d4       __imp___initterm_e         100500d4     MSVCRTD:MSVCR80D.dll
+ 0002:000000d8       __imp___amsg_exit          100500d8     MSVCRTD:MSVCR80D.dll
+ 0002:000000dc       __imp___adjust_fdiv        100500dc     MSVCRTD:MSVCR80D.dll
+ 0002:000000e0       __imp____CppXcptFilter     100500e0     MSVCRTD:MSVCR80D.dll
+ 0002:000000e4       __imp____clean_type_info_names_internal 100500e4     MSVCRTD:MSVCR80D.dll
+ 0002:000000e8       __imp___unlock             100500e8     MSVCRTD:MSVCR80D.dll
+ 0002:000000ec       __imp____dllonexit         100500ec     MSVCRTD:MSVCR80D.dll
+ 0002:000000f0       __imp___lock               100500f0     MSVCRTD:MSVCR80D.dll
+ 0002:000000f4       __imp___onexit             100500f4     MSVCRTD:MSVCR80D.dll
+ 0002:000000f8       __imp___except_handler4_common 100500f8     MSVCRTD:MSVCR80D.dll
+ 0002:000000fc       __imp___strdup             100500fc     MSVCRTD:MSVCR80D.dll
+ 0002:000000fc       __imp__strdup              100500fc     MSVCRTD:MSVCR80D.dll
+ 0002:00000100       __imp__open                10050100     MSVCRTD:MSVCR80D.dll
+ 0002:00000100       __imp___open               10050100     MSVCRTD:MSVCR80D.dll
+ 0002:00000104       __imp__close               10050104     MSVCRTD:MSVCR80D.dll
+ 0002:00000104       __imp___close              10050104     MSVCRTD:MSVCR80D.dll
+ 0002:00000108       __imp___read               10050108     MSVCRTD:MSVCR80D.dll
+ 0002:00000108       __imp__read                10050108     MSVCRTD:MSVCR80D.dll
+ 0002:0000010c       __imp__fileno              1005010c     MSVCRTD:MSVCR80D.dll
+ 0002:0000010c       __imp___fileno             1005010c     MSVCRTD:MSVCR80D.dll
+ 0002:00000110       __imp__stricmp             10050110     MSVCRTD:MSVCR80D.dll
+ 0002:00000110       __imp___stricmp            10050110     MSVCRTD:MSVCR80D.dll
+ 0002:00000114       __imp___crt_debugger_hook  10050114     MSVCRTD:MSVCR80D.dll
+ 0002:00000118       __imp__strcat_s            10050118     MSVCRTD:MSVCR80D.dll
+ 0002:0000011c       __imp__memset              1005011c     MSVCRTD:MSVCR80D.dll
+ 0002:00000120       __imp___errno              10050120     MSVCRTD:MSVCR80D.dll
+ 0002:00000124       __imp__strlen              10050124     MSVCRTD:MSVCR80D.dll
+ 0002:00000128       __imp__memcpy              10050128     MSVCRTD:MSVCR80D.dll
+ 0002:0000012c       __imp__strncmp             1005012c     MSVCRTD:MSVCR80D.dll
+ 0002:00000130       __imp___strtoi64           10050130     MSVCRTD:MSVCR80D.dll
+ 0002:00000134       __imp__strcmp              10050134     MSVCRTD:MSVCR80D.dll
+ 0002:00000138       __imp__strrchr             10050138     MSVCRTD:MSVCR80D.dll
+ 0002:0000013c       __imp__strtol              1005013c     MSVCRTD:MSVCR80D.dll
+ 0002:00000140       __imp__sscanf              10050140     MSVCRTD:MSVCR80D.dll
+ 0002:00000144       __imp__strchr              10050144     MSVCRTD:MSVCR80D.dll
+ 0002:00000148       __imp___time64             10050148     MSVCRTD:MSVCR80D.dll
+ 0002:0000014c       __imp__fclose              1005014c     MSVCRTD:MSVCR80D.dll
+ 0002:00000150       __imp__fgets               10050150     MSVCRTD:MSVCR80D.dll
+ 0002:00000154       __imp__fopen               10050154     MSVCRTD:MSVCR80D.dll
+ 0002:00000158       __imp____iob_func          10050158     MSVCRTD:MSVCR80D.dll
+ 0002:0000015c       __imp__qsort               1005015c     MSVCRTD:MSVCR80D.dll
+ 0002:00000160       __imp__fputs               10050160     MSVCRTD:MSVCR80D.dll
+ 0002:00000164       __imp___strnicmp           10050164     MSVCRTD:MSVCR80D.dll
+ 0002:00000164       __imp__strnicmp            10050164     MSVCRTD:MSVCR80D.dll
+ 0002:00000168       __imp__strcpy_s            10050168     MSVCRTD:MSVCR80D.dll
+ 0002:0000016c       __imp__free                1005016c     MSVCRTD:MSVCR80D.dll
+ 0002:00000170       __imp__strtoul             10050170     MSVCRTD:MSVCR80D.dll
+ 0002:00000174       __imp__calloc              10050174     MSVCRTD:MSVCR80D.dll
+ 0002:00000178       __imp__strncpy_s           10050178     MSVCRTD:MSVCR80D.dll
+ 0002:0000017c       __imp__sprintf_s           1005017c     MSVCRTD:MSVCR80D.dll
+ 0002:00000180       __imp__isgraph             10050180     MSVCRTD:MSVCR80D.dll
+ 0002:00000184       __imp__islower             10050184     MSVCRTD:MSVCR80D.dll
+ 0002:00000188       __imp__isupper             10050188     MSVCRTD:MSVCR80D.dll
+ 0002:0000018c       __imp__isspace             1005018c     MSVCRTD:MSVCR80D.dll
+ 0002:00000190       __imp__isxdigit            10050190     MSVCRTD:MSVCR80D.dll
+ 0002:00000194       __imp__isdigit             10050194     MSVCRTD:MSVCR80D.dll
+ 0002:00000198       __imp__isalpha             10050198     MSVCRTD:MSVCR80D.dll
+ 0002:0000019c       __imp__isalnum             1005019c     MSVCRTD:MSVCR80D.dll
+ 0002:000001a0       __imp__isprint             100501a0     MSVCRTD:MSVCR80D.dll
+ 0002:000001a4       __imp___beginthreadex      100501a4     MSVCRTD:MSVCR80D.dll
+ 0002:000001a8       __imp__malloc              100501a8     MSVCRTD:MSVCR80D.dll
+ 0002:000001ac       __imp__realloc             100501ac     MSVCRTD:MSVCR80D.dll
+ 0002:000001b0       __imp___lseeki64           100501b0     MSVCRTD:MSVCR80D.dll
+ 0002:000001b4       __imp___fstat64            100501b4     MSVCRTD:MSVCR80D.dll
+ 0002:000001b8       __imp__fwrite              100501b8     MSVCRTD:MSVCR80D.dll
+ 0002:000001bc       __imp__fread               100501bc     MSVCRTD:MSVCR80D.dll
+ 0002:000001c0       __imp___stat64             100501c0     MSVCRTD:MSVCR80D.dll
+ 0002:000001c4       __imp__strcpy              100501c4     MSVCRTD:MSVCR80D.dll
+ 0002:000001c8       __imp__strncpy             100501c8     MSVCRTD:MSVCR80D.dll
+ 0002:000001cc       __imp__strstr              100501cc     MSVCRTD:MSVCR80D.dll
+ 0002:000001d0       __imp__strcat              100501d0     MSVCRTD:MSVCR80D.dll
+ 0002:000001d4       __imp__getenv              100501d4     MSVCRTD:MSVCR80D.dll
+ 0002:000001d8       __imp__memcmp              100501d8     MSVCRTD:MSVCR80D.dll
+ 0002:000001dc       __imp__tolower             100501dc     MSVCRTD:MSVCR80D.dll
+ 0002:000001e0       __imp__memmove             100501e0     MSVCRTD:MSVCR80D.dll
+ 0002:000001e4       __imp__memchr              100501e4     MSVCRTD:MSVCR80D.dll
+ 0002:000001e8       __imp__sprintf             100501e8     MSVCRTD:MSVCR80D.dll
+ 0002:000001ec       __imp__fputc               100501ec     MSVCRTD:MSVCR80D.dll
+ 0002:000001f0       __imp___gmtime64           100501f0     MSVCRTD:MSVCR80D.dll
+ 0002:000001f4       __imp__fflush              100501f4     MSVCRTD:MSVCR80D.dll
+ 0002:000001f8       __imp__strerror            100501f8     MSVCRTD:MSVCR80D.dll
+ 0002:000001fc       __imp____sys_nerr          100501fc     MSVCRTD:MSVCR80D.dll
+ 0002:00000200       __imp__atoi                10050200     MSVCRTD:MSVCR80D.dll
+ 0002:00000204       __imp__fseek               10050204     MSVCRTD:MSVCR80D.dll
+ 0002:00000208       \177MSVCR80D_NULL_THUNK_DATA 10050208     MSVCRTD:MSVCR80D.dll
+ 0002:0000020c       __imp__ldap_err2string     1005020c     wldap32:WLDAP32.dll
+ 0002:00000210       __imp__ldap_set_option     10050210     wldap32:WLDAP32.dll
+ 0002:00000214       __imp__ldap_init           10050214     wldap32:WLDAP32.dll
+ 0002:00000218       __imp__ldap_simple_bind_s  10050218     wldap32:WLDAP32.dll
+ 0002:0000021c       __imp__ldap_search_s       1005021c     wldap32:WLDAP32.dll
+ 0002:00000220       __imp__ldap_first_entry    10050220     wldap32:WLDAP32.dll
+ 0002:00000224       __imp__ldap_next_entry     10050224     wldap32:WLDAP32.dll
+ 0002:00000228       __imp__ldap_get_dn         10050228     wldap32:WLDAP32.dll
+ 0002:0000022c       __imp__ldap_first_attribute 1005022c     wldap32:WLDAP32.dll
+ 0002:00000230       __imp__ldap_next_attribute 10050230     wldap32:WLDAP32.dll
+ 0002:00000234       __imp__ldap_get_values_len 10050234     wldap32:WLDAP32.dll
+ 0002:00000238       __imp__ldap_value_free_len 10050238     wldap32:WLDAP32.dll
+ 0002:0000023c       __imp__ldap_memfree        1005023c     wldap32:WLDAP32.dll
+ 0002:00000240       __imp__ber_free            10050240     wldap32:WLDAP32.dll
+ 0002:00000244       __imp__ldap_msgfree        10050244     wldap32:WLDAP32.dll
+ 0002:00000248       __imp__ldap_unbind_s       10050248     wldap32:WLDAP32.dll
+ 0002:0000024c       \177WLDAP32_NULL_THUNK_DATA 1005024c     wldap32:WLDAP32.dll
+ 0002:00000250       __imp__recvfrom@24         10050250     ws2_32:WS2_32.dll
+ 0002:00000254       __imp__sendto@24           10050254     ws2_32:WS2_32.dll
+ 0002:00000258       __imp__send@16             10050258     ws2_32:WS2_32.dll
+ 0002:0000025c       __imp__select@20           1005025c     ws2_32:WS2_32.dll
+ 0002:00000260       __imp____WSAFDIsSet@8      10050260     ws2_32:WS2_32.dll
+ 0002:00000264       __imp__ioctlsocket@12      10050264     ws2_32:WS2_32.dll
+ 0002:00000268       __imp__accept@12           10050268     ws2_32:WS2_32.dll
+ 0002:0000026c       __imp__listen@8            1005026c     ws2_32:WS2_32.dll
+ 0002:00000270       __imp__WSAStartup@8        10050270     ws2_32:WS2_32.dll
+ 0002:00000274       __imp__WSACleanup@0        10050274     ws2_32:WS2_32.dll
+ 0002:00000278       __imp__gethostname@8       10050278     ws2_32:WS2_32.dll
+ 0002:0000027c       __imp__getservbyport@8     1005027c     ws2_32:WS2_32.dll
+ 0002:00000280       __imp__gethostbyaddr@12    10050280     ws2_32:WS2_32.dll
+ 0002:00000284       __imp__gethostbyname@4     10050284     ws2_32:WS2_32.dll
+ 0002:00000288       __imp__inet_addr@4         10050288     ws2_32:WS2_32.dll
+ 0002:0000028c       __imp__getservbyname@8     1005028c     ws2_32:WS2_32.dll
+ 0002:00000290       __imp__htonl@4             10050290     ws2_32:WS2_32.dll
+ 0002:00000294       __imp__inet_ntoa@4         10050294     ws2_32:WS2_32.dll
+ 0002:00000298       __imp__socket@12           10050298     ws2_32:WS2_32.dll
+ 0002:0000029c       __imp__closesocket@4       1005029c     ws2_32:WS2_32.dll
+ 0002:000002a0       __imp__recv@16             100502a0     ws2_32:WS2_32.dll
+ 0002:000002a4       __imp__htons@4             100502a4     ws2_32:WS2_32.dll
+ 0002:000002a8       __imp__bind@12             100502a8     ws2_32:WS2_32.dll
+ 0002:000002ac       __imp__connect@12          100502ac     ws2_32:WS2_32.dll
+ 0002:000002b0       __imp__setsockopt@20       100502b0     ws2_32:WS2_32.dll
+ 0002:000002b4       __imp__getsockopt@20       100502b4     ws2_32:WS2_32.dll
+ 0002:000002b8       __imp__WSASetLastError@4   100502b8     ws2_32:WS2_32.dll
+ 0002:000002bc       __imp__ntohs@4             100502bc     ws2_32:WS2_32.dll
+ 0002:000002c0       __imp__getpeername@12      100502c0     ws2_32:WS2_32.dll
+ 0002:000002c4       __imp__getsockname@12      100502c4     ws2_32:WS2_32.dll
+ 0002:000002c8       __imp__WSAGetLastError@0   100502c8     ws2_32:WS2_32.dll
+ 0002:000002cc       \177WS2_32_NULL_THUNK_DATA 100502cc     ws2_32:WS2_32.dll
+ 0002:000002d0       ___xc_a                    100502d0     MSVCRTD:cinitexe.obj
+ 0002:000002d4       ___xc_z                    100502d4     MSVCRTD:cinitexe.obj
+ 0002:000002d8       ___xi_a                    100502d8     MSVCRTD:cinitexe.obj
+ 0002:000002e4       ___xi_z                    100502e4     MSVCRTD:cinitexe.obj
+ 0002:00000354       ?iNumGlobal@?1??WspiapiLoad@@9@9 10050354     curl_addrinfo.obj
+ 0002:00000358       _Curl_handler_dict         10050358     dict.obj
+ 0002:000003a0       _Curl_handler_file         100503a0     file.obj
+ 0002:00000448       _Curl_handler_ftp          10050448     ftp.obj
+ 0002:000004f0       __real@0000000000000000    100504f0     getinfo.obj
+ 0002:000004f8       __real@bff0000000000000    100504f8     getinfo.obj
+ 0002:00000500       _Curl_handler_gopher       10050500     gopher.obj
+ 0002:00000548       _Curl_handler_http         10050548     http.obj
+ 0002:00000590       _Curl_handler_imap         10050590     imap.obj
+ 0002:00000638       _Curl_handler_ldap         10050638     ldap.obj
+ 0002:000006c0       _Curl_HMAC_MD5             100506c0     md5.obj
+ 0002:000006d8       _Curl_DIGEST_MD5           100506d8     md5.obj
+ 0002:00000758       _Curl_wkday                10050758     parsedate.obj
+ 0002:00000790       _Curl_month                10050790     parsedate.obj
+ 0002:00000b20       _Curl_handler_pop3         10050b20     pop3.obj
+ 0002:00000bb0       __real@408f400000000000    10050bb0     progress.obj
+ 0002:00000bb8       __real@3ff0000000000000    10050bb8     progress.obj
+ 0002:00000bc0       __real@412e848000000000    10050bc0     progress.obj
+ 0002:00000bc8       _Curl_handler_rtsp         10050bc8     rtsp.obj
+ 0002:00000c28       _Curl_handler_smtp         10050c28     smtp.obj
+ 0002:00000db8       _Curl_handler_telnet       10050db8     telnet.obj
+ 0002:00000e00       _Curl_handler_tftp         10050e00     tftp.obj
+ 0002:00000ef8       __pDefaultRawDllMain       10050ef8     MSVCRTD:crtdll.obj
+ 0002:00000ef8       __pRawDllMain              10050ef8     MSVCRTD:crtdll.obj
+ 0002:00000efc       ??_C@_08EIBOPINA@crtdll?4c?$AA@ 10050efc     MSVCRTD:crtdll.obj
+ 0002:00000f08       ??_C@_0BP@OGBCLIBO@Stack?5around?5_alloca?5corrupted?$AA@ 10050f08     MSVCRTD:userapi.obj
+ 0002:00000f28       ??_C@_0CK@CNLNOEPB@Local?5variable?5used?5before?5initi@ 10050f28     MSVCRTD:userapi.obj
+ 0002:00000f54       ??_C@_0BI@CIGMDCBH@Stack?5memory?5corruption?$AA@ 10050f54     MSVCRTD:userapi.obj
+ 0002:00000f6c       ??_C@_0CK@FEGOIOPB@Cast?5to?5smaller?5type?5causing?5los@ 10050f6c     MSVCRTD:userapi.obj
+ 0002:00000f98       ??_C@_0BJ@HEGAHDFO@Stack?5pointer?5corruption?$AA@ 10050f98     MSVCRTD:userapi.obj
+ 0002:00000fc8       ??_C@_0BO@GNIAFIKK@Unknown?5Runtime?5Check?5Error?6?$AN?$AA@ 10050fc8     MSVCRTD:error.obj
+ 0002:00000fe8       ??_C@_0CM@NGINOKPC@Stack?5memory?5around?5_alloca?5was?5@ 10050fe8     MSVCRTD:error.obj
+ 0002:00001014       ??_C@_0DG@HKJMLLLP@A?5local?5variable?5was?5used?5before@ 10051014     MSVCRTD:error.obj
+ 0002:0000104c       ??_C@_0BN@FFOINMNJ@Stack?5memory?5was?5corrupted?6?$AN?$AA@ 1005104c     MSVCRTD:error.obj
+ 0002:00001070       ??_C@_0BBN@GPMLNJCF@A?5cast?5to?5a?5smaller?5data?5type?5ha@ 10051070     MSVCRTD:error.obj
+ 0002:00001190       ??_C@_0NN@NGPKDKPD@The?5value?5of?5ESP?5was?5not?5properl@ 10051190     MSVCRTD:error.obj
+ 0002:000012f4       ??_C@_0CA@IODNCDPG@Run?9Time?5Check?5Failure?5?$CD?$CFd?5?9?5?$CFs?$AA@ 100512f4     MSVCRTD:error.obj
+ 0002:00001314       ??_C@_0BE@GNBOBNCK@Unknown?5Module?5Name?$AA@ 10051314     MSVCRTD:error.obj
+ 0002:00001328       ??_C@_0BB@PFFGGCJP@Unknown?5Filename?$AA@ 10051328     MSVCRTD:error.obj
+ 0002:00001340       ??_C@_1EA@NFKNIFJP@?$AAR?$AAu?$AAn?$AA?9?$AAT?$AAi?$AAm?$AAe?$AA?5?$AAC?$AAh?$AAe?$AAc?$AAk?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAu?$AAr?$AAe?$AA?5?$AA?$CD?$AA?$CF?$AAd?$AA?5?$AA?9?$AA?5?$AA?$CF?$AAs?$AA?$AA@ 10051340     MSVCRTD:error.obj
+ 0002:00001380       ??_C@_1GM@OLMCBDMB@?$AAR?$AAu?$AAn?$AAt?$AAi?$AAm?$AAe?$AA?5?$AAC?$AAh?$AAe?$AAc?$AAk?$AA?5?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?4?$AA?6?$AA?$AN?$AA?5?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo@ 10051380     MSVCRTD:error.obj
+ 0002:000013ec       ??_C@_0CG@IAFNJNEE@Stack?5corrupted?5near?5unknown?5var@ 100513ec     MSVCRTD:error.obj
+ 0002:00001418       ??_C@_0EJ@LJKNEOLN@Stack?5area?5around?5_alloca?5memory@ 10051418     MSVCRTD:error.obj
+ 0002:00001464       ??_C@_08KJEDNCKC@?$CFs?$CFs?$CFs?$CFs?$AA@ 10051464     MSVCRTD:error.obj
+ 0002:00001470       ??_C@_02LLMPMKNF@?$DO?5?$AA@ 10051470     MSVCRTD:error.obj
+ 0002:00001474       ??_C@_01EEMJAFIK@?6?$AA@   10051474     MSVCRTD:error.obj
+ 0002:00001478       ??_C@_0BC@KIBAILCI@?$CFs?$CFs?$CFp?$CFs?$CFld?$CFs?$CFd?$CFs?$AA@ 10051478     MSVCRTD:error.obj
+ 0002:00001490       ??_C@_0EI@CLEPFNGI@Stack?5area?5around?5_alloca?5memory@ 10051490     MSVCRTD:error.obj
+ 0002:000014d8       ??_C@_0N@MHFFIMFG@?6Address?3?50x?$AA@ 100514d8     MSVCRTD:error.obj
+ 0002:000014e8       ??_C@_07DFDJCKFN@?6Size?3?5?$AA@ 100514e8     MSVCRTD:error.obj
+ 0002:000014f0       ??_C@_0CK@DKGBICFE@?6Allocation?5number?5within?5this?5f@ 100514f0     MSVCRTD:error.obj
+ 0002:0000151c       ??_C@_08OMAHNMHJ@?6Data?3?5?$DM?$AA@ 1005151c     MSVCRTD:error.obj
+ 0002:00001528       ??_C@_09FOPFMPEJ@wsprintfA?$AA@ 10051528     MSVCRTD:error.obj
+ 0002:00001534       ??_C@_0L@GMPLCCII@user32?4dll?$AA@ 10051534     MSVCRTD:error.obj
+ 0002:00001540       ??_C@_05MKKEDADM@?$CF?42X?5?$AA@ 10051540     MSVCRTD:error.obj
+ 0002:00001548       ??_C@_0DE@OHJBPMBP@A?5variable?5is?5being?5used?5without@ 10051548     MSVCRTD:error.obj
+ 0002:00001584       ?ProcessDetach@NativeDll@<CrtImplementationDetails>@@0IB 10051584     MSVCRTD:tncleanup.obj
+ 0002:00001588       ?ProcessAttach@NativeDll@<CrtImplementationDetails>@@0IB 10051588     MSVCRTD:tncleanup.obj
+ 0002:0000158c       ?ThreadAttach@NativeDll@<CrtImplementationDetails>@@0IB 1005158c     MSVCRTD:tncleanup.obj
+ 0002:00001590       ?ThreadDetach@NativeDll@<CrtImplementationDetails>@@0IB 10051590     MSVCRTD:tncleanup.obj
+ 0002:00001594       ?ProcessVerifier@NativeDll@<CrtImplementationDetails>@@0IB 10051594     MSVCRTD:tncleanup.obj
+ 0002:00001598       ??_C@_0M@EKFFODEC@MSPDB80?4DLL?$AA@ 10051598     MSVCRTD:pdblkup.obj
+ 0002:000015a4       ??_C@_01KDCPPGHE@r?$AA@    100515a4     MSVCRTD:pdblkup.obj
+ 0002:000015a8       ??_C@_0BB@KCIACLNC@PDBOpenValidate5?$AA@ 100515a8     MSVCRTD:pdblkup.obj
+ 0002:000015bc       ??_C@_0BF@BMIHBHCA@EnvironmentDirectory?$AA@ 100515bc     MSVCRTD:pdblkup.obj
+ 0002:000015d4       ??_C@_0CN@EAEOKKOC@SOFTWARE?2Microsoft?2VisualStudio?2@ 100515d4     MSVCRTD:pdblkup.obj
+ 0002:00001604       ??_C@_0M@HLOHPNFA@RegCloseKey?$AA@ 10051604     MSVCRTD:pdblkup.obj
+ 0002:00001610       ??_C@_0BB@HHEIPGME@RegQueryValueExA?$AA@ 10051610     MSVCRTD:pdblkup.obj
+ 0002:00001624       ??_C@_0O@DCOGKJGG@RegOpenKeyExA?$AA@ 10051624     MSVCRTD:pdblkup.obj
+ 0002:00001634       ??_C@_0N@JJPEKNFO@ADVAPI32?4DLL?$AA@ 10051634     MSVCRTD:pdblkup.obj
+ 0002:00001648       __load_config_used         10051648     MSVCRTD:loadcfg.obj
+ 0002:000016f0       ___safe_se_handler_table   100516f0     <linker-defined>
+ 0002:000016f4       ___rtc_iaa                 100516f4     MSVCRTD:initsect.obj
+ 0002:00001804       ___rtc_izz                 10051804     MSVCRTD:initsect.obj
+ 0002:00001808       ___rtc_taa                 10051808     MSVCRTD:initsect.obj
+ 0002:00001918       ___rtc_tzz                 10051918     MSVCRTD:initsect.obj
+ 0002:000019e4       __IMPORT_DESCRIPTOR_WS2_32 100519e4     ws2_32:WS2_32.dll
+ 0002:000019f8       __IMPORT_DESCRIPTOR_WLDAP32 100519f8     wldap32:WLDAP32.dll
+ 0002:00001a0c       __IMPORT_DESCRIPTOR_KERNEL32 10051a0c     kernel32:KERNEL32.dll
+ 0002:00001a20       __IMPORT_DESCRIPTOR_MSVCR80D 10051a20     MSVCRTD:MSVCR80D.dll
+ 0002:00001a34       __NULL_IMPORT_DESCRIPTOR   10051a34     ws2_32:WS2_32.dll
+ 0003:00000698       ??_C@_07OKMCKPF@?2wship6?$AA@ 10053698     curl_addrinfo.obj
+ 0003:000006a0       ??_C@_07LPPPKMHP@?2ws2_32?$AA@ 100536a0     curl_addrinfo.obj
+ 0003:000006a8       ?rgtGlobal@?1??WspiapiLoad@@9@9 100536a8     curl_addrinfo.obj
+ 0003:000006c0       ??_C@_0N@EHOPPMLH@freeaddrinfo?$AA@ 100536c0     curl_addrinfo.obj
+ 0003:000006d0       ??_C@_0M@NNJNLPKG@getnameinfo?$AA@ 100536d0     curl_addrinfo.obj
+ 0003:000006dc       ??_C@_0M@MBIPAJOD@getaddrinfo?$AA@ 100536dc     curl_addrinfo.obj
+ 0003:000006e8       ??_C@_03FPEIBLKH@tcp?$AA@  100536e8     curl_addrinfo.obj
+ 0003:000006ec       ??_C@_03OCLLGKEH@udp?$AA@  100536ec     curl_addrinfo.obj
+ 0003:000006f0       ??_C@_02GMHACPFF@?$CFu?$AA@ 100536f0     curl_addrinfo.obj
+ 0003:000006f4       ??_C@_05LGDGBMPG@65535?$AA@ 100536f4     curl_addrinfo.obj
+ 0003:000008a4       _Curl_cmalloc              100538a4     easy.obj
+ 0003:000008a8       _Curl_cfree                100538a8     easy.obj
+ 0003:000008ac       _Curl_crealloc             100538ac     easy.obj
+ 0003:000008b0       _Curl_cstrdup              100538b0     easy.obj
+ 0003:000008b4       _Curl_ccalloc              100538b4     easy.obj
+ 0003:00007494       ___security_cookie         1005a494     MSVCRTD:gs_cookie.obj
+ 0003:00007498       ___security_cookie_complement 1005a498     MSVCRTD:gs_cookie.obj
+ 0003:000074a0       ?_RTC_ErrorLevels@@3PAHA   1005a4a0     MSVCRTD:error.obj
+ 0003:000074cc       ___native_dllmain_reason   1005a4cc     MSVCRTD:natstart.obj
+ 0003:000074d0       ___native_vcclrit_reason   1005a4d0     MSVCRTD:natstart.obj
+ 0003:000074e0       ?pfGetAddrInfo@?1??WspiapiGetAddrInfo@@9@9 1005a4e0     curl_addrinfo.obj
+ 0003:000074e4       ?bInitialized@?1??WspiapiLoad@@9@9 1005a4e4     curl_addrinfo.obj
+ 0003:000074e8       ??_C@_00CNPNBAHC@?$AA@     1005a4e8     curl_addrinfo.obj
+ 0003:000074ec       ?pfFreeAddrInfo@?1??WspiapiFreeAddrInfo@@9@9 1005a4ec     curl_addrinfo.obj
+ 0003:00007648       ?wsprintffp@@3P6AHPADPBDZZA 1005a648     MSVCRTD:error.obj
+ 0003:00007974       __forceCRTManifest         1005a974     MSVCRTD:crtmanifest.obj
+ 0003:00007978       ?__type_info_root_node@@3U__type_info_node@@A 1005a978     MSVCRTD:tncleanup.obj
+ 0003:0000798c       __adjust_fdiv              1005a98c     <common>
+ 0003:00007990       ___native_startup_state    1005a990     <common>
+ 0003:00007994       ___native_startup_lock     1005a994     <common>
+ 0003:00007998       ___onexitend               1005a998     <common>
+ 0003:0000799c       ___onexitbegin             1005a99c     <common>
+ 0003:000079a0       ___sse2_available          1005a9a0     <common>
+ 0003:000079a4       ___dyn_tls_init_callback   1005a9a4     <common>
+
+ entry point at        0001:0004d080
+
+ Static symbols
+
+ 0001:00000070       _destroy_async_data        10001070 f   asyn-thread.obj
+ 0001:00000110       _destroy_thread_sync_data  10001110 f   asyn-thread.obj
+ 0001:000002a0       _getaddrinfo_complete      100012a0 f   asyn-thread.obj
+ 0001:00000300       _conn_thread_sync_data     10001300 f   asyn-thread.obj
+ 0001:00000320       _resolver_error            10001320 f   asyn-thread.obj
+ 0001:000006e0       _init_resolve_thread       100016e0 f   asyn-thread.obj
+ 0001:00000870       _init_thread_sync_data     10001870 f   asyn-thread.obj
+ 0001:00000920       _getaddrinfo_thread@4      10001920 f   asyn-thread.obj
+ 0001:00000c40       _decodeQuantum             10001c40 f   base64.obj
+ 0001:00001470       _getaddressinfo            10002470 f   connect.obj
+ 0001:00001830       _waitconnect               10002830 f   connect.obj
+ 0001:000018e0       _verifyconnect             100028e0 f   connect.obj
+ 0001:000019e0       _trynextip                 100029e0 f   connect.obj
+ 0001:00001c10       _singleipconnect           10002c10 f   connect.obj
+ 0001:00002190       _tcpkeepalive              10003190 f   connect.obj
+ 0001:00002240       _bindlocal                 10003240 f   connect.obj
+ 0001:000028a0       _tcpnodelay                100038a0 f   connect.obj
+ 0001:000041f0       _time                      100051f0 f   cookie.obj
+ 0001:00004220       _freecookie                10005220 f   cookie.obj
+ 0001:00004340       _tailmatch                 10005340 f   cookie.obj
+ 0001:000043b0       _strstore                  100053b0 f   cookie.obj
+ 0001:00004930       _cookie_sort               10005930 f   cookie.obj
+ 0001:00004cf0       _get_netscape_format       10005cf0 f   cookie.obj
+ 0001:00004f40       _cookie_output             10005f40 f   cookie.obj
+ 0001:00006ac0       _loop                      10007ac0 f   curl_fnmatch.obj
+ 0001:00007040       _setcharset                10008040 f   curl_fnmatch.obj
+ 0001:000076a0       _parsekeyword              100086a0 f   curl_fnmatch.obj
+ 0001:00007ae0       _time                      10008ae0 f   curl_rand.obj
+ 0001:00007c00       _dict_do                   10008c00 f   dict.obj
+ 0001:000080d0       _unescape_word             100090d0 f   dict.obj
+ 0001:000082f0       _win32_init                100092f0 f   easy.obj
+ 0001:000084f0       _win32_cleanup             100094f0 f   easy.obj
+ 0001:00008ff0       _easy_connection           10009ff0 f   easy.obj
+ 0001:00009340       _Curl_isunreserved         1000a340 f   escape.obj
+ 0001:00009700       _file_connect              1000a700 f   file.obj
+ 0001:00009940       _file_done                 1000a940 f   file.obj
+ 0001:000099e0       _file_disconnect           1000a9e0 f   file.obj
+ 0001:00009a80       _file_do                   1000aa80 f   file.obj
+ 0001:0000a100       _file_range                1000b100 f   file.obj
+ 0001:0000a310       _file_upload               1000b310 f   file.obj
+ 0001:0000a930       _FormAdd                   1000b930 f   formdata.obj
+ 0001:0000b610       _AddHttpPost               1000c610 f   formdata.obj
+ 0001:0000b740       _AddFormInfo               1000c740 f   formdata.obj
+ 0001:0000b7d0       _ContentTypeForFilename    1000c7d0 f   formdata.obj
+ 0001:0000b8c0       _memdup                    1000c8c0 f   formdata.obj
+ 0001:0000c540       _AddFormData               1000d540 f   formdata.obj
+ 0001:0000c710       _AddFormDataf              1000d710 f   formdata.obj
+ 0001:0000c7d0       _strippath                 1000d7d0 f   formdata.obj
+ 0001:0000c860       _Curl_basename             1000d860 f   formdata.obj
+ 0001:0000c960       _readfromfile              1000d960 f   formdata.obj
+ 0001:0000cee0       _ftp_readresp              1000dee0 f   ftp.obj
+ 0001:0000cf90       _ftp_getsock               1000df90 f   ftp.obj
+ 0001:0000cfc0       _ftp_domore_getsock        1000dfc0 f   ftp.obj
+ 0001:0000d060       _ftp_multi_statemach       1000e060 f   ftp.obj
+ 0001:0000d0b0       _ftp_connect               1000e0b0 f   ftp.obj
+ 0001:0000d1e0       _ftp_endofresp             1000e1e0 f   ftp.obj
+ 0001:0000d2c0       _state                     1000e2c0 f   ftp.obj
+ 0001:0000d2f0       _ftp_statemach_act         1000e2f0 f   ftp.obj
+ 0001:0000df20       _ftp_state_user            1000ef20 f   ftp.obj
+ 0001:0000dfc0       _ftp_state_pwd             1000efc0 f   ftp.obj
+ 0001:0000e010       _ftp_state_use_pasv        1000f010 f   ftp.obj
+ 0001:0000e0e0       _ftp_state_post_cwd        1000f0e0 f   ftp.obj
+ 0001:0000e190       _ftp_state_post_mdtm       1000f190 f   ftp.obj
+ 0001:0000e260       _ftp_state_post_type       1000f260 f   ftp.obj
+ 0001:0000e310       _ftp_state_post_size       1000f310 f   ftp.obj
+ 0001:0000e3c0       _ftp_state_post_rest       1000f3c0 f   ftp.obj
+ 0001:0000e570       _ftp_state_use_port        1000f570 f   ftp.obj
+ 0001:0000f250       _ftp_state_quote           10010250 f   ftp.obj
+ 0001:0000f4b0       _ftp_state_cwd             100104b0 f   ftp.obj
+ 0001:0000f5f0       _ftp_state_ul_setup        100105f0 f   ftp.obj
+ 0001:0000f990       _ftp_state_pasv_resp       10010990 f   ftp.obj
+ 0001:00010220       _ftp_state_port_resp       10011220 f   ftp.obj
+ 0001:00010300       _ftp_state_mdtm_resp       10011300 f   ftp.obj
+ 0001:000107e0       _time                      100117e0 f   ftp.obj
+ 0001:00010810       _ftp_state_type_resp       10011810 f   ftp.obj
+ 0001:000108f0       _ftp_state_post_listtype   100118f0 f   ftp.obj
+ 0001:00010b20       _ftp_state_post_retrtype   10011b20 f   ftp.obj
+ 0001:00010b60       _ftp_state_post_stortype   10011b60 f   ftp.obj
+ 0001:00010ba0       _ftp_state_post_retr_size  10011ba0 f   ftp.obj
+ 0001:00010ed0       _ftp_state_size_resp       10011ed0 f   ftp.obj
+ 0001:00011040       _ftp_state_rest_resp       10012040 f   ftp.obj
+ 0001:00011180       _ftp_state_stor_resp       10012180 f   ftp.obj
+ 0001:000112a0       _InitiateTransfer          100122a0 f   ftp.obj
+ 0001:000113d0       _AllowServerConnect        100123d0 f   ftp.obj
+ 0001:00011550       _AcceptServerConnect       10012550 f   ftp.obj
+ 0001:000116a0       _ftp_timeleft_accept       100126a0 f   ftp.obj
+ 0001:00011780       _ReceivedServerConnect     10012780 f   ftp.obj
+ 0001:00011970       _ftp_state_get_resp        10012970 f   ftp.obj
+ 0001:00011cf0       _ftp_state_user_resp       10012cf0 f   ftp.obj
+ 0001:00011ed0       _ftp_state_loggedin        10012ed0 f   ftp.obj
+ 0001:00011f50       _ftp_state_acct_resp       10012f50 f   ftp.obj
+ 0001:00011fc0       _ftp_easy_statemach        10012fc0 f   ftp.obj
+ 0001:00012030       _ftp_init                  10013030 f   ftp.obj
+ 0001:00012140       _isBadFtpString            10013140 f   ftp.obj
+ 0001:000121b0       _ftp_done                  100131b0 f   ftp.obj
+ 0001:000128e0       _freedirs                  100138e0 f   ftp.obj
+ 0001:000129c0       _ftp_sendquote             100139c0 f   ftp.obj
+ 0001:00012b10       _ftp_need_type             10013b10 f   ftp.obj
+ 0001:00012b40       _ftp_nb_type               10013b40 f   ftp.obj
+ 0001:00012c00       _ftp_pasv_verbose          10013c00 f   ftp.obj
+ 0001:00012cb0       _ftp_do_more               10013cb0 f   ftp.obj
+ 0001:00012f10       _ftp_range                 10013f10 f   ftp.obj
+ 0001:00013110       _ftp_do                    10014110 f   ftp.obj
+ 0001:00013200       _wc_statemach              10014200 f   ftp.obj
+ 0001:00013630       _init_wc_data              10014630 f   ftp.obj
+ 0001:000139e0       _wc_data_dtor              100149e0 f   ftp.obj
+ 0001:00013c00       _ftp_disconnect            10014c00 f   ftp.obj
+ 0001:00013d30       _ftp_quit                  10014d30 f   ftp.obj
+ 0001:00013df0       _ftp_parse_url_path        10014df0 f   ftp.obj
+ 0001:00014450       _ftp_doing                 10015450 f   ftp.obj
+ 0001:000144b0       _ftp_dophase_done          100154b0 f   ftp.obj
+ 0001:000145d0       _ftp_regular_transfer      100155d0 f   ftp.obj
+ 0001:00014710       _ftp_perform               10015710 f   ftp.obj
+ 0001:000147f0       _ftp_setup_connection      100157f0 f   ftp.obj
+ 0001:000161d0       _ftp_pl_get_permission     100171d0 f   ftplistparser.obj
+ 0001:00016450       _PL_ERROR                  10017450 f   ftplistparser.obj
+ 0001:000164c0       _ftp_pl_gettime            100174c0 f   ftplistparser.obj
+ 0001:000164d0       _ftp_pl_insert_finfo       100174d0 f   ftplistparser.obj
+ 0001:00016700       _GetEnv                    10017700 f   getenv.obj
+ 0001:00017010       _gopher_do                 10018010 f   gopher.obj
+ 0001:00017460       _hash_element_dtor         10018460 f   hash.obj
+ 0001:00017700       _mk_hash_element           10018700 f   hash.obj
+ 0001:000182e0       _time                      100192e0 f   hostip.obj
+ 0001:00018310       _hostcache_prune           10019310 f   hostip.obj
+ 0001:00018390       _hostcache_timestamp_remove 10019390 f   hostip.obj
+ 0001:00018570       _create_hostcache_id       10019570 f   hostip.obj
+ 0001:00018850       _remove_entry_if_stale     10019850 f   hostip.obj
+ 0001:00018a10       _freednsentry              10019a10 f   hostip.obj
+ 0001:00018af0       _hostcache_inuse           10019af0 f   hostip.obj
+ 0001:000192d0       _pickoneauth               1001a2d0 f   http.obj
+ 0001:00019380       _http_perhapsrewind        1001a380 f   http.obj
+ 0001:000197b0       _output_auth_headers       1001a7b0 f   http.obj
+ 0001:00019980       _http_output_basic         1001a980 f   http.obj
+ 0001:00019db0       _http_should_fail          1001adb0 f   http.obj
+ 0001:0001a1f0       _readmoredata              1001b1f0 f   http.obj
+ 0001:0001a840       _http_getsock_do           1001b840 f   http.obj
+ 0001:0001d110       _copy_header_value         1001e110 f   http.obj
+ 0001:0001d2a0       _use_http_1_1              1001e2a0 f   http.obj
+ 0001:0001d300       _expect100                 1001e300 f   http.obj
+ 0001:0001e970       _time                      1001f970 f   http.obj
+ 0001:0001e9a0       _checkhttpprefix           1001f9a0 f   http.obj
+ 0001:0001ea50       _checkprotoprefix          1001fa50 f   http.obj
+ 0001:0001eaa0       _checkrtspprefix           1001faa0 f   http.obj
+ 0001:0001eae0       _header_append             1001fae0 f   http.obj
+ 0001:0001f2f0       _Curl_isxdigit             100202f0 f   http_chunks.obj
+ 0001:0001f8b0       _get_pair                  100208b0 f   http_digest.obj
+ 0001:00020420       _md5_to_ascii              10021420 f   http_digest.obj
+ 0001:00020480       _digest_cleanup_one        10021480 f   http_digest.obj
+ 0001:000214c0       _imap_getsock              100224c0 f   imap.obj
+ 0001:000214f0       _imap_multi_statemach      100224f0 f   imap.obj
+ 0001:00021570       _imap_connect              10022570 f   imap.obj
+ 0001:000216b0       _imap_endofresp            100226b0 f   imap.obj
+ 0001:00021790       _state                     10022790 f   imap.obj
+ 0001:000217c0       _imap_statemach_act        100227c0 f   imap.obj
+ 0001:00021990       _imap_state_servergreet_resp 10022990 f   imap.obj
+ 0001:00021a50       _imapsendf                 10022a50 f   imap.obj
+ 0001:00021ac0       _getcmdid                  10022ac0 f   imap.obj
+ 0001:00021b00       _imap_state_login          10022b00 f   imap.obj
+ 0001:00021bc0       _imap_state_starttls_resp  10022bc0 f   imap.obj
+ 0001:00021c90       _imap_state_upgrade_tls    10022c90 f   imap.obj
+ 0001:00021d00       _imap_state_login_resp     10022d00 f   imap.obj
+ 0001:00021d70       _imap_state_fetch_resp     10022d70 f   imap.obj
+ 0001:00021ff0       _imap_state_select_resp    10022ff0 f   imap.obj
+ 0001:00022060       _imap_fetch                10023060 f   imap.obj
+ 0001:000220d0       _imap_easy_statemach       100230d0 f   imap.obj
+ 0001:00022140       _imap_init                 10023140 f   imap.obj
+ 0001:000221f0       _imap_done                 100231f0 f   imap.obj
+ 0001:00022260       _imap_do                   10023260 f   imap.obj
+ 0001:000222e0       _imap_disconnect           100232e0 f   imap.obj
+ 0001:00022360       _imap_logout               10023360 f   imap.obj
+ 0001:000223f0       _imap_parse_url_path       100233f0 f   imap.obj
+ 0001:00022470       _imap_doing                10023470 f   imap.obj
+ 0001:000224c0       _imap_dophase_done         100234c0 f   imap.obj
+ 0001:00022510       _imap_regular_transfer     10023510 f   imap.obj
+ 0001:00022620       _imap_perform              10023620 f   imap.obj
+ 0001:000226f0       _imap_select               100236f0 f   imap.obj
+ 0001:00022790       _imap_setup_connection     10023790 f   imap.obj
+ 0001:00022890       _inet_ntop4                10023890 f   inet_ntop.obj
+ 0001:00022a00       _inet_pton4                10023a00 f   inet_pton.obj
+ 0001:00022b80       _Curl_ldap                 10023b80 f   ldap.obj
+ 0001:00023490       __ldap_url_parse           10024490 f   ldap.obj
+ 0001:00023520       __ldap_url_parse2          10024520 f   ldap.obj
+ 0001:00023830       _str2scope                 10024830 f   ldap.obj
+ 0001:000238d0       _split_str                 100248d0 f   ldap.obj
+ 0001:00023a00       _unescape_elements         10024a00 f   ldap.obj
+ 0001:00023b90       __ldap_free_urldesc        10024b90 f   ldap.obj
+ 0001:00023d30       _llist_init                10024d30 f   llist.obj
+ 0001:000240f0       _MD5_Init                  100250f0 f   md5.obj
+ 0001:00024130       _MD5_Update                10025130 f   md5.obj
+ 0001:00024250       _MD5_Final                 10025250 f   md5.obj
+ 0001:00024360       _MD5Transform              10025360 f   md5.obj
+ 0001:000251f0       _Encode                    100261f0 f   md5.obj
+ 0001:000252a0       _Decode                    100262a0 f   md5.obj
+ 0001:000255e0       _dprintf_formatf           100265e0 f   mprintf.obj
+ 0001:00026990       _dprintf_DollarString      10027990 f   mprintf.obj
+ 0001:00026a40       _dprintf_Pass1             10027a40 f   mprintf.obj
+ 0001:000273f0       _dprintf_IsQualifierNoDollar 100283f0 f   mprintf.obj
+ 0001:000274a0       _addbyter                  100284a0 f   mprintf.obj
+ 0001:00027660       _alloc_addbyter            10028660 f   mprintf.obj
+ 0001:000278c0       _storebuffer               100288c0 f   mprintf.obj
+ 0001:00027ba0       _sh_init                   10028ba0 f   multi.obj
+ 0001:00027bd0       _sh_freeentry              10028bd0 f   multi.obj
+ 0001:00027c10       _fd_key_compare            10028c10 f   multi.obj
+ 0001:00027c30       _hash_fd                   10028c30 f   multi.obj
+ 0001:00027c50       _multi_freeamsg            10028c50 f   multi.obj
+ 0001:00027ff0       _multistate                10028ff0 f   multi.obj
+ 0001:00028620       _multi_getsock             10029620 f   multi.obj
+ 0001:00028770       _waitconnect_getsock       10029770 f   multi.obj
+ 0001:000287b0       _domore_getsock            100297b0 f   multi.obj
+ 0001:000289c0       _multi_runsingle           100299c0 f   multi.obj
+ 0001:00029e10       _multi_addmsg              1002ae10 f   multi.obj
+ 0001:0002a140       _singlesocket              1002b140 f   multi.obj
+ 0001:0002a540       _sh_addentry               1002b540 f   multi.obj
+ 0001:0002a5f0       _sh_delentry               1002b5f0 f   multi.obj
+ 0001:0002a640       _add_next_timeout          1002b640 f   multi.obj
+ 0001:0002a8e0       _multi_socket              1002b8e0 f   multi.obj
+ 0001:0002ad40       _multi_timeout             1002bd40 f   multi.obj
+ 0001:0002ae90       _update_timer              1002be90 f   multi.obj
+ 0001:0002b090       _addHandleToSendOrPendPipeline 1002c090 f   multi.obj
+ 0001:0002b190       _checkPendPipeline         1002c190 f   multi.obj
+ 0001:0002b2f0       _moveHandleFromSendToRecvPipeline 1002c2f0 f   multi.obj
+ 0001:0002b3a0       _moveHandleFromRecvToDonePipeline 1002c3a0 f   multi.obj
+ 0001:0002b420       _isHandleAtHead            1002c420 f   multi.obj
+ 0001:0002b450       _multi_freetimeout         1002c450 f   multi.obj
+ 0001:0002b6e0       _multi_addtimeout          1002c6e0 f   multi.obj
+ 0001:0002b860       _multi_connc_remove_handle 1002c860 f   multi.obj
+ 0001:0002b950       _add_closure               1002c950 f   multi.obj
+ 0001:0002bfe0       _parsedate                 1002cfe0 f   parsedate.obj
+ 0001:0002c6e0       _checkday                  1002d6e0 f   parsedate.obj
+ 0001:0002c780       _checkmonth                1002d780 f   parsedate.obj
+ 0001:0002c810       _checktz                   1002d810 f   parsedate.obj
+ 0001:0002c8b0       _skip                      1002d8b0 f   parsedate.obj
+ 0001:0002c900       _my_timegm                 1002d900 f   parsedate.obj
+ 0001:0002cae0       _gmtime                    1002dae0 f   parsedate.obj
+ 0001:0002d750       _pop3_getsock              1002e750 f   pop3.obj
+ 0001:0002d780       _pop3_multi_statemach      1002e780 f   pop3.obj
+ 0001:0002d7d0       _pop3_connect              1002e7d0 f   pop3.obj
+ 0001:0002d900       _pop3_endofresp            1002e900 f   pop3.obj
+ 0001:0002d990       _state                     1002e990 f   pop3.obj
+ 0001:0002d9c0       _pop3_statemach_act        1002e9c0 f   pop3.obj
+ 0001:0002db70       _pop3_state_servergreet_resp 1002eb70 f   pop3.obj
+ 0001:0002dc20       _pop3_state_user           1002ec20 f   pop3.obj
+ 0001:0002dcb0       _pop3_state_starttls_resp  1002ecb0 f   pop3.obj
+ 0001:0002dd70       _pop3_state_user_resp      1002ed70 f   pop3.obj
+ 0001:0002de30       _pop3_state_pass_resp      1002ee30 f   pop3.obj
+ 0001:0002dea0       _pop3_state_command_resp   1002eea0 f   pop3.obj
+ 0001:0002dfd0       _pop3_easy_statemach       1002efd0 f   pop3.obj
+ 0001:0002e040       _pop3_init                 1002f040 f   pop3.obj
+ 0001:0002e0f0       _pop3_done                 1002f0f0 f   pop3.obj
+ 0001:0002e1e0       _pop3_do                   1002f1e0 f   pop3.obj
+ 0001:0002e280       _pop3_disconnect           1002f280 f   pop3.obj
+ 0001:0002e2d0       _pop3_quit                 1002f2d0 f   pop3.obj
+ 0001:0002e340       _pop3_parse_url_path       1002f340 f   pop3.obj
+ 0001:0002e3b0       _pop3_parse_custom_request 1002f3b0 f   pop3.obj
+ 0001:0002e430       _pop3_doing                1002f430 f   pop3.obj
+ 0001:0002e480       _pop3_dophase_done         1002f480 f   pop3.obj
+ 0001:0002e4d0       _pop3_regular_transfer     1002f4d0 f   pop3.obj
+ 0001:0002e5e0       _pop3_perform              1002f5e0 f   pop3.obj
+ 0001:0002e6b0       _pop3_command              1002f6b0 f   pop3.obj
+ 0001:0002e800       _pop3_setup_connection     1002f800 f   pop3.obj
+ 0001:0002fcf0       _time2str                  10030cf0 f   progress.obj
+ 0001:0002feb0       _max5data                  10030eb0 f   progress.obj
+ 0001:000303a0       _rtsp_getsock_do           100313a0 f   rtsp.obj
+ 0001:00030460       _rtsp_connect              10031460 f   rtsp.obj
+ 0001:000304e0       _rtsp_disconnect           100314e0 f   rtsp.obj
+ 0001:00030530       _rtsp_done                 10031530 f   rtsp.obj
+ 0001:00030620       _rtsp_do                   10031620 f   rtsp.obj
+ 0001:00031200       _rtsp_rtp_readwrite        10032200 f   rtsp.obj
+ 0001:000315c0       _rtp_client_write          100325c0 f   rtsp.obj
+ 0001:000330b0       _pausewrite                100340b0 f   sendf.obj
+ 0001:00033610       _showit                    10034610 f   sendf.obj
+ 0001:00033c60       _slist_get_last            10034c60 f   slist.obj
+ 0001:00033da0       _smtp_getsock              10034da0 f   smtp.obj
+ 0001:00033dd0       _smtp_multi_statemach      10034dd0 f   smtp.obj
+ 0001:00033e50       _smtp_connect              10034e50 f   smtp.obj
+ 0001:00034070       _smtp_endofresp            10035070 f   smtp.obj
+ 0001:000343d0       _state                     100353d0 f   smtp.obj
+ 0001:00034400       _smtp_statemach_act        10035400 f   smtp.obj
+ 0001:00034750       _smtp_state_servergreet_resp 10035750 f   smtp.obj
+ 0001:000347c0       _smtp_state_ehlo           100357c0 f   smtp.obj
+ 0001:00034840       _smtp_state_starttls_resp  10035840 f   smtp.obj
+ 0001:00034910       _smtp_authenticate         10035910 f   smtp.obj
+ 0001:00034b80       _smtp_auth_plain_data      10035b80 f   smtp.obj
+ 0001:00034d10       _smtp_auth_login_user      10035d10 f   smtp.obj
+ 0001:00034db0       _smtp_state_upgrade_tls    10035db0 f   smtp.obj
+ 0001:00034e10       _smtp_state_ehlo_resp      10035e10 f   smtp.obj
+ 0001:00034f00       _smtp_state_helo           10035f00 f   smtp.obj
+ 0001:00034f70       _smtp_state_helo_resp      10035f70 f   smtp.obj
+ 0001:00034fe0       _smtp_state_authplain_resp 10035fe0 f   smtp.obj
+ 0001:00035120       _smtp_state_authlogin_resp 10036120 f   smtp.obj
+ 0001:00035260       _smtp_state_authpasswd_resp 10036260 f   smtp.obj
+ 0001:000353f0       _smtp_state_authcram_resp  100363f0 f   smtp.obj
+ 0001:000357c0       _smtp_state_authdigest_resp 100367c0 f   smtp.obj
+ 0001:00036250       _smtp_digest_get_key_value 10037250 f   smtp.obj
+ 0001:00036310       _smtp_state_authdigest_resp_resp 10037310 f   smtp.obj
+ 0001:000363a0       _smtp_state_auth_resp      100373a0 f   smtp.obj
+ 0001:00036410       _smtp_state_mail_resp      10037410 f   smtp.obj
+ 0001:000364c0       _smtp_rcpt_to              100374c0 f   smtp.obj
+ 0001:00036570       _smtp_state_rcpt_resp      10037570 f   smtp.obj
+ 0001:00036670       _smtp_state_data_resp      10037670 f   smtp.obj
+ 0001:00036700       _smtp_state_postdata_resp  10037700 f   smtp.obj
+ 0001:00036750       _smtp_easy_statemach       10037750 f   smtp.obj
+ 0001:000367c0       _smtp_init                 100377c0 f   smtp.obj
+ 0001:00036870       _smtp_done                 10037870 f   smtp.obj
+ 0001:000369f0       _smtp_do                   100379f0 f   smtp.obj
+ 0001:00036a60       _smtp_disconnect           10037a60 f   smtp.obj
+ 0001:00036ae0       _smtp_quit                 10037ae0 f   smtp.obj
+ 0001:00036b50       _smtp_doing                10037b50 f   smtp.obj
+ 0001:00036bb0       _smtp_dophase_done         10037bb0 f   smtp.obj
+ 0001:00036c50       _smtp_regular_transfer     10037c50 f   smtp.obj
+ 0001:00036d60       _smtp_perform              10037d60 f   smtp.obj
+ 0001:00036e30       _smtp_mail                 10037e30 f   smtp.obj
+ 0001:00037190       _smtp_setup_connection     10038190 f   smtp.obj
+ 0001:00039290       _safe_strequal             1003a290 f   sslgen.obj
+ 0001:00039e40       _get_winsock_error         1003ae40 f   strerror.obj
+ 0001:0003a330       _telnet_done               1003b330 f   telnet.obj
+ 0001:0003a3d0       _telnet_do                 1003b3d0 f   telnet.obj
+ 0001:0003ac40       _check_wsock2              1003bc40 f   telnet.obj
+ 0001:0003ad60       _init_telnet               1003bd60 f   telnet.obj
+ 0001:0003ae30       _negotiate                 1003be30 f   telnet.obj
+ 0001:0003aed0       _set_remote_option         1003bed0 f   telnet.obj
+ 0001:0003b070       _send_negotiation          1003c070 f   telnet.obj
+ 0001:0003b150       _printoption               1003c150 f   telnet.obj
+ 0001:0003b2e0       _set_local_option          1003c2e0 f   telnet.obj
+ 0001:0003b470       _check_telnet_options      1003c470 f   telnet.obj
+ 0001:0003b8e0       _telrcv                    1003c8e0 f   telnet.obj
+ 0001:0003bf50       _rec_will                  1003cf50 f   telnet.obj
+ 0001:0003c0d0       _rec_wont                  1003d0d0 f   telnet.obj
+ 0001:0003c220       _rec_do                    1003d220 f   telnet.obj
+ 0001:0003c410       _rec_dont                  1003d410 f   telnet.obj
+ 0001:0003c550       _suboption                 1003d550 f   telnet.obj
+ 0001:0003ca50       _printsub                  1003da50 f   telnet.obj
+ 0001:0003cee0       _sendsuboption             1003dee0 f   telnet.obj
+ 0001:0003d2f0       _send_telnet_data          1003e2f0 f   telnet.obj
+ 0001:0003d470       _tftp_disconnect           1003e470 f   tftp.obj
+ 0001:0003d530       _tftp_connect              1003e530 f   tftp.obj
+ 0001:0003d780       _tftp_set_timeouts         1003e780 f   tftp.obj
+ 0001:0003d9b0       _time                      1003e9b0 f   tftp.obj
+ 0001:0003d9e0       _tftp_done                 1003e9e0 f   tftp.obj
+ 0001:0003da40       _tftp_translate_code       1003ea40 f   tftp.obj
+ 0001:0003db90       _tftp_getsock              1003eb90 f   tftp.obj
+ 0001:0003dbc0       _tftp_multi_statemach      1003ebc0 f   tftp.obj
+ 0001:0003ddc0       _tftp_state_machine        1003edc0 f   tftp.obj
+ 0001:0003deb0       _tftp_send_first           1003eeb0 f   tftp.obj
+ 0001:0003e370       _setpacketevent            1003f370 f   tftp.obj
+ 0001:0003e3a0       _tftp_option_add           1003f3a0 f   tftp.obj
+ 0001:0003e3f0       _tftp_connect_for_tx       1003f3f0 f   tftp.obj
+ 0001:0003e470       _tftp_connect_for_rx       1003f470 f   tftp.obj
+ 0001:0003e4f0       _tftp_rx                   1003f4f0 f   tftp.obj
+ 0001:0003e8f0       _setpacketblock            1003f8f0 f   tftp.obj
+ 0001:0003e920       _getrpacketblock           1003f920 f   tftp.obj
+ 0001:0003e940       _tftp_tx                   1003f940 f   tftp.obj
+ 0001:0003ee10       _tftp_receive_packet       1003fe10 f   tftp.obj
+ 0001:0003f1d0       _getrpacketevent           100401d0 f   tftp.obj
+ 0001:0003f1f0       _tftp_parse_option_ack     100401f0 f   tftp.obj
+ 0001:0003f4c0       _tftp_option_get           100404c0 f   tftp.obj
+ 0001:0003f560       _Curl_strnlen              10040560 f   tftp.obj
+ 0001:0003f5c0       _tftp_state_timeout        100405c0 f   tftp.obj
+ 0001:0003f6e0       _tftp_doing                100406e0 f   tftp.obj
+ 0001:0003f720       _tftp_do                   10040720 f   tftp.obj
+ 0001:0003f7c0       _tftp_perform              100407c0 f   tftp.obj
+ 0001:0003f870       _tftp_easy_statemach       10040870 f   tftp.obj
+ 0001:0003fcd0       _tftp_setup_connection     10040cd0 f   tftp.obj
+ 0001:00040890       _readwrite_data            10041890 f   transfer.obj
+ 0001:000413b0       _data_pending              100423b0 f   transfer.obj
+ 0001:000413f0       _read_rewind               100423f0 f   transfer.obj
+ 0001:00041420       _readwrite_upload          10042420 f   transfer.obj
+ 0001:00042200       _strlen_url                10043200 f   transfer.obj
+ 0001:00042290       _strcpy_url                10043290 f   transfer.obj
+ 0001:00042360       _is_absolute_url           10043360 f   transfer.obj
+ 0001:00042410       _concat_url                10043410 f   transfer.obj
+ 0001:00042ae0       _Curl_do_perform           10043ae0 f   transfer.obj
+ 0001:00042ea0       _Transfer                  10043ea0 f   transfer.obj
+ 0001:00043370       _connect_host              10044370 f   transfer.obj
+ 0001:000437e0       _setstropt                 100447e0 f   url.obj
+ 0001:00043c80       _close_connections         10044c80 f   url.obj
+ 0001:00046db0       _setstropt_userpwd         10047db0 f   url.obj
+ 0001:00046f40       _conn_free                 10047f40 f   url.obj
+ 0001:000478d0       _gethandleathead           100488d0 f   url.obj
+ 0001:00047900       _signalPipeClose           10048900 f   url.obj
+ 0001:00047990       _ConnectionKillOne         10048990 f   url.obj
+ 0001:00048190       _ConnectPlease             10049190 f   url.obj
+ 0001:000483a0       _create_conn               100493a0 f   url.obj
+ 0001:00048da0       _ConnectionExists          10049da0 f   url.obj
+ 0001:000493a0       _SocketIsDead              1004a3a0 f   url.obj
+ 0001:000493f0       _IsPipeliningPossible      1004a3f0 f   url.obj
+ 0001:00049460       _ConnectionStore           1004a460 f   url.obj
+ 0001:00049550       _allocate_conn             1004a550 f   url.obj
+ 0001:000499d0       _llist_dtor                1004a9d0 f   url.obj
+ 0001:000499e0       _parseurlandfillconn       1004a9e0 f   url.obj
+ 0001:00049f70       _findprotocol              1004af70 f   url.obj
+ 0001:0004a040       _setup_range               1004b040 f   url.obj
+ 0001:0004a1a0       _setup_connection_internals 1004b1a0 f   url.obj
+ 0001:0004a250       _check_noproxy             1004b250 f   url.obj
+ 0001:0004a420       _detect_proxy              1004b420 f   url.obj
+ 0001:0004a650       _parse_proxy               1004b650 f   url.obj
+ 0001:0004ab40       _parse_proxy_auth          1004bb40 f   url.obj
+ 0001:0004acf0       _parse_url_userpass        1004bcf0 f   url.obj
+ 0001:0004aec0       _parse_remote_port         1004bec0 f   url.obj
+ 0001:0004b280       _override_userpass         1004c280 f   url.obj
+ 0001:0004b380       _set_userpass              1004c380 f   url.obj
+ 0001:0004b490       _resolve_server            1004c490 f   url.obj
+ 0001:0004b6b0       _fix_hostname              1004c6b0 f   url.obj
+ 0001:0004b6f0       _is_ASCII_name             1004c6f0 f   url.obj
+ 0001:0004b750       _reuse_conn                1004c750 f   url.obj
+ 0001:0004bde0       _ConnectionDone            1004cde0 f   url.obj
+ 0001:0004bdf0       _do_init                   1004cdf0 f   url.obj
+ 0001:0004c040       _do_complete               1004d040 f   url.obj
+ 0001:0004cdb0       _pre_c_init                1004ddb0 f   MSVCRTD:crtdll.obj
+ 0001:0004d0b0       ___DllMainCRTStartup       1004e0b0 f   MSVCRTD:crtdll.obj
+ 0001:0004d340       ?DebuggerProbe@@YAHK@Z     1004e340 f   MSVCRTD:error.obj
+ 0001:0004d420       ?failwithmessage@@YAXPAXHHPBD@Z 1004e420 f   MSVCRTD:error.obj
+ 0001:0004d660       ?DebuggerRuntime@@YAHKHPAXPB_W@Z 1004e660 f   MSVCRTD:error.obj
+ 0001:0004d960       ?_getMemBlockDataString@@YAXPAD00I@Z 1004e960 f   MSVCRTD:error.obj
+ 0001:0004dc70       _has_osfxsr_set            1004ec70 f   MSVCRTD:cpu_disp.obj
+ 0001:0004e530       ?GetPdbDll@@YAPAUHINSTANCE__@@XZ 1004f530 f   MSVCRTD:pdblkup.obj
