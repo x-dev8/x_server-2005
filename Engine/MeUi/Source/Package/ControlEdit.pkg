@@ -1,0 +1,78 @@
+
+class ControlEdit : public ControlObject
+{
+public:
+
+public:
+	// 初始化UI
+	virtual void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	// 渲染
+	virtual void Render();
+	//
+	void Create( IN const RECT* pRect, const int colText = 0xffffffff,
+				const bool bMultiline = true, const bool bReadOnly = true,
+				const int colBack = 0 );
+
+public:
+	// 鼠标移动消息
+	virtual bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	// 鼠标左键按下消息
+	virtual bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+	//
+	virtual bool OnLButtonUp( UINT nFlags, const int nX, const int nY );
+	// 鼠标左键双击消息
+	virtual bool OnLButtonDBClick( UINT nFlags, const int nX, const int nY );
+	// 字符消息
+	virtual bool OnChar( UINT nChar );
+	// 键盘按下消息
+	virtual bool OnKeyDown( UINT nChar );
+
+public:
+	void			SetText( const std::string& strText );
+	void			SetText( const CHAR *pszText );
+	void			SetText( const int n );
+	void			SetTextW( const WCHAR *pwText );
+	const CHAR*		GetText();
+	const WCHAR*	GetTextW();
+	bool			addChar( WCHAR wChar );
+	bool			DelByte( bool bBack );
+	void			addText( const char* text );
+
+public:
+	void SetEnterFun_2lua( const char* luaTable, const char* funName );
+	void SetTabFun_2lua( const char* luaTable, const char* funName );
+	void SetLBtnDownFun_2lua( const char* luaTable, const char* funName );
+	void SetLBtnUpFun_2lua( const char* luaTable, const char* funName );
+	void SetDelByteFun_2lua( const char* luaTable, const char* funName );
+	
+	bool IsReadOnly(){ return ((S_EditData*)m_pstData)->m_bReadOnly; }
+	void SetIsNumber( const bool b ) { ((S_EditData*)m_pstData)->m_bIsNumber = b; }
+	void SetMaxLength( const int n ){ m_nMaxLength = n; }
+	void SetReadOnly( const bool b ){ ((S_EditData*)m_pstData)->m_bReadOnly = b; }
+	void SetIsPassword( bool b ){ ((S_EditData*)m_pstData)->m_bPassword = b; }
+	bool IsPassword() { return ((S_EditData*)m_pstData)->m_bPassword; }
+	void setNoPitchOn(){}
+	void SetMaxCnt(int nMax)	{ m_nMaxLength = nMax; }
+	void setDefaultColor(D3DCOLOR color)		{ _DefaultColor = color; }
+
+//private:
+	void	SetCurIndex( int nIndex );
+	void	CopyToClipboard( const char *szText );
+	char*	GetTextFromClipboard();
+	void	DataChanged();
+	bool	CPtoX( int nCP, BOOL bTrail, int *pX );
+	bool	XtoCP( int nX, int *pCP, int *pnTrail );
+
+//private:
+	void	OnEnter( const char* szData );
+	bool	OnTab( IN const char* szData );	//return bool: true: 表示回掉函数调用 return消息
+
+public:
+	//const std::string& operator=( const std::string& stText );
+	//const int& operator=( const int& nNum );
+
+public:
+	ControlEdit(void);
+	virtual ~ControlEdit(void);
+};
+

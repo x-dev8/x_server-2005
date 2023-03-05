@@ -1,0 +1,62 @@
+
+struct TargaHeader
+{
+	BYTE IDLength;
+	BYTE ColormapType;
+	BYTE ImageType;
+	BYTE ColormapSpecification[5];
+	WORD XOrigin;
+	WORD YOrigin;
+	WORD ImageWidth;
+	WORD ImageHeight;
+	BYTE PixelDepth;
+	BYTE ImageDescriptor;
+};
+	
+
+class UiPicture
+{
+public:
+	void	RegisterTexture( IN const char* szName );
+	void	UnregisterTexture();
+
+//private:
+	bool	TestPower( int nNum );		// 检验是否是2的幂次方
+
+public:
+	UiPicture(void);
+	~UiPicture(void);
+};
+
+struct S_Pic
+{
+	int				m_nId;
+	std::string		m_strName;
+	UiPicture	m_Pic;
+	DWORD			m_dwLastUseTime;
+};
+
+
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+class ControlPictureManager
+{
+public:
+	void	Run();
+	bool	BitBlt( IN OUT int* pPicId, IN const char* szFileName,
+					IN RECT* pDstRc, IN RECT* pSrcRc = NULL,
+					D3DCOLOR col = 0xffffffff, const float fZ = 0.0f );
+	void	Release();
+	void	UnregisterTexture( IN const char* szFileName );
+
+	UINT	GetPicCount(){ return (UINT)m_vtPic.size(); }
+	S_Pic*	GetPic( const UINT nIndex );
+
+
+
+public:
+	ControlPictureManager(void);
+	~ControlPictureManager(void);
+};
+
+

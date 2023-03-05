@@ -1,0 +1,97 @@
+
+
+enum EKeyType
+	{
+		eKeyNormal,
+		eKeyColor,
+		eKeyUrl,
+		eKeyImg,
+		eKeyEnd
+	};
+	
+class ControlText : public ControlObject
+{
+public:
+	//typedef void (*funHyberClick)( OUT ControlObject* pSender, OUT const char* szData );
+
+public:
+	// 初始化UI
+	virtual void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	// 渲染
+	virtual void Render();
+
+public:
+	// 鼠标移动消息
+	virtual bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	// 鼠标左键按下消息
+	virtual bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+
+public:
+	void	SetText( const std::string& szData, int col = 0  );
+	void	SetText( const int nNum, int col = 0 );
+	void	SetText( const CHAR* szText, int col = 0 );
+	void	SetTextW( const WCHAR* wText, int col = 0 );
+	void	SetCurLine( unsigned int nLine );
+	const char* GetText();
+	void Create( IN const RECT* pRect, const D3DCOLOR colText );
+
+public:
+	void SetText_HyberClickFun_2lua( const char* luaTable, const char* funName );
+	void setDesIconTip( int nID );
+	void setShowDesIconTip( bool show = true)  { _bIsDesIconTip = show; }
+	void Clear();
+	void SetIsShowLine(bool bShow = true)		{ _bShowUnderLine = bShow;  }
+	void setTip(const char* data);
+	void setShowTip(bool show = true) { _bIsShowTip = show; }
+	void SetSingleMaxTextCnt( int cnt )			{ _singleMaxTextCnt = cnt;	}
+	void SetOffsetY( int oy );
+
+private:
+	
+	struct STextData
+	{
+		std::wstring	str;		// 文本内容
+		int				nTextureID;	// 贴图ID
+		RECT			rc;			// 有效区域
+		int				nLine;		// 行号
+	};
+	struct SText 
+	{
+		SText()
+		{
+			type = eKeyEnd;
+			col = 0xffffffff;
+			bPtInText = false;
+		}
+		EKeyType type;	// 类型
+		DWORD	col;	// 颜色
+		std::vector<STextData> vtTextData;
+		bool bPtInText;
+		bool CheckPtInText( int x, int y );
+		bool GetTextW( std::wstring *pString );
+		bool GetTextA( std::string *pString );
+	};
+
+//private:
+	// 解析"\n"
+	bool		WordBreak( std::wstring* pOutText, const WCHAR* wInText );
+	EKeyType	GetTextData( const std::wstring& strString, unsigned int *pnOff,
+							std::wstring* pstrText, DWORD *dwKey );
+	bool		CalculatePoint();
+	bool		CheckDrawMode();
+	bool		CPtoX( SCRIPT_STRING_ANALYSIS *analysis,
+						int nCP, BOOL bTrail, int *pX );
+	bool		XtoCP( SCRIPT_STRING_ANALYSIS *analysis,
+						std::wstring &str,
+						int nX, int *pCP, int *pnTrail, BOOL *pbEnd );
+	bool		MoveTextDataPos( int nLine, int nEndIndex, int nOffsetX, int nOffsetY );
+
+public:
+	//const std::string& operator=( const std::string& szData );
+	//const int& operator=( const int& nNum );
+
+public:
+	ControlText();
+	~ControlText();
+};
+

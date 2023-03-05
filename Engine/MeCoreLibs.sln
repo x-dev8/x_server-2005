@@ -1,0 +1,123 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{D3FF0C5B-FFFB-4130-BC5D-F90F9196E9D6}"
+	ProjectSection(SolutionItems) = preProject
+		MeEngine_ChangeLog.txt = MeEngine_ChangeLog.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeUi", "MeUi\MeUi.vcproj", "{9EF37073-3215-4E56-8E2A-3A93B70E32B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559} = {2114E941-8BD2-4881-A04B-EA35A9D2B559}
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE} = {3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeAudio", "MeAudio\MeAudio.vcproj", "{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46A36B44-0FC1-4244-9D43-FD4449756E64} = {46A36B44-0FC1-4244-9D43-FD4449756E64}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeFont", "MeFont\MeFont.vcproj", "{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46A36B44-0FC1-4244-9D43-FD4449756E64} = {46A36B44-0FC1-4244-9D43-FD4449756E64}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Me3d", "Me3d\Me3d.vcproj", "{2114E941-8BD2-4881-A04B-EA35A9D2B559}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46A36B44-0FC1-4244-9D43-FD4449756E64} = {46A36B44-0FC1-4244-9D43-FD4449756E64}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeTerrain", "MeTerrain\MeTerrain.vcproj", "{B42A1F29-C3D1-4F63-9AD1-EF143512549D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46A36B44-0FC1-4244-9D43-FD4449756E64} = {46A36B44-0FC1-4244-9D43-FD4449756E64}
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559} = {2114E941-8BD2-4881-A04B-EA35A9D2B559}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeFoundation", "MeFoundation\MeFoundation.vcproj", "{46A36B44-0FC1-4244-9D43-FD4449756E64}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MeUi\\MeUi.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = MeUi\\
+		SccProjectUniqueName2 = MeAudio\\MeAudio.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = MeAudio\\
+		SccProjectUniqueName3 = MeFont\\MeFont.vcproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = MeFont\\
+		SccProjectUniqueName4 = Me3d\\Me3d.vcproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = Me3d\\
+		SccProjectUniqueName5 = MeTerrain\\MeTerrain.vcproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = MeTerrain\\
+		SccProjectUniqueName6 = MeFoundation\\MeFoundation.vcproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = MeFoundation\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug DLL|Win32 = Debug DLL|Win32
+		Debug|Win32 = Debug|Win32
+		Release DLL|Win32 = Release DLL|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Debug DLL|Win32.ActiveCfg = Debug|Win32
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Debug DLL|Win32.Build.0 = Debug|Win32
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Debug|Win32.Build.0 = Debug|Win32
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Release DLL|Win32.ActiveCfg = Release|Win32
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Release DLL|Win32.Build.0 = Release|Win32
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Release|Win32.ActiveCfg = Release|Win32
+		{9EF37073-3215-4E56-8E2A-3A93B70E32B0}.Release|Win32.Build.0 = Release|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Debug DLL|Win32.ActiveCfg = Debug|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Debug DLL|Win32.Build.0 = Debug|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Debug|Win32.Build.0 = Debug|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Release DLL|Win32.ActiveCfg = Release|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Release DLL|Win32.Build.0 = Release|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Release|Win32.ActiveCfg = Release|Win32
+		{BF28558B-B37A-48B8-8B99-3EEDB8A3E647}.Release|Win32.Build.0 = Release|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Debug DLL|Win32.ActiveCfg = Debug|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Debug DLL|Win32.Build.0 = Debug|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Debug|Win32.Build.0 = Debug|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Release DLL|Win32.ActiveCfg = Release|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Release DLL|Win32.Build.0 = Release|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Release|Win32.ActiveCfg = Release|Win32
+		{3518F68F-DCEF-4D08-BE9D-7BA74F47BAEE}.Release|Win32.Build.0 = Release|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Debug DLL|Win32.ActiveCfg = Debug|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Debug DLL|Win32.Build.0 = Debug|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Debug|Win32.Build.0 = Debug|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Release DLL|Win32.ActiveCfg = Release|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Release DLL|Win32.Build.0 = Release|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Release|Win32.ActiveCfg = Release|Win32
+		{2114E941-8BD2-4881-A04B-EA35A9D2B559}.Release|Win32.Build.0 = Release|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Debug DLL|Win32.ActiveCfg = Debug|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Debug DLL|Win32.Build.0 = Debug|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Debug|Win32.Build.0 = Debug|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Release DLL|Win32.ActiveCfg = Release|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Release DLL|Win32.Build.0 = Release|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Release|Win32.ActiveCfg = Release|Win32
+		{B42A1F29-C3D1-4F63-9AD1-EF143512549D}.Release|Win32.Build.0 = Release|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Debug DLL|Win32.ActiveCfg = Debug DLL|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Debug DLL|Win32.Build.0 = Debug DLL|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Debug|Win32.ActiveCfg = Debug|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Debug|Win32.Build.0 = Debug|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Release DLL|Win32.ActiveCfg = Release DLL|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Release DLL|Win32.Build.0 = Release DLL|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Release|Win32.ActiveCfg = Release|Win32
+		{46A36B44-0FC1-4244-9D43-FD4449756E64}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

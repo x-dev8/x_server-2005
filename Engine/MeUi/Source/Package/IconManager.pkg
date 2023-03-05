@@ -1,0 +1,272 @@
+
+//#define ICON_INFO_STRUCT S_IconInfoHero
+enum eIconDrawState
+{
+	eIcon_Disable,
+	eIcon_Enable,	
+	eIcon_Shop,
+	eIcon_Max
+};
+
+enum eItemType
+{
+	eCharItem = 0,
+	eTaskItem
+};
+
+enum eTipFlag
+{
+	eTipFlag_Normal = 0,
+	eTipFlag_SkillNoNextLevel,
+	eTipFlag_SkillWithNextLevel,
+	eTipFlag_SkillTree,
+	eTipFlag_Status,
+	eTipFlag_Count
+};
+
+class S_IconInfoBase
+{
+public:// Virtual Function
+	virtual unsigned short& Id() = 0;
+	virtual int& Count() = 0;
+	virtual bool& IsLocked() = 0;
+	virtual int& MaxCount() = 0;
+	virtual int& SpareTime() = 0;
+	virtual int GetSpareTime() = 0;
+	virtual bool& IsNextLvl() = 0;
+	virtual bool IsNull() = 0;
+	virtual bool SetData( void* pData, 
+		const bool bShowCount = false,
+		const bool bNext = false,
+		void* pCompareData = NULL,
+		int nPlayerID = -1 ) = 0;
+
+	virtual bool SetData( const int nId, 
+		const int nCount, 
+		const bool bShowCount = false,
+		const bool bNext = false, 
+		int nCompareId = 0xffff,
+		int nPlayerID = -1 ) = 0;
+	//virtual bool operator==( S_IconInfoBase& stIconInfoBase ) = 0;
+	virtual bool PlaySound() = 0;
+
+public:// Virtual Function
+	virtual std::string& IconFileName() = 0;
+	virtual std::string& DisableIconFileName() = 0;
+	virtual std::string& ShopIconFileName() = 0;
+	virtual int Cost() = 0;
+
+public:
+	virtual void Clear();
+
+
+public:
+	void DisplayIcon( RECT* prcDst, COLORREF col,
+						int nFontIndex, int nFontSize,
+						COLORREF colFont, eIconDrawState bEnable = eIcon_Enable );
+	void DisplayInfo( RECT *prc, const bool bIsShop,
+						const int nFontIndex, const int nFontSize, const COLORREF col,
+						const bool bFaveFrame = true, const bool bShowAllInfo = true );
+	void DisplayInfo( const int nX, const int nY, const bool bIsShop,
+						const int nFontIndex, const int nFontSize, const COLORREF col,
+						const bool bFaveFrame = true, const bool bShowAllInfo = true );
+
+	void SetInfo( const char* szInfo );
+	void SetOtherInfo( const char* szInfo );
+	void SetFontSize(int size);
+public:
+	S_IconInfoBase();
+	virtual ~S_IconInfoBase(){};
+	
+	public:
+	// <#ffff0000=abcdefghij
+	struct stIconInfo
+	{
+		stIconInfo()
+		{
+			m_col = 0;
+		}
+		D3DCOLOR	m_col;
+		std::string m_strInfo;
+	};
+
+	struct sShowGem
+	{
+		enum enumElement
+		{
+			eElement_Ice,//eElement_Bing = 0,
+			eElement_Fire,//eElement_Huo,
+
+			eElement_Thunder,//eElement_Lei,
+			eElement_Poison,//eElement_Du,
+			eElement_Max,
+		};
+
+		sShowGem()
+		{
+			nGemPhysicAtt = 0;
+			nGemMagicAtt = 0;
+			nGemPhysicDef =0;
+			nGemAttSpeed = 0;
+			nGemExact = 0;
+			nGemDodge = 0;
+			for (int n = 0; n < eElement_Max;n++)
+			{
+				nGemAtt[n] = 0;
+				nGemDef[n] = 0;
+			}
+			nGemAddHp = 0;
+			nGemAddMp = 0;
+			nGemAddHpRestor = 0;
+			nGemAddMpRestor = 0;
+		}
+		int nGemPhysicAtt;
+		int nGemMagicAtt;
+		int nGemPhysicDef;
+		int nGemAttSpeed;
+		int nGemExact ;
+		int nGemDodge ;
+		int nGemAtt[eElement_Max] ;
+		int nGemDef[eElement_Max] ;
+		int nGemAddHp ;
+		int nGemAddMp ;
+		int nGemAddHpRestor;
+		int nGemAddMpRestor;
+	};
+};
+
+//////////////////////////////////////////////////////////
+class CIconInfoMouseTip
+{
+public:
+	void Render();
+	void Clear();
+	void SetDisplayInfo( S_IconInfoBase* pIconInfo,
+						const int nX, const int nY,
+						const bool bShowPrice,
+						const int nFontIndex,
+						const int nFontSize,
+						const COLORREF col,
+						const bool bShowAllInfo );
+
+public:
+	bool	m_bShopOpen;
+
+public:
+	CIconInfoMouseTip(void);
+};
+
+
+class S_TextTipInfo : public S_IconInfoBase
+{
+public:
+	virtual unsigned short& Id();
+	virtual int& Count();
+	virtual bool& IsLocked();
+	virtual int& MaxCount();
+	virtual int& SpareTime();
+	virtual int GetSpareTime();
+	virtual bool& IsNextLvl();
+	virtual bool IsNull();
+	virtual bool SetData( void* pData, 
+		const bool bShowCount = false,
+		const bool bNext = false,
+		void* pCompareData = NULL,
+		int nPlayerID = -1 );
+
+	virtual bool SetData( const int nId, 
+		const int nCount, 
+		const bool bShowCount = false,
+		const bool bNext = false, 
+		int nCompareId = 0xffff,
+		int nPlayerID = -1 );
+	//virtual bool operator==( S_IconInfoBase& stIconInfoBase );
+
+	virtual bool PlaySound();
+
+public:// Virtual Function
+	virtual std::string& IconFileName();
+	virtual std::string& DisableIconFileName();
+	virtual std::string& ShopIconFileName();
+	virtual int Cost();
+public:
+	S_TextTipInfo();
+	void Clear();
+
+};
+//////////////////////////////////////////////////////////
+#include "More.h"
+
+	
+class S_IconInfoHero : public S_IconInfoBase
+{
+
+public:// Virtual Function
+	unsigned short& Id();
+	int& Count();
+	bool& IsLocked();
+	int& MaxCount();
+	int& SpareTime();
+	int GetSpareTime();
+	bool& IsNextLvl();
+	bool IsNull();
+	bool SetData( void* pData, 
+		const bool bShowCount = false, 
+		const bool bNext = false, 
+		void* pCompareData = NULL,
+		int nPlayerID = -1 );
+	bool SetData( const int nId, 
+		const int nCount,
+		const bool bShowCount = false,
+		const bool bNext = false, 
+		int nCompareId = ErrorUnsignedShortID,
+		int nPlayerID = -1 );
+
+	//bool operator==( S_IconInfoBase& stIconInfoBase );
+	bool PlaySound();
+	void SetSpareTime(int nSpareTime, int nStartTime );
+
+public:
+	static DWORD GetQualityColor( DWORD dwQuality );
+
+public:// Virtual Function
+	std::string& IconFileName();
+	std::string& DisableIconFileName();
+	std::string& ShopIconFileName();
+	int Cost();
+
+
+	void ShowBaseInfo(	void* pItemDetail, int nType, void* pComItemDetail );
+	void ShowCanWeapon( void* pItemDetail, int nType, void* pComItemDetail );
+	void ShowWeapon(	void* pItemDetail, int nType, void* pComItemDetail );
+	void ShowArmour(	void* pItemDetail, int nType, void* pComItemDetail, int nPlayerID, int dwDestColor = 0xCACBCCCD );
+	void ShowSkill(		void* pItemDetail, int nType );
+	//void ShowStatus(  void* pItemDetail, int nType );
+
+	void ShowRestore( void* pItemDetail, int nType );
+
+	//void ShowRand( void* pItemDetail, int nType );
+	//void ShowRand( void* pItemDetail, int nType );
+
+	void ShowGem(void* pItemDetail, int nType, void* pComItemDetail);
+
+	void SetGemCount(short stIntensifyPart,sShowGem* pShowGem,int nGemCount
+					/*int nGemPhysicAtt,
+					int nGemMagicAtt ,
+					int nGemPhysicDef ,
+					int nGemAttSpeed,
+					int nGemExact  ,
+					int nGemDodge ,
+					int nGemAtt[More::eElement_Max] ,
+					int nGemDef[More::eElement_Max] ,
+					int nGemAddHp ,
+					int nGemAddMp,
+					int nGemCount*/);
+public:
+	void Clear();
+
+	
+public:
+	S_IconInfoHero();
+};
+

@@ -1,0 +1,38 @@
+
+class ControlComboBox : public ControlObject
+{
+public:
+	//typedef void (*funOnChange)( OUT ControlObject* pSender, OUT const char* szData );
+	//typedef void (*funOnShowList)( void );
+
+public:	/*Virtual Function*/
+	void Render();
+	void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	bool OnMouseWheel( bool bUp, const int nX, const int nY );
+	bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonUp( UINT nFlags, const int nX, const int nY );
+	bool OnChar( UINT nChar );
+
+	ControlList&  GetListBox()
+	{
+		return m_listSelect;
+	}
+	ControlEdit& GetEditInput()
+	{
+		return m_editInput;
+	}
+public:
+	void SetChangeFun_2lua( const char* luaTable, const char* funName );
+	void SetShowListFun_2lua( const char* luaTable, const char* funName );
+
+//private:
+	void	OnChange();
+	void	OnShowList();
+
+
+
+public:
+	ControlComboBox(void);
+	~ControlComboBox(void);
+};

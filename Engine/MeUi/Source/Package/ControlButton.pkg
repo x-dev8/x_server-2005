@@ -1,0 +1,56 @@
+
+class ControlButton : public ControlObject
+{
+
+public:	/*Virtual Function*/
+	void Render();
+	bool OnKeyDown( UINT nChar );
+	bool OnKeyUp( UINT nChar );
+	bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonUp( UINT nFlags, const int nX, const int nY );
+	void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+
+public:
+	// 设置回调函数
+	void SetButtonClickFun_2lua( const char* luaTable, const char* funName );
+	void SetButtonMouseOnFun_2lua( const char* luaTable, const char* funName );
+	// 设置按下时图片
+	void SetPressPic();
+	// 设置普通时图片2
+	void SetNormalPic();
+	// 是否拖拉中
+	bool IsDrag();
+	//
+	//void SetShowTip( const bool b );
+	//
+	void SetEnable( const bool b );
+	bool IsEnable( void );
+	//
+	bool IsPress();
+	//是否有MouseMove消息
+	void SetMouseMove(bool bMove);
+	void SetCaption(const char* strObjName);
+	const char* GetCaption( void );
+
+	void		SetState(BtnState nState);
+	BtnState	GetState();
+
+	S_ButtonData::S_Pic*	getMouseMovePic();
+	S_ButtonData::S_Pic*	getMousePressPic();
+	S_ButtonData::S_Pic*	getDisabledPic();
+
+	void		setMouseMovePic( S_ButtonData::S_Pic* pic );
+	void		setMousePressPic( S_ButtonData::S_Pic* pic );
+	void		setDisabledPic( S_ButtonData::S_Pic* pic );
+
+	void		SetShowTip(bool show = true);
+	void		setTip(const char* data);
+
+	void OnButton(void);
+
+public:
+	ControlButton(void);
+	~ControlButton(void);
+};
+

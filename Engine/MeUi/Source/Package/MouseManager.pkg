@@ -1,0 +1,33 @@
+
+class MouseManager
+{
+public:
+enum E_CursorType
+	{
+		Type_Arrow = 0,		// 箭头
+		Type_Rotate,		// 旋转
+		Type_Wait,			// 等待
+		Type_LockTarget,	// 锁定目标
+		Type_Attack,		// 进攻
+		Type_Dialog,		// 对话
+		Type_Shop,			// 商店
+		Type_Pick,			// 拾起
+		Type_Group,			// 组队
+		Type_CollectHerb,	// 采草药
+		Type_CollectMine,	// 采矿
+        Type_CollectWood,   // 采木头
+		Type_LockItem,      //物品加锁
+		Type_UnLockItem,    //物品解锁
+		Type_UseItem,		// 使用物品
+		Type_Max
+	};	
+public:
+	void Render();
+	//void SetCursor( const E_CursorType enType );
+	//void SetUICursor( const E_CursorType enType );
+
+public:
+	MouseManager(void);
+	~MouseManager(void);
+};
+

@@ -1,0 +1,8 @@
+CenterServer类似于lobby
+Gameserver类似于大房间即分类
+
+CenterServer存在以下线程
+1.Console主线程 * 1
+2.CenterServer主逻辑线程 * 1
+3.网络线程，默认为CPU核数 * 2+1
+4.Sql数据层线程 * 1

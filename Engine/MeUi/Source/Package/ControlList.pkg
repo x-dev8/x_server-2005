@@ -1,0 +1,205 @@
+
+enum HyberReturnType
+{
+	HYBER_NONE = 0,
+	HYBER_PLAYER,	//用于电击玩家名字的链接
+	HYBER_ITEM		//用于物品名字的链接
+};
+
+class ControlList : public ControlObject
+{
+public:
+	struct S_List
+	{
+		S_List()
+		{
+			m_pTipInfo = 0;
+			clear();
+		}
+		void clear()
+		{
+			m_nID = -1;
+			memset( m_szText, 0, sizeof(m_szText) );
+			memset( m_szNote, 0, sizeof(m_szNote) );
+			m_pData = NULL;
+			m_colTextCol = 0xffffffff;			
+			_bOnline = false;
+			UseSelColor = TRUE;
+			if( m_pTipInfo )
+				m_pTipInfo->clear();
+	
+			SAFE_DELETE( m_pTipInfo );
+		}
+		void SetData( IN const char* szText, int nID = 0, IN void* pData = NULL, int col = 0, 
+			char *szNote = NULL /*备用数据*/,char* hyberItemInfo=NULL, int hyberItemCnt = 0)
+		{
+			if( strlen(szText) >= sizeof(m_szText) )
+			{
+				assert(false);
+			}
+			strncpy( m_szText, szText, sizeof(m_szText) - 1 );
+			if( szNote )
+				strncpy( m_szNote, szNote, sizeof(m_szNote) - 1 );
+			m_nID = nID;
+			m_pData = pData;
+			m_colTextCol = col;
+
+			if( hyberItemCnt > 0 )
+			{
+				if( NULL != hyberItemInfo )
+				{
+					memcpy( _hyberItemInfo, hyberItemInfo, sizeof(SCharItem)*hyberItemCnt );
+				}
+			}
+		}
+		void setColor( D3DCOLOR col )
+		{
+			m_colTextCol = col;
+		}
+		void setTextCustomKey( const char* key )
+		{
+			std::string temp = m_szText;
+			temp.erase( 30, temp.length()-30 );
+			temp += key;
+
+			memset( m_szText, 0, sizeof(m_szText));
+			strncpy( m_szText, temp.c_str(), sizeof(m_szText)-1 );
+		}
+		void setTip( const char* tip, DWORD dwAlign )
+		{
+			if( NULL == tip )
+				return ;
+			if( !m_pTipInfo )
+				m_pTipInfo = MeNew S_TextTipInfo();
+			m_pTipInfo->SetInfo( tip, dwAlign );
+		}
+		void setTip( const char* tip )
+		{
+			if( NULL == tip )
+				return;
+			if( !m_pTipInfo )
+				m_pTipInfo = MeNew S_TextTipInfo();
+			m_pTipInfo->SetInfo( tip );
+		}
+		void setIsOnline(bool online)
+		{
+			_bOnline = online;
+		}
+		char m_szText[256];		// 文本(必要)
+		char m_szNote[32];		//备注,备用
+		int	 m_nID;				// ID
+		void *m_pData;			// 数据
+
+		SCharItem _hyberItemInfo[ITEM_HYBER_MAX_CNT];
+		D3DCOLOR m_colTextCol;
+		bool			_bOnline;//是否在线
+		S_TextTipInfo*   m_pTipInfo;	//tip显示
+
+		BOOL			UseSelColor;
+	};
+
+	//struct Catalog	//目录 用于类标分页		以后有时间再实现伸缩列表吧~~
+	//{
+	//	S_List*		_catalog;
+	//	int			_nChlidCnt;	//孩子的数量
+	//
+	//};
+public:
+
+public:	/*Virtual Function*/
+	void Render();
+	bool PtInObject( const int nX, const int nY );
+	void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	bool OnMouseWheel( bool bUp, const int nX, const int nY );
+	bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonUp( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonDBClick( UINT nFlags, const int nX, const int nY );
+	bool OnRButtonDown( UINT nFlags, const int nX, const int nY);
+	bool OnKeyDown( UINT nChar );
+
+public:
+	// 添加单项
+	bool	AddItem( IN const S_List* pItem, const bool bMoveDonw = true );
+	// 添加组项
+	bool	AddArrayItem( IN const S_List* pItem, const int nItemCount, const bool bMoveDonw = true );
+	// 重设组项
+	bool	ResetItem( IN const S_List* pItem, const int nItemCount );
+	// 取得当前选择项
+	S_List* GetCurSelItem();
+	S_List* GetOldCurSelItem();
+	// 查找项
+	S_List* FindItemByID( const int nID );
+	void	setItemTip( int index, const char* tip );	//设置某个item的tip
+	int		FindItemByItem( const char* item );			//返回-1即没有找到有这个字符串的item
+	// 取得当前选项的索引
+	int		GetCurSelIndex(){ return m_nCurSel; }
+	bool	SetCurSelIndex( const int nIndex );
+	// 清除
+	void	Clear();
+	// 设置回调函数
+	void	SetSelectChangeFun_2lua( const char* luaTable, const char* funName );
+	void	SetRBClickFun_2lua( const char* luaTable, const char* funName );
+	void	SetShiftRBClickFun_2lua( const char* luaTable, const char* funName );
+	void	SetShiftLBClickFun_2lua( const char* luaTable, const char* funName );
+	void	SetLDBClickFun_2lua( const char* luaTable, const char* funName );
+	void	SetHyberClickFun_2lua( const char* luaTable, const char* funName );
+	void	SetHyberRBtnDown_2lua( const char* luaTable, const char* funName );
+	void	SetHyberItemClick_2lua( const char* luaTable, const char* funName );
+	// 创建
+	//void	Create( IN const RECT* pRect, const D3DCOLOR colBack = 0,
+	//	IN funSelectChange pSelectChangeFun = NULL,
+	//	IN funLDBClick pLDBClickFun = NULL );
+	void	HaveSelBar( const bool b, const bool bShow = LIST_SHOWBAR ) { m_bHaveSelBar = b;  m_bSelShow = bShow; }
+	void	SetScrollPos( const int nX, const int nY );
+	void	SetItemMaxCount( const DWORD dw ) { m_dwItemMaxCount = dw; }
+	int		GetItemMaxCount()				  { return m_dwItemMaxCount; }
+	void    SetItemShowCount( const int nCount ) { m_nShowMaxCount = nCount; }
+	int     GetItemShowCount() { return m_nShowMaxCount; }
+	int     GetListItemHeight();// { return (S_ListData*)m_pstData->m_nItemHeight; };
+	void    SetUIScrollBlend( const int nBlend ) 
+	{	
+		m_UIScroll.SetUIScrollBarBlend( nBlend );
+	}
+	void	SetScrollHeight( const int nHeight )
+	{
+		m_UIScroll.SetScrollHeight( nHeight );	
+	}
+	void	SetScrollValue(int nValue);
+	int		GetStartIndex()							{ return m_nStartIndex;}
+	void	SetStartIndex(int nStartIndex)			{ m_nStartIndex = nStartIndex; }
+	void	SetScrollVisable( bool bShow = true )		{ m_UIScroll.SetVisable(bShow); }
+	void	SetScrollBarEnable( bool bEnable = true )		{ m_UIScroll.SetEnable(bEnable); }
+	void    SetRBSelectEnable( bool bEnable = true ) { m_bRbCanSelect = bEnable; }
+
+	std::vector<S_List*> GetListItem() { return m_vtpItem; }
+	int		GetListItemCnt()		   { return m_vtpItem.size(); }
+	ControlScrollBar* GetScrollBar()	{ return &m_UIScroll; }
+
+	HyberReturnType	PtInHyber( const int nX, const int nY );
+	void	UpdataLine2D();
+
+	HyberReturnType findHyber_player( int index, int x, int y );
+	HyberReturnType findHyber_item( int index, int x = -1, int y = -1 );
+
+	void setShowTip(bool show = true) { _bIsShowTip = show; }
+	bool IsShowTip() const			  { return _bIsShowTip; }
+
+	void BeginUpdate();
+	void EndUpdate();
+
+	void SetAutoSetCurIndex( bool b )	{ m_bAutoSetCurIndex = b; }
+
+//private:
+	void	OnSelectChange( IN S_List* pItem );
+	void	OnLDBClick( IN S_List* pItem );
+	int		Refeash();
+	void	OnRBDown( IN S_List* pItem );
+	void	OnShiftRBDown( IN S_List* pItem );
+	void	OnShiftLBDown( IN S_List* pItem );
+
+
+public:
+	ControlList(void);
+	~ControlList(void);
+};

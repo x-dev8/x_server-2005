@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateMaker", "UpdateMaker.vcproj", "{64D82CC3-DE0D-4804-BCC0-63FC3EB28A4B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxml", "tinyxml\tinyxml.vcproj", "{A3A84737-5017-4577-B8A2-79429A25B8B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64D82CC3-DE0D-4804-BCC0-63FC3EB28A4B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64D82CC3-DE0D-4804-BCC0-63FC3EB28A4B}.Debug|Win32.Build.0 = Debug|Win32
+		{64D82CC3-DE0D-4804-BCC0-63FC3EB28A4B}.Release|Win32.ActiveCfg = Release|Win32
+		{64D82CC3-DE0D-4804-BCC0-63FC3EB28A4B}.Release|Win32.Build.0 = Release|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Debug|Win32.Build.0 = Debug|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|Win32.ActiveCfg = Release|Win32
+		{A3A84737-5017-4577-B8A2-79429A25B8B6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

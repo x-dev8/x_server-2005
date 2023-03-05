@@ -1,0 +1,583 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#include ""afxprint.rc""       // 打印/打印预览资源\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "QuestEditor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "加载(&L).\tCtrl+L",             ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVEQUEST
+        MENUITEM "另存为(&A)\tCtrl+Shift+S",       ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "设置置顶",                        ID_32827ID_FILE_TOP
+        MENUITEM "设置批量",                        ID_FILE_BATCH
+        MENUITEM "添加列表",                        ID_FILE_ADD
+        MENUITEM "删除列表",                        ID_FILE_DELETE
+        MENUITEM "删除任务",                        ID_FILE_DELETEQUEST
+        MENUITEM "设置编辑",                        ID_FILE_EDIT
+        MENUITEM "查找路点",                        ID_FILE_POSITION
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)\t",                    ID_APP_EXIT
+    END
+    POPUP "查找&F)"
+    BEGIN
+        MENUITEM "查找(&F)\tCtrl+F",              ID_FILE_FIND
+        MENUITEM "查找下一个(&T)\tF3",               ID_FILE_NEXT
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "String Slk转换(&S)",            ID_FILE_STRING
+        MENUITEM "Npc Slk转换(&N)",               ID_FILE_NPC
+        MENUITEM "字符串编辑(&C)\tCtrl+W",           ID_FILE_STRINGEDIT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 QuestEditor(&A)...",       ID_APP_ABOUT
+    END
+END
+
+IDR_MENU_HIDE MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "设置置顶",                        ID_FILE_TOP
+        MENUITEM "设置批量",                        ID_FILE_BATCH
+        MENUITEM "添加列表",                        ID_FILE_ADD
+        MENUITEM "删除列表",                        ID_FILE_DELETE
+        MENUITEM "删除任务",                        ID_FILE_DELETEQUEST
+        MENUITEM "设置编辑",                        ID_FILE_EDIT
+        MENUITEM "查找路点",                        ID_FILE_POSITION
+    END
+END
+
+IDR_MENU_DROPDELETE MENU 
+BEGIN
+    POPUP "物品掉落"
+    BEGIN
+        MENUITEM "删除掉落关联\tAlt+D",               ID_DROPDELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_FILE_ADD,            VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_FILE_BATCH,          VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_FILE_DELETE,         VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_FILE_DELETEQUEST,    VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_FILE_EDIT,           VIRTKEY, ALT, NOINVERT
+    "F",            ID_FILE_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_FILE_NEXT,           VIRTKEY, NOINVERT
+    "L",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_FILE_POSITION,       VIRTKEY, ALT, NOINVERT
+    "S",            ID_FILE_SAVEAS,         VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVEQUEST,      VIRTKEY, CONTROL, NOINVERT
+    "W",            ID_FILE_STRINGEDIT,     VIRTKEY, ALT, NOINVERT
+    "T",            ID_FILE_TOP,            VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_DROPDELETE,          VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 243, 172
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 QuestEditor"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "QuestEditor 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "QuestEditor 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK3,186,7,50,16,WS_GROUP
+    LTEXT           "加载文件:【Ctrl + L】",IDC_STATIC,16,63,85,8
+    GROUPBOX        "热键说明",IDC_STATIC,7,48,229,116
+    LTEXT           "保存文件:【Ctrl + S】",IDC_STATIC,16,77,85,8
+    LTEXT           "查找替换:【Ctrl + F】",IDC_STATIC,16,91,85,8
+    LTEXT           "查找下一个:【F3】",IDC_STATIC,15,120,85,8
+    LTEXT           "设置编辑:【Alt + E】",IDC_STATIC,15,135,81,8
+    LTEXT           "添加条件:【Ctrl + Z】",IDC_STATIC,138,62,85,8
+    LTEXT           "删除条件:【Ctrl + X】",IDC_STATIC,138,76,85,8
+    LTEXT           "删除任务:【Ctrl + D】",IDC_STATIC,138,90,85,8
+    LTEXT           "窗口置顶:【Ctrl + T】",IDC_STATIC,138,106,85,8
+    LTEXT           "设置批量:【Ctrl + B】",IDC_STATIC,138,121,85,8
+    LTEXT           "另存为:【Ctrl + Shift + S】",IDC_STATIC,16,105,109,8
+    LTEXT           "编辑字串:【Alt + W】",IDC_STATIC,138,135,81,8
+END
+
+IDD_EDITOR DIALOGEX 0, 0, 654, 469
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_CHILD | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "任务编辑器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_GROUP | WS_TABSTOP,100,3,551,127
+    GROUPBOX        "前置任务需求",IDC_STATIC_PREREQUIEMENT,100,133,551,101
+    CONTROL         "",IDC_LIST4,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_GROUP | WS_TABSTOP,105,352,542,77
+    CONTROL         "",IDC_LIST6,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_GROUP | WS_TABSTOP,102,143,546,87
+    CONTROL         "",IDC_LIST7,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_GROUP | WS_TABSTOP,103,249,544,84
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,3,3,89,448,WS_EX_TRANSPARENT
+    GROUPBOX        "完成任务需求",IDC_STATIC_POST,100,238,551,99
+    GROUPBOX        "任务奖励",IDC_STATIC_REWARD,100,341,551,92
+    LTEXT           "",IDC_STATIC_SAVE,101,443,86,8
+    CONTROL         "批量添加任务",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,246,442,72,9
+    CONTROL         "去除只读属性",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,441,443,72,9
+END
+
+IDD_DIALOG_CHANGE DIALOGEX 0, 0, 268, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "String文件转换"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "转换",IDOK,183,59,63,14
+    GROUPBOX        "String.Slk转换String.xml",IDC_STATIC,3,2,261,76
+    LTEXT           "源文件：",IDC_STATIC,7,18,33,8
+    EDITTEXT        IDC_EDIT7,47,15,163,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BUTTON18,215,32,41,14
+    LTEXT           "目标文件：",IDC_STATIC,6,35,41,8
+    EDITTEXT        IDC_EDIT8,47,33,163,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BUTTON19,215,14,41,14
+END
+
+IDD_DIALOG_DROPMONSTER DIALOGEX 0, 0, 249, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "杀怪关联"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,162,56,67,14
+    EDITTEXT        IDC_EDIT4,48,51,38,13,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    LTEXT           "物品掉率:",IDC_STATIC,9,54,36,8
+    LTEXT           "物品名称:",IDC_STATIC,9,35,37,8
+    EDITTEXT        IDC_EDIT7,204,33,33,13,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    LTEXT           "数量:",IDC_STATIC,177,35,26,8
+    LTEXT           "变量Id",IDC_STATIC,10,15,36,8
+    EDITTEXT        IDC_EDIT11,48,12,35,13,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "",IDC_STATIC,3,3,243,72
+    COMBOBOX        IDC_COMBO1,47,33,81,169,CBS_DROPDOWN | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT9,135,33,34,13,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+END
+
+IDD_DIALOG_FIND DIALOGEX 0, 0, 229, 126
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找与替换"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,3,3,223,50
+    LTEXT           "查找:",IDC_STATIC,9,15,28,9
+    EDITTEXT        IDC_EDIT1,40,14,76,13,ES_AUTOHSCROLL
+    LTEXT           "替换:",IDC_STATIC,9,35,29,9
+    EDITTEXT        IDC_EDIT3,40,34,76,13,ES_AUTOHSCROLL
+    CONTROL         "模糊查找",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,89,66,10
+    GROUPBOX        "条件",IDC_STATIC,3,57,223,66
+    PUSHBUTTON      "查找(&F)",IDC_BUTTON1,148,12,62,15
+    PUSHBUTTON      "替换(&R)",IDC_BUTTON11,148,33,62,15
+    LTEXT           "查找条件:",IDC_STATIC,11,71,40,9
+    COMBOBOX        IDC_COMBO1,59,68,102,108,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_NPC DIALOGEX 0, 0, 276, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Npc.Slk转换成Npc.xml"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "转换",IDOK2,184,135,63,14
+    GROUPBOX        "Npc.Slk转换Npc.xml",IDC_STATIC,3,3,267,153
+    LTEXT           "源文件：",IDC_STATIC,10,18,33,8
+    PUSHBUTTON      "浏览",IDC_BUTTON18,218,109,41,14
+    LTEXT           "目标文件：",IDC_STATIC,9,114,41,8
+    PUSHBUTTON      "浏览",IDC_BUTTON19,218,14,41,14
+    EDITTEXT        IDC_EDIT10,51,15,163,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,51,111,163,12,ES_AUTOHSCROLL
+    LTEXT           "动作,说话：",IDC_STATIC,9,41,44,8
+    LTEXT           "战斗：",IDC_STATIC,9,58,25,8
+    EDITTEXT        IDC_EDIT12,51,36,163,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,51,56,164,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BUTTON20,218,34,41,14
+    PUSHBUTTON      "浏览",IDC_BUTTON21,217,55,41,14
+    LTEXT           "动作：",IDC_STATIC,8,78,25,8
+    EDITTEXT        IDC_EDIT14,50,75,164,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BUTTON22,218,74,41,14
+END
+
+IDD_DIALOG_QUESTSTRINGEDIT DIALOGEX 0, 0, 255, 169
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "任务字符串编辑"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,3,3,248,161
+    LISTBOX         IDC_LIST1,3,20,66,143,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字符串ID",IDC_STATIC,75,22,36,8
+    COMBOBOX        IDC_COMBO1,116,20,93,150,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,75,41,174,95,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "添加(&Add)",IDC_BUTTON2,95,143,58,14
+    PUSHBUTTON      "删除(&Remove)",IDC_BUTTON3,165,143,58,14
+    LTEXT           "字串列表",IDC_STATIC,7,10,33,8
+END
+
+IDD_DIALOG_POSITION DIALOGEX 0, 0, 200, 105
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ID查找"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,126,6,68,92,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,10,74,58,13,ES_AUTOHSCROLL
+    CONTROL         "寻路点",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,10,58,10
+    CONTROL         "怪物",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,11,25,58,10
+    CONTROL         "物品",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,11,41,58,10
+    EDITTEXT        IDC_EDIT2,85,73,33,13,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+END
+
+IDD_DIALOG_DROPITEM DIALOGEX 0, 0, 249, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "掉落物品关联"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,162,40,67,14
+    EDITTEXT        IDC_EDIT4,48,38,38,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "物品掉率:",IDC_STATIC,9,41,36,8
+    LTEXT           "怪物名称:",IDC_STATIC,9,16,37,8
+    GROUPBOX        "",IDC_STATIC,3,3,243,59
+    COMBOBOX        IDC_COMBO1,47,14,81,169,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT9,137,14,34,13,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "QuestEditor.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "QuestEditor.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_NPC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 274
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_DIALOG_QUESTSTRINGEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 252
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DIALOG_POSITION, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 197
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_DIALOG_DROPITEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 246
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 62
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "QuestEditor\n\nQuestEditor\n\n\nQuestEditor.Document\nQuestEditor.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "QuestEditor"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+    ID_FILE_PAGE_SETUP      "更改打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "更改打印机选项和打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "清除选定内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制选定内容并将其放到剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切选定内容并将其放到剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "恢复上次撤消的操作\n重做"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n切换工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小为图标"
+    AFX_IDS_SCMAXIMIZE      "使窗口最大化显示"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预览"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "afxres.rc"         // 标准组件
+#include "afxprint.rc"       // 打印/打印预览资源
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

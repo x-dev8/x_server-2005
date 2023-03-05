@@ -1,0 +1,573 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANEL DIALOGEX 0, 0, 101, 401
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "Arial", 400, 0, 0x0
+BEGIN
+    LTEXT           "Tolez Games",IDC_STATIC,7,7,87,8
+    PUSHBUTTON      "Node Prop",IDC_BUTTON_NODEPROP,7,23,64,14
+    PUSHBUTTON      "Ribbon Emitter",IDC_BUTTON_SETRIBBONEMITTER,7,131,64,14
+    PUSHBUTTON      "Billboard",IDC_BUTTON_SETBILLBOARD,7,158,64,14
+    EDITTEXT        IDC_APPDATA_EDIT,7,180,87,17,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "Get",IDC_APPDATA_GET,7,279,50,14
+    PUSHBUTTON      "Put",IDC_APPDATA_PUT,7,303,50,14
+    PUSHBUTTON      "ParticleEmitter",IDC_BUTTON_PARTICLEEMITTERSETTING,7,50,64,14
+    PUSHBUTTON      "Conv Bone Name",IDC_BUTTON_CONVBONENAME,7,104,64,14
+    PUSHBUTTON      "RibbonEmitter",IDC_BUTTON_RIBBONEMITTERSETTING,7,77,64,14
+    PUSHBUTTON      "Exp Swf",IDC_BUTTON_EXPSWF,7,326,50,14
+END
+
+IDD_DIALOG_NODEPROP DIALOGEX 0, 0, 556, 334
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tolez Games"
+FONT 8, "Arial", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE_NODE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,7,18,90,191
+    PUSHBUTTON      "Close",IDC_BUTTON_CLOSEPROP,485,305,50,14
+    PUSHBUTTON      "Pause",IDC_BUTTON_PAUSE,485,246,50,14
+    PUSHBUTTON      "Save Mdx2",IDC_BUTTON_SAVEMDX,485,276,50,14
+    LTEXT           "Objects",IDC_STATIC,7,7,70,8
+    LTEXT           "Materials",IDC_STATIC,196,23,47,8
+    CONTROL         "",IDC_TREE_MATERIALS,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,193,35,123,87
+    LISTBOX         IDC_LIST_TEXTURES,192,137,318,58,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Textures",IDC_STATIC,204,124,56,8
+    CONTROL         "",IDC_TREE_CHUNKS,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_CHECKBOXES | WS_BORDER | WS_TABSTOP,331,35,144,86
+    LTEXT           "Mesh chunks",IDC_STATIC,332,23,46,8
+    LISTBOX         IDC_LIST_LOG1,7,224,196,103,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Log",IDC_STATIC,7,211,45,8
+    GROUPBOX        "Mdx Component",IDC_STATIC,181,12,368,193
+    GROUPBOX        "",IDC_STATIC,477,233,72,94
+    GROUPBOX        "Dressing Doll",IDC_STATIC,237,214,108,78
+    CONTROL         "Head",IDC_CHECK_DISPLAYHEAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,247,226,33,10
+    CONTROL         "Body",IDC_CHECK_DISPLAYBODY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,247,239,33,10
+    CONTROL         "Glove",IDC_CHECK_DISPLAYGLOVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,247,252,35,10
+    CONTROL         "Shoe",IDC_CHECK_DISPLAYSHOE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,247,265,33,10
+    PUSHBUTTON      "Load Action",IDC_BUTTON1,397,303,50,14
+END
+
+IDD_DIALOG_ANIMSEQUENCE_SETTING DIALOGEX 0, 0, 176, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Animation sequence info"
+FONT 8, "Arial", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,119,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,119,23,50,14
+    EDITTEXT        IDC_EDIT_ANIMSEQUENCE_STARTFRAME,47,23,67,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ANIMSEQUENCE_ENDFRAME,47,41,67,12,ES_AUTOHSCROLL
+    CONTROL         "Loopping",IDC_CHECK_ANIMSEQUENCE_LOOPPING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,59,54,10
+    LTEXT           "Start Frame",IDC_STATIC,7,25,39,8
+    LTEXT           "End Frame",IDC_STATIC,7,43,35,8
+    EDITTEXT        IDC_EDIT_ANIMSEQUENCE_NAME,47,6,67,12,ES_AUTOHSCROLL
+    LTEXT           "Name",IDC_STATIC,7,6,19,8
+END
+
+IDD_DIALOG_LOG DIALOGEX 0, 0, 263, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Log"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,202,50,14
+    LISTBOX         IDC_LIST_LOG,7,7,249,187,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_MDX2PARAM DIALOGEX 0, 0, 306, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,249,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,249,24,50,14
+    CONTROL         "Default char skeleton",IDC_CHECK_EXPDEFCHARSKELETON,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,26,84,10
+END
+
+IDD_DIALOG_DEFCHARCFG DIALOGEX 0, 0, 372, 197
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HR3D Avatar System Export"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,177,176,50,14
+    PUSHBUTTON      "取消",IDCANCEL,315,176,50,14
+    LISTBOX         IDC_LIST_INVALIDBONES,96,20,73,57,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Invalid Bones",IDC_STATIC,95,7,44,8
+    LISTBOX         IDC_LIST_INVALIDMESHES,183,21,96,57,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Invalid Mesh",IDC_STATIC,184,7,41,8
+    LTEXT           "Select Part",IDC_STATIC,96,86,36,8
+    CONTROL         "Hair",IDC_CHECK_PARTHAIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,20,29,10
+    CONTROL         "Face",IDC_CHECK_PARTFACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,36,31,10
+    CONTROL         "Armour",IDC_CHECK_PARTARMOUR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,84,39,10
+    CONTROL         "Weapon",IDC_CHECK_PARTWEAPON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,100,43,10
+    GROUPBOX        "Export Part",IDC_STATIC,7,7,70,114
+    CONTROL         "Helmet",IDC_CHECK_PARTHELMET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,53,38,10
+    CONTROL         "HeadWear",IDC_CHECK_PARTHEADWEAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,70,50,10
+    COMBOBOX        IDC_COMBO_PART,141,87,74,82,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_PARTICLEEMITTERSETTING DIALOGEX 0, 0, 670, 415
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Particle Emitter Setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,552,396,50,14
+    GROUPBOX        "Emitter Option(发射器属性)",IDC_STATIC,7,7,151,118
+    GROUPBOX        "Timing Option(时间属性)",IDC_STATIC,167,7,143,67
+    GROUPBOX        "Size Option",IDC_STATIC,167,76,145,49
+    GROUPBOX        "Texture Option(材质属性)",IDC_STATIC,326,7,151,222
+    GROUPBOX        "Particle Option(粒子属性)",IDC_STATIC,7,129,307,281
+    GROUPBOX        "Other Option",IDC_STATIC,327,238,150,110
+    EDITTEXT        IDC_EDIT1,74,17,54,14,ES_AUTOHSCROLL
+    LTEXT           "Count(数量)",IDC_STATIC,15,24,42,8
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,140,17,11,14
+    LTEXT           "Speed(速度)",IDC_STATIC,15,40,42,8
+    EDITTEXT        IDC_EDIT2,74,36,54,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,140,36,11,14
+    LTEXT           "Variation%(速度随机量)",IDC_STATIC,15,55,82,8
+    LTEXT           "Cone Angle(喷射夹角)",IDC_STATIC,15,81,75,8
+    EDITTEXT        IDC_EDIT3,74,65,54,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,74,91,54,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN3,"msctls_updown32",UDS_ARROWKEYS,140,65,11,14
+    CONTROL         "",IDC_SPIN4,"msctls_updown32",UDS_ARROWKEYS,140,91,11,14
+    LTEXT           "Width(发射平面宽)",IDC_STATIC,173,86,65,8
+    LTEXT           "Length(发射平面长)",IDC_STATIC,173,106,68,8
+    EDITTEXT        IDC_EDIT5,244,86,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,244,106,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN5,"msctls_updown32",UDS_ARROWKEYS,288,86,11,14
+    CONTROL         "",IDC_SPIN6,"msctls_updown32",UDS_ARROWKEYS,288,106,11,14
+    LTEXT           "Life(Sec)(生命)",IDC_STATIC,172,23,50,8
+    LTEXT           "Parts/Sec(每秒产生速率)",IDC_STATIC,172,39,85,8
+    LTEXT           "Max(最大数量) 500",IDC_STATIC,172,62,66,8
+    EDITTEXT        IDC_EDIT7,230,20,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,230,48,52,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN7,"msctls_updown32",UDS_ARROWKEYS,289,20,11,14
+    CONTROL         "",IDC_SPIN8,"msctls_updown32",UDS_ARROWKEYS,289,47,11,14
+    CONTROL         "Squirt(全部喷发)",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,239,62,72,10
+    LTEXT           "Texture(贴图文件)",IDC_STATIC,336,75,64,8
+    EDITTEXT        IDC_EDIT10,335,85,88,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON1,425,88,15,10
+    LTEXT           "Col(列数)",IDC_STATIC,334,118,32,8
+    LTEXT           "Row(行数)",IDC_STATIC,391,117,36,8
+    EDITTEXT        IDC_EDIT9,333,128,38,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,391,127,36,14,ES_AUTOHSCROLL
+    CONTROL         "Unshaded(不受光照影响)",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,333,161,119,10
+    CONTROL         "SortZ(根据距离排序)",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,333,185,108,10
+    CONTROL         "Unfogged(不受雾的影响)",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,333,207,121,10
+    LTEXT           "Start",IDC_STATIC,12,241,17,8
+    LTEXT           "Middle",IDC_STATIC,103,241,21,8
+    LTEXT           "End",IDC_STATIC,211,241,13,8
+    EDITTEXT        IDC_EDIT12,29,241,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,131,241,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT14,240,241,52,14,ES_AUTOHSCROLL
+    LTEXT           "Alpha",IDC_STATIC,140,228,19,8
+    CONTROL         "",IDC_SPIN9,"msctls_updown32",UDS_ARROWKEYS,87,241,11,14
+    CONTROL         "",IDC_SPIN10,"msctls_updown32",UDS_ARROWKEYS,193,241,11,14
+    CONTROL         "",IDC_SPIN11,"msctls_updown32",UDS_ARROWKEYS,241,156,11,14
+    LTEXT           "Start",IDC_STATIC,12,270,17,8
+    LTEXT           "Middle",IDC_STATIC,103,270,21,8
+    LTEXT           "End",IDC_STATIC,211,270,13,8
+    EDITTEXT        IDC_EDIT15,29,270,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT16,131,270,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT17,240,270,52,14,ES_AUTOHSCROLL
+    LTEXT           "Scale",IDC_STATIC,136,260,18,8
+    CONTROL         "",IDC_SPIN12,"msctls_updown32",UDS_ARROWKEYS,87,270,11,14
+    CONTROL         "",IDC_SPIN13,"msctls_updown32",UDS_ARROWKEYS,193,270,11,14
+    CONTROL         "",IDC_SPIN14,"msctls_updown32",UDS_ARROWKEYS,297,270,11,14
+    LTEXT           "Start",IDC_STATIC,12,299,17,8
+    LTEXT           "Middle",IDC_STATIC,103,299,21,8
+    LTEXT           "Repeat",IDC_STATIC,211,299,24,8
+    EDITTEXT        IDC_EDIT18,28,299,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT19,131,299,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT20,239,299,52,14,ES_AUTOHSCROLL
+    LTEXT           "LifeSpan Head UV Anim",IDC_STATIC,120,287,75,8
+    CONTROL         "",IDC_SPIN15,"msctls_updown32",UDS_ARROWKEYS,87,299,11,14
+    CONTROL         "",IDC_SPIN16,"msctls_updown32",UDS_ARROWKEYS,193,299,11,14
+    CONTROL         "",IDC_SPIN17,"msctls_updown32",UDS_ARROWKEYS,297,299,11,14
+    LTEXT           "Start",IDC_STATIC,12,328,17,8
+    LTEXT           "Middle",IDC_STATIC,103,328,21,8
+    LTEXT           "Repeat",IDC_STATIC,211,328,24,8
+    EDITTEXT        IDC_EDIT21,29,328,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT22,131,328,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT23,240,328,52,14,ES_AUTOHSCROLL
+    LTEXT           "Decay Head UV Anim",IDC_STATIC,120,318,68,8
+    CONTROL         "",IDC_SPIN18,"msctls_updown32",UDS_ARROWKEYS,87,328,11,14
+    CONTROL         "",IDC_SPIN19,"msctls_updown32",UDS_ARROWKEYS,193,328,11,14
+    CONTROL         "",IDC_SPIN20,"msctls_updown32",UDS_ARROWKEYS,297,328,11,14
+    LTEXT           "Start",IDC_STATIC,12,357,17,8
+    LTEXT           "Middle",IDC_STATIC,103,357,21,8
+    LTEXT           "Repeat",IDC_STATIC,211,357,24,8
+    EDITTEXT        IDC_EDIT24,28,357,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT25,131,357,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT26,239,357,52,14,ES_AUTOHSCROLL
+    LTEXT           "LifeSpan Tail UV Anim",IDC_STATIC,117,347,69,8
+    CONTROL         "",IDC_SPIN21,"msctls_updown32",UDS_ARROWKEYS,87,357,11,14
+    CONTROL         "",IDC_SPIN22,"msctls_updown32",UDS_ARROWKEYS,193,357,11,14
+    CONTROL         "",IDC_SPIN23,"msctls_updown32",UDS_ARROWKEYS,297,357,11,14
+    LTEXT           "Start",IDC_STATIC,12,386,17,8
+    LTEXT           "Middle",IDC_STATIC,103,386,21,8
+    LTEXT           "Repeat",IDC_STATIC,211,386,24,8
+    EDITTEXT        IDC_EDIT27,29,386,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT28,131,386,52,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT29,240,386,52,14,ES_AUTOHSCROLL
+    LTEXT           "Decay Tail UV Anim",IDC_STATIC,120,376,62,8
+    CONTROL         "",IDC_SPIN24,"msctls_updown32",UDS_ARROWKEYS,87,386,11,14
+    CONTROL         "",IDC_SPIN25,"msctls_updown32",UDS_ARROWKEYS,193,386,11,14
+    CONTROL         "",IDC_SPIN26,"msctls_updown32",UDS_ARROWKEYS,297,386,11,14
+    LTEXT           "Tail Length(尾部长度)",IDC_STATIC,14,158,73,8
+    EDITTEXT        IDC_EDIT30,87,156,31,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN27,"msctls_updown32",UDS_ARROWKEYS,127,156,11,14
+    LTEXT           "Time(时间属性)",IDC_STATIC,202,136,53,8
+    LTEXT           "Start(开始)",IDC_STATIC,158,147,38,8
+    LTEXT           "Middle(中间)",IDC_STATIC,203,147,42,8
+    LTEXT           "End(结束)",IDC_STATIC,258,147,34,8
+    EDITTEXT        IDC_EDIT31,163,157,26,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT32,205,157,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT33,261,157,17,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN28,"msctls_updown32",UDS_ARROWKEYS,375,127,11,14
+    CONTROL         "",IDC_SPIN29,"msctls_updown32",UDS_ARROWKEYS,431,127,11,14
+    LTEXT           "Color",IDC_STATIC,12,194,18,8
+    CONTROL         "",IDC_SPIN30,"msctls_updown32",UDS_ARROWKEYS,297,241,11,14
+    PUSHBUTTON      "Save",IDC_BUTTON_SAVEEMITTERSETTING,492,396,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,612,396,50,14
+    LTEXT           "BlendMode(混合模式)",IDC_STATIC,337,28,73,8
+    COMBOBOX        IDC_COMBO3,73,140,48,70,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ParticlePart(类型)",IDC_STATIC,14,142,59,8
+    COMBOBOX        IDC_COMBO4,335,43,48,62,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "",IDC_BUTTON2,40,191,19,16
+    PUSHBUTTON      "",IDC_BUTTON3,69,191,19,16
+    PUSHBUTTON      "",IDC_BUTTON4,98,191,19,16
+    LTEXT           "Start",IDC_STATIC,42,178,17,8
+    LTEXT           "Middle",IDC_STATIC,70,178,21,8
+    LTEXT           "End",IDC_STATIC,99,178,13,8
+    EDITTEXT        IDC_EDIT34,133,196,52,14,ES_AUTOHSCROLL
+    LTEXT           "Cell Fps(序列帧Fps)",IDC_STATIC,127,183,66,8
+    CONTROL         "In Model Space(在模型空间运动)",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,262,148,10
+    LTEXT           "Gravity(重力)",IDC_STATIC,15,110,46,8
+    EDITTEXT        IDC_EDIT35,74,108,54,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN31,"msctls_updown32",UDS_ARROWKEYS,140,108,11,14
+    COMBOBOX        IDC_COMBO_BINDPARTNAME,330,371,93,91,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "绑定部位",IDC_STATIC,331,360,33,8
+    CONTROL         "Lock Emitter(锁定发射器)",IDC_CHECK_LOCKEMITTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,291,148,10
+    EDITTEXT        IDC_EDIT36,258,195,40,14,ES_AUTOHSCROLL
+    LTEXT           "Loop(循环次数)",IDC_STATIC,196,198,54,8
+    CONTROL         "Use Seq(时间序列帧)",IDC_CHECK_USETIMEBASEDCELL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,195,183,113,10
+    CONTROL         "XY Quad(锁定XY平面)",IDC_CHECK_XYQUAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,329,318,133,10
+    GROUPBOX        "新增属性",IDC_STATIC,494,7,160,377
+    CONTROL         "旋转粒子",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,24,77,10
+    CONTROL         "随机方向",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,73,77,10
+    CONTROL         "跟随发射器变换",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,91,77,10
+    CONTROL         "拖尾长度变化",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,160,77,10
+    CONTROL         "XYQuad在世界中放平",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,252,90,10
+    CONTROL         "UV动画第1帧随机",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,270,77,10
+    CONTROL         "顶点色取反",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,109,77,10
+    CONTROL         "随发射方向旋转",IDC_CHECK15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,506,127,77,10
+    LTEXT           "旋转360度用时",IDC_STATIC,507,42,53,8
+    EDITTEXT        IDC_EDIT37,565,38,59,14,ES_AUTOHSCROLL
+    LTEXT           "Start",IDC_STATIC,534,176,19,8
+    LTEXT           "Middle",IDC_STATIC,529,192,20,8
+    LTEXT           "End",IDC_STATIC,537,210,20,8
+    EDITTEXT        IDC_EDIT38,555,172,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT39,555,189,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT40,555,206,82,14,ES_AUTOHSCROLL
+    LTEXT           "生命随机最大值",IDC_STATIC,508,311,57,8
+    LTEXT           "大小随机最小值",IDC_STATIC,508,333,57,8
+    LTEXT           "大小随机最大值",IDC_STATIC,508,357,57,8
+    EDITTEXT        IDC_EDIT41,570,307,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT42,570,330,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT43,570,353,72,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_CHAR_AUTO_NAME DIALOGEX 0, 0, 416, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,359,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,359,24,50,14
+    COMBOBOX        IDC_COMBO_RACE,26,33,48,101,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Race",IDC_STATIC,28,22,17,8
+    LTEXT           "Level",IDC_STATIC,108,22,18,8
+    LTEXT           "Sex",IDC_STATIC,177,22,13,8
+    LTEXT           "Ext",IDC_STATIC,236,22,20,8
+    COMBOBOX        IDC_COMBO_LEVEL,96,33,48,96,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SEX,162,33,48,109,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CHARNAME_EXT,225,33,76,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_RIBBONEMITTERSETTING DIALOGEX 0, 0, 225, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ribbon Emitter Setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Edge/Sec",IDC_STATIC,15,25,31,8
+    EDITTEXT        IDC_EDIT_EDGEPERSEC,56,23,56,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,115,23,11,14
+    PUSHBUTTON      "...",IDC_BUTTON_TEXTURE,187,95,20,14
+    EDITTEXT        IDC_EDIT_TEXTURENAME,8,94,178,14,ES_AUTOHSCROLL
+    LTEXT           "Edge Life",IDC_STATIC,15,47,30,8
+    EDITTEXT        IDC_EDIT_EDGELIFE,56,45,56,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN32,"msctls_updown32",UDS_ARROWKEYS,115,47,11,14
+    LTEXT           "Vertex Alpha",IDC_STATIC,4,69,42,8
+    EDITTEXT        IDC_EDIT_VERTEXALPHA,56,67,56,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN33,"msctls_updown32",UDS_ARROWKEYS,115,67,11,14
+    PUSHBUTTON      "Save",IDC_BUTTON_SAVERIBBONEMITTERSETTING,168,121,50,14
+    COMBOBOX        IDC_COMBO_BINDPARTNAME,142,27,65,80,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "绑定部位",IDC_STATIC,175,17,33,8
+    LTEXT           "混合模式",IDC_STATIC,175,59,33,8
+    COMBOBOX        IDC_COMBO3,142,69,65,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_EXPSETTING DIALOGEX 0, 0, 379, 239
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,322,201,50,14
+    PUSHBUTTON      "取消",IDCANCEL,322,218,50,14
+    COMBOBOX        IDC_COMBO_EXPTYPE,19,30,114,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Export Type",IDC_STATIC,20,17,40,8
+    CONTROL         "DressingDoll",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,63,89,55,10
+    CONTROL         "Combine",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,63,108,43,10
+    COMBOBOX        IDC_COMBO3,176,30,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select Part",IDC_STATIC,177,18,36,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 94
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 394
+    END
+
+    IDD_DIALOG_NODEPROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 549
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 327
+    END
+
+    IDD_DIALOG_ANIMSEQUENCE_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_DIALOG_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_DIALOG_MDX2PARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_DIALOG_DEFCHARCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 365
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_DIALOG_PARTICLEEMITTERSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 663
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 410
+    END
+
+    IDD_DIALOG_CHAR_AUTO_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 409
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_DIALOG_RIBBONEMITTERSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DIALOG_EXPSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 372
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_LOGO         BITMAP                  "logo.bmp"
+IDB_BITMAP_DEFSKELETON  BITMAP                  "DefaultSkeleton.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,12,5,2
+ PRODUCTVERSION 3,12,5,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "TECH: "
+            VALUE "FileDescription", "HR3D_Plugins"
+            VALUE "FileVersion", "3.12.5.5"
+            VALUE "InternalName", "HR3D_Plugins"
+            VALUE "LegalTrademarks", "3D Studio MAX, Biped, Character Studio, Heidi, Kinetix and Physique are registered trademarks and 3ds max, combustion, Discreet, DWG Unplugged, DXF, FLI and FLC are trademarks of Autodesk, Inc."
+            VALUE "OriginalFilename", "HR3D_Plugins.dlu"
+            VALUE "ProductName", "3ds max"
+            VALUE "ProductVersion", "4.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_LIBDESCRIPTION      "HR3D_Plugin Desc"
+    IDS_CATEGORY            "HR3D_Plugin_Utility"
+    IDS_CLASS_NAME          "HR3D_Plugins"
+    IDS_PARAMS              "Parameters"
+    IDS_SPIN                "Spin"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

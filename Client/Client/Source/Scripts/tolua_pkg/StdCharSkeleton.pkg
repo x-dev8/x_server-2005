@@ -1,0 +1,28 @@
+
+class CStdCharSkeleton
+{
+public:
+	enum EPartId
+	{
+		eHairPartMask,		    //头发
+        eHelmetPartMask,		    //头盔
+        eFacePartMask	,	    //脸
+        eArmourPartMask	,	    //甲
+        eGlovePartMask   ,       //手套
+        eShoePartMask	,	    //鞋子
+        eRightHandItemPartMask,  //右手武器
+        eLeftHandItemPartMask ,  //左手武器
+        eBadgeMask			,	//徽章
+        eLeftHandShieldPartMask,	//盾
+        eShoulderPartMask	,	//护肩
+        eTrousersPartMask	,	//裤子
+        eGemBagMask			,	//宝囊
+        eRightRingMask		,	//右手戒指
+        //eLeftRing		    //左手戒指	
+        erBangleMask		,	//手镯
+        eNecklaceMask		,	
+        eSashMask			,	//腰带
+        eHonorMask			,	//勋章
+        eMaxPart
+	};
+};

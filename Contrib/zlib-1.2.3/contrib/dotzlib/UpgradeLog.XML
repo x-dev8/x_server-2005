@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DotZLib">
+</Property><Property Name="Solution File" Value="F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\DotZLib.sln">
+</Property><Property Name="Date" Value="2011年11月18日星期五">
+</Property><Property Name="Time" Value="01:13">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DotZLib.sln" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib.sln">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\DotZLib.csproj" Description="Project file successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\DotZLib.csproj">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\AssemblyInfo.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\ChecksumImpl.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\ChecksumImpl.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\CircularBuffer.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\CircularBuffer.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\CodecBase.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\CodecBase.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\Deflater.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\Deflater.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\DotZLib.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\DotZLib.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\GZipStream.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\GZipStream.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\Inflater.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\Inflater.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\UnitTests.cs" Description="File successfully backed up as F:\新建文件夹\TServer\MoreEngine-Contrib\trunk\Contrib\zlib-1.2.3\contrib\dotzlib\Backup\DotZLib\UnitTests.cs">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\DotZLib.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DotZLib" Source="DotZLib\DotZLib.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DotZLib.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="DotZLib.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DotZLib" Source="DotZLib\DotZLib.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

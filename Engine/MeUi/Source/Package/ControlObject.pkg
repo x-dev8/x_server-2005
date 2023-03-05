@@ -1,0 +1,198 @@
+
+class ControlObject : public zizi
+{
+public:
+	//typedef bool (*funOnMsgProc)( UINT msg, WPARAM wParam, LPARAM lParam, bool bMsgUsed ); 
+
+public:	/*Virtual Function*/
+	virtual const char* GetAlias() { return ""; }
+	// 渲染
+	virtual void Render();
+	// 运行
+	virtual void Run();
+	// 释放
+	virtual void ReleaseUI();
+	// 初始化数据
+	virtual void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	// 使用焦点
+	virtual bool UseFocus();
+	// 是否需要Render
+	virtual bool IsNeedRender();
+	// 坐标是否在本身内
+	virtual bool PtInObject( const int nX, const int nY );
+	virtual bool PtInObject( const RECT& rc, const int nX, const int nY);
+	// 设置是否可见/可用
+	virtual void SetVisable( const bool bVisable, const bool bFadeInorFadeOut = false , const int bColor = 0xff);
+	// 闪烁
+	virtual void StartFlash( const int nFlashCount,
+							const bool bAutoClose = false, const bool bFadeIn = false );
+	//
+	virtual void SetRealRect( IN const RECT* prc );
+	// 消息
+	virtual bool MsgProc( UINT msg, WPARAM wParam, LPARAM lParam, bool bMsgUsed = false );
+	// 查找子控件
+	virtual ControlObject*	FindControl( IN const char* szControlID,
+										IN const char* szFrameID = NULL)		{ return NULL;  }
+	// 查找子框架
+	virtual ControlObject* FindFrame( IN const char *szFrameID )				{ return NULL;  }
+	// 取得排列模式
+	virtual int	 GetArrayMode()													{ return 0;		}
+	// 是否是本身子控件
+	virtual bool IsChild( IN const ControlObject* pChild )						{ return false; }
+	// 鼠标移动消息
+	virtual bool OnMouseMove( UINT nFlags, const int nX, const int nY )			{ return false; }
+	virtual bool OnMouseLeave( )												{ return false; }
+	// 鼠标滚轮消息
+	virtual bool OnMouseWheel( bool bUp, const int nX, const int nY )			{ return false; }
+	// 鼠标左键按下消息
+	virtual bool OnLButtonDown( UINT nFlags, const int nX, const int nY )		{ return false; }
+	// 鼠标右键按下消息
+	virtual bool OnRButtonDown( UINT nFlags, const int nX, const int nY )		{ return false; }
+	// 鼠标左键松开消息
+	virtual bool OnLButtonUp( UINT nFlags, const int nX, const int nY )			{ return false; }
+	// 鼠标右键松开消息
+	virtual bool OnRButtonUp( UINT nFlags, const int nX, const int nY )			{ return false; }
+	// 鼠标左键双击消息
+	virtual bool OnLButtonDBClick( UINT nFlags, const int nX, const int nY )	{ return false; }
+	// 鼠标右键双击消息
+	virtual bool OnRButtonDBClick( UINT nFlags, const int nX, const int nY )	{ return false; }
+	// 键盘按下消息
+	virtual bool OnKeyDown( UINT nChar )										{ return false; }
+	// 键盘松开消息
+	virtual bool OnKeyUp( UINT nChar )											{ return false; }
+	// 字符消息
+	virtual bool OnChar( UINT nChar )											{ return false; }
+	// 窗口是否被拖拽
+	virtual bool IsLButtonDrag(){ return false; }
+
+	// virtual void SetButtonClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetButtonMouseOnFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetCheckFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetChangeFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetShowListFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetEnterFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetTabFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetLBtnDownFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetLBtnUpFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetDelByteFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetRunFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetRenderFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetOnClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetOnRBtnDown_2lua( const char* luaTable, const char* funName );
+// virtual void SetMouseMoveOn_2lua( const char* luaTable, const char* funName );
+// virtual void SetMouseMoveLevel_2lua( const char* luaTable, const char* funName );
+// virtual void SetOnTab_2lua( const char* luaTable, const char* funName );
+// virtual void SetFrameMove_2lua( const char* luaTable, const char* funName );
+// virtual void SetSelectChangeFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetRBClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetShiftRBClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetShiftLBClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetLDBClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetHyberClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetHyberRBtnDown_2lua( const char* luaTable, const char* funName );
+// virtual void SetHyberItemClick_2lua( const char* luaTable, const char* funName );
+// virtual void SetDrawInfoFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetPlaySoundFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetPicClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetOnMouseOn_2lua( const char* luaTable, const char* funName );
+// virtual void SetOnMouseLeave_2lua( const char* luaTable, const char* funName );
+// virtual void SetOnLDBClickFun_2lua( const char* luaTable, const char* funName );
+// virtual void SetText_HyberClickFun_2lua( const char* luaTable, const char* funName );
+
+
+
+	// 取得绝对矩形
+	void	GetRealRect( OUT RECT* prc );
+	// 得到控件ID
+	char*	GetControlID(){ return m_pstData->m_szID;}
+	// 得到控件类型
+	int		GetControlType(){ return m_pstData->m_nType; }
+	//
+	int		GetFontSize(){ return m_pstData->m_nFontSize; }
+	//
+	int		GetFontIndex(){ return m_nFontIndex; }
+//	void	SetFontIndex(int nIndex)		{ m_nFontIndex = nIndex; }
+	void	SetFont( const ControlObject* pSrc );
+	//
+	COLORREF GetFontColor(){ return m_pstData->m_colFont; }
+	// 取得宽度
+	int		GetWidth(){ return m_nWidth; }
+	// 取得高度
+	int		GetHeight(){ return m_nHeight; }
+	// 设置当前显示图片
+	bool	SetPic( IN S_BaseData::S_Pic *pPic, bool bCoverData = false );
+	//
+	void	SetPos( const int nX, const int nY, bool bReal = true );
+	// 设置X坐标
+	void	SetXPos( const int nX );
+	// 设置Y坐标
+	void	SetYPos( const int nY );
+	// 设置宽度
+	void	SetWidth( const int nW );
+	// 设置高度
+	void	SetHeight( const int nH );
+	// 设置是否被覆盖了
+	void	SetCovered( const bool bCovered ){ m_bCovered = bCovered; }
+	// 是否可见可用
+	bool	IsVisable(){ return m_bVisable; }
+	// 是否被覆盖
+	bool	IsCovered(){ return m_bCovered; }
+	// 是否被覆盖
+	bool	IsBeCovered( IN ControlObject* pCover );
+	// 激活
+	void	SetActivate( const bool bActivate = true );
+	bool	IsActivated();
+	// 移动
+	void	MoveTo( const int nX, const int nY );
+	//
+	//void	SetMsgProcFun( IN funOnMsgProc pFun ){ m_pOnMsgProc = pFun; }
+	//
+	void	SetMsgHoldup( const bool b ){ m_bMsgHoldup = b; }
+	//
+	bool	IsMsgHoldup(){ return m_bMsgHoldup; }
+	//
+	void	SetBackPicZValue( const float fZ ){ m_fBackPicZ = fZ; }
+	//
+	void	SetBackColor( D3DCOLOR col, bool bFrame = false ){ m_colBackColor = col; m_bDrawFrame = bFrame; }
+	D3DCOLOR GetBackColor() { return m_colBackColor; }
+	//设置 Blt时候的
+	void	SetBlendColor( int col ) { m_nFadeCurColorA = col; }
+	int		GetBlendColor( void )	{ return m_nFadeCurColorA; }
+	//
+	bool	PlaySound();
+	//
+	void	SetFadeInval( bool bInval );
+	bool	IsFadeInval();
+	void	SetMaxMinFade( const int nMaxFade, const int nMinFade );
+	void	SetPicName( const char* szPath );
+	S_BaseData::S_Pic* GetPic( );
+	S_BaseData* GetData()			{ return m_pstData; }
+
+	void	SetAllVisableDlg( bool bAllVisable = true)			{ m_bAllVisable = bAllVisable; }
+	bool	GetAllVisableDlg() const							{ return m_bAllVisable;		   }
+	/*{ 
+		if(m_pstPic) strncpy( m_pstPic->m_szPicName, szPath.c_str(), 128 );
+	}*/
+//	void	SetCaption(char *szText) { if(!szText) strcpy(m_pstData->m_szCaption, szText);}
+
+	// 画图
+	void 	BitBlt( IN OUT int* pPicId,
+					IN const char* szPicName,
+					const int nDstX, const int nDstY,
+					const int nDstWidth, const int nDstHeight,
+					const int nSrcX, const int nSrcY,
+					const int nSrcWidth, const int nSrcHeight,
+					const int nDrawMode,
+					const int col = 0xffffffff );
+	// 得到父区域
+	void	GetFatherRect( OUT RECT* prc );
+
+public:
+	ControlObject(void);
+	virtual ~ControlObject(void);
+public:
+	// Lua
+	
+
+};
+

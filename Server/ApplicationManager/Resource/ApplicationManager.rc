@@ -1,0 +1,207 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "../Resource/Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "../Resource/Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ApplicationManager.rc2""  // 非 Microsoft Visual C++ 編輯過的資源\r\n"
+    "#include ""afxres.rc""     // 標準元件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "ApplicationManager.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROTECTOR_DIALOG DIALOGEX 0, 0, 375, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ApplicationManager"
+MENU IDR_MENU_MAIN
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply",IDOK,277,183,43,11,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,329,182,39,11
+    LTEXT           "status info",IDC_STATIC_INFO,6,181,66,8
+    CONTROL         "",IDC_TREE_PROCESS,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | WS_BORDER | WS_TABSTOP | 0x400,1,1,93,174,WS_EX_LEFTSCROLLBAR
+    CONTROL         "",IDC_TAB_PROCESS,"SysTabControl32",0x0,95,1,274,176
+END
+
+IDD_PROPPAGE_PROCESS_INFO DIALOGEX 0, 0, 284, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Path",IDC_STATIC,14,17,23,8
+    GROUPBOX        "General Infomation",IDC_STATIC,3,3,278,118
+    GROUPBOX        "General Operation",IDC_STATIC_OP,6,27,272,35
+    PUSHBUTTON      "start",IDC_BUTTON_START,11,39,50,14
+    EDITTEXT        IDC_EDIT_APPLICATIONNAME,37,17,236,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "need watch",IDC_CHECK_NEED_PROTECT,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,68,43,53,10
+    LISTBOX         IDC_LIST_OUTPUT,6,70,271,40,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_HELP DIALOGEX 0, 0, 150, 42
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Help Document"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,49,21,50,14
+    CTEXT           "Version_1_0_0_1",IDC_STATIC,7,7,136,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "拓乐网络"
+            VALUE "FileDescription", "ApplicationManager"
+            VALUE "FileVersion", "0.0.0.1"
+            VALUE "InternalName", "ApplicationManager.exe"
+            VALUE "LegalCopyright", "拓乐网络.  All rights reserved."
+            VALUE "OriginalFilename", "ApplicationManager.exe"
+            VALUE "ProductName", "ApplicationManager"
+            VALUE "ProductVersion", "0.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        POPUP "Open"
+        BEGIN
+            MENUITEM "Reopen Config...",            ID_OPEN_SOLUTION
+            MENUITEM "Appendopen Config...",        ID_OPEN_APPENDOPENCONFIG
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About Application Manager",   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROTECTOR_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 372
+        BOTTOMMARGIN, 196
+    END
+
+    IDD_PROPPAGE_PROCESS_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 281
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_DIALOG_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 35
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////

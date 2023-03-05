@@ -1,0 +1,180 @@
+
+class ControlIconDrag : public ControlObject
+{
+public:
+	struct S_ListImg 
+	{
+		S_ListImg()
+		{
+			Clear();
+		}
+		void Clear()
+		{
+			m_stIcon.Clear();
+			m_eEnable = eIcon_Enable;
+			m_dwStartTime = 0;
+			m_dwPeriod = 0;
+			m_dwFlags = 0;
+			m_bUseCol = false;
+			m_dwColor = 0xffffffff;
+		}
+		bool IsNull()
+		{
+			return m_stIcon.IsNull();
+		}
+		void ChangeCount( const bool bAdd/*Add or Remove*/, const int nCount )
+		{
+			assert( m_stIcon.Count() > 0 );
+			if ( bAdd == true )
+			{
+				m_stIcon.Count() += nCount;
+			}
+			else
+			{
+				m_stIcon.Count() -= nCount;
+				if ( m_stIcon.Count() <= 0 )
+				{
+					Clear();
+				}
+			}
+		}
+		void SetData( IN void* pData , eIconDrawState eEnable=eIcon_Enable, eTipFlag eFlags = eTipFlag_Normal, IN void* pCompareData = NULL, int nPlayerID = -1 )
+		{
+			m_stIcon.SetFlag( eFlags );
+			m_stIcon.SetData( pData, false, false, pCompareData, vPlayerArmour );
+			
+			
+			m_eEnable = eEnable;
+		}
+		void SetData( int nID, int nCount, eIconDrawState eEnable=eIcon_Enable, bool bShowCount=false,  eTipFlag eFlags = eTipFlag_Normal,
+			bool bNext = false )
+		{
+			m_stIcon.SetFlag( eFlags );
+			m_stIcon.SetData( nID, nCount, bShowCount,bNext );
+			
+			
+			m_eEnable = eEnable;
+			//if( m_bEnable )
+			//{
+			//	m_dwColor = 0xffffffff;
+			//}
+			//else
+			//{
+			//	m_dwColor = 0x7fffffff;
+			//}
+		}
+		void SetFlags( int Flags )
+		{
+			m_dwFlags = Flags;
+		}
+		void SetTime( int dwStartTime, int dwPeriod )
+		{
+			m_dwStartTime = dwStartTime;
+			m_dwPeriod = dwPeriod;
+		}
+		void SetOtherInfo( const char* szInfo )
+		{
+			m_stIcon.SetOtherInfo( szInfo );
+		}
+		void SetCol( const COLORREF& col )
+		{
+			m_col = col;
+			m_bUseCol = true;
+		}
+		void SetEnable( eIconDrawState eEnable )
+		{
+			m_eEnable = eEnable;
+		}
+
+		eIconDrawState m_eEnable;
+		ICON_INFO_STRUCT	m_stIcon;
+		int	m_dwFlags;		//附加信息
+		COLORREF m_dwColor;		//自身的颜色
+		//
+		int	m_dwStartTime;
+		int	m_dwPeriod;
+		//
+		COLORREF m_col;
+		bool	m_bUseCol;
+	};
+
+public:
+
+public:	/*Virtual Function by ControlObject*/
+	virtual void Run();
+	virtual bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	virtual bool OnMouseWheel( bool bUp, const int nX, const int nY );
+	virtual bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+	virtual bool OnLButtonUp( UINT nFlags, const int nX, const int nY );
+	virtual bool OnRButtonUp( UINT nFlags, const int nX, const int nY );
+	virtual bool OnLButtonDBClick( UINT nFlags, const int nX, const int nY );
+
+public:
+	virtual int	 GetIconSize() = 0;
+	virtual bool GetTilePt( const int nX, const int nY, OUT POINT *ptTile ) = 0;
+	virtual bool CanbePick() = 0;
+	virtual void SetCanbePick( const bool b ) = 0;
+
+public:
+	bool OnDragOn( const int nX, const int nY, OUT IN S_ListImg* pItem, IN ControlObject* pSender );
+
+public:
+	bool SetItem( IN S_ListImg *pItem,const int nIndex = -1, bool reverse = false);
+	// 移除指定坐标项
+	bool RemoveItemById( const int nItemID, const int nCount );
+	bool RemoveItemByIndex( int nIndex );
+	// 清除
+	void	Clear( bool bChangeStartIndex = false );
+	// 取得项
+	S_ListImg* GetItem( const unsigned int nX, const unsigned int nY );
+	S_ListImg* GetCurSelItem();
+	S_ListImg* GetItemByIndex( const unsigned int nIndex );
+	S_ListImg* GetLastIndex( int index );
+	S_ListImg* GetItemById( const int nId );
+
+//
+//	int GetMaxCount();
+	// 取得该项的索引 to zizi ： 应该放到逻辑层，不应该放到这里。
+	int	 GetItemIndex( IN const S_ListImg *pItem );
+	//取得一个空位置 如果没有则 返回-1  to zizi ： 应该放到逻辑层，不应该放到这里。
+	int	 GetNullItem( bool reverse = false );
+	//
+	void SetIsShop( const bool b ){ m_bIsShop = b; }
+	//
+	void SetShowAllInfo( const bool b){ m_bShowAllInfo = b; }
+	// 设置处理函数
+	//void SetDragOnFun( IN funDragOn pFun )	{ m_pFunDragOn = pFun; }
+	//void SetDragOffFun( IN funDragOff pFun )	{ m_pFunDragOff = pFun; }
+	//void SetLDBClickFun( IN funLDBClick pFun )	{ m_pFunLDBClick = pFun; }
+	//void SetRButtonUpFun( IN funRButtonUp pFun )	{ m_pFunRButtonUp = pFun; }
+	//void SetButtonClickFun( IN funOnButtonClick pFun )	{ m_pFunButtonClick = pFun; }
+	//void SetShiftLBClickFun( funOnShiftLBClick pFun )	{ m_pFunShiftLBClick = pFun; }
+
+	int  GetItemCnt()									{  return m_vtItem.size();}
+	void SetSpareTime( int nIndex, int nTime, int nStartTime );
+	int	 GetStartIndex() const							{ return m_nStartIndex; }
+
+	void SetScrollVisable( bool bShow = true );
+	void SetStartIndex(int nStartIndex)			{ m_nStartIndex = nStartIndex; }
+
+	void SetScrollBarEnable( bool bEnable = true)		{ m_UIScroll.SetEnable(bEnable); }
+	
+	bool IsDisableCanbePick(){ return m_bDisableCanbePick; }
+	void SetDisableCanbePick( bool b ){ m_bDisableCanbePick = b; }
+
+	void SetHeightShowMaxCnt( int max ) { m_nHeightShowMaxCount = max; }
+	void SetEnableRowCnt( int cnt )		{ m_nEnbaleRowCnt = cnt; }
+	void SetNotMsgClick( bool b = true)	{ m_bNotMsgClick = true; }
+
+	//POINT getCurItemPos()	{ return m_ptCurSel; }
+
+//protected:
+	bool OnLDBClick( const int nX, const int nY, OUT IN S_ListImg* pItem, IN ControlObject* pSender );
+	int Refeash();
+	void InitItemDate();
+
+
+public:
+	ControlIconDrag(void);
+	virtual ~ControlIconDrag(void);
+};

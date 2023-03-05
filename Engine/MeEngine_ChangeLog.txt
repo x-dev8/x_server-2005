@@ -1,0 +1,333 @@
+1.2.0.241
+	QA已进行过简单测试
+	修改问题如下：
+	1。半透物体远近排序（需要测试半透物体如粒子，特效等是否显示正常）
+	2。ui上文字解析重构（需要测试聊天窗口各种特殊定义如vip等，是否显示正常）
+
+1.3.0.246
+	将avatar与引擎分离
+	修改resmgr的严重bug
+	修改alpha渲染排序问题
+
+1.3.0.249
+	修改release下当机问题
+	修改alpha问题
+	
+1.3.0.253
+	修改ExpresstionManager,删除多余字符串（需要测试表情显示是否正常）
+	decal类型的半透明可以被正确处理了
+	非骨骼动画创建为eDyanmic,不使用骨骼shader，减少显卡损耗
+	UpdateComponent修改bug，否则可能引起崩溃
+	
+1.3.0.260
+	半透处理修改
+	表情功能修改
+	
+1.3.0.263
+	表情功能修改
+	添加地形裁剪参数，支持小范围裁剪（2.5D时用）
+	
+1.3.0.274
+	新字体绘制整合，支持原绘制字体方法。暂时不能使用新绘制
+	树叶不再半透，否则引起的渲染问题无法解决
+	ui平铺后的裂缝问题
+	billboard有时会看不见的问题（始终面向摄像机的面片）
+	
+1.3.0.280
+	修改天空盒绘制，修正了半透错误
+	字体绘制到贴图的次数减少了
+	
+1.3.0.291
+	修改新字体的一些细节
+	UiParsing打开（解析文本功能）
+	防止UiParsing的多线程问题
+	修改BeginParse可能出现的问题
+	
+1.4.0.0
+	uiparse支持回调函数注册
+	text支持带数据的回调函数
+	uirender增加workingarea概念
+	所有半透物体关闭zwrite
+	渲染草皮世界矩阵设置为单位矩阵
+	新字体渲染改动
+	渲染草皮放到客户端做
+	
+1.4.0.306
+	WorldBuffer路径索引tile，改为地图id索引tile
+	edit添加Redraw
+	Text的ScrollBar跟随text大小变化而拉长
+	alphatest与billboard不渲染阴影
+	font字体生成参数变化
+
+1.4.0.310
+	text控件返回文字占用宽度
+	ui的半透混合错误问题
+	去掉frame莫名的绿框
+	
+1.4.0.314
+	s_SimpleMapLoadMode, 2.5d视角的时候的剪裁距离默认60
+	text控件支持右键回调函数
+	九宫格像素偏离 
+	字体内存泄露
+	
+1.4.0.318
+	mex支持.nosort后缀；以及地形编辑器的一些支持
+	worldtile添加国家属性，解决一个worldeditor当机
+	去掉button里多余的char数组
+	
+1.4.0.323
+	scrollbar显示不出的bug
+	nosort的billboard绘制当机
+	text,edit能正确显示选中文字前景色
+	固定管线渲染暗的问题
+	
+1.4.0.328
+	ob_wj目录下的物件视作小物件
+	rapidxml完全替换tinyxml
+	
+1.4.0.422
+	改动很大，具体见log，主要修改：
+	多线程机制修改，抽象为底层
+	模型锁，贴图锁的优化
+	
+1.4.0.442
+	后期处理减少贴图
+	平均删除模型
+	修改一些效率不高的容器
+	字体的对齐彻底修改
+	增加贴图mipmap可控参数
+	粒子增加数量可控参数
+	添加对比度和亮度参数
+	
+1.4.0.461
+	阴影不显示的bug
+	点阵字体
+	添加灯光属性
+	微调文字位置
+	
+1.4.0.472
+	字体可半透了
+	listimage播放特效
+	hotkey字体alpha没有设置，导致透明
+	修改多行文本换行bug
+	修改文字对齐的bug	
+	
+1.4.0.475
+	拿掉了多余的flyRouteXml。以及其他一些小的修改
+	tip对比增加一项
+	
+1.4.0.480
+	原来的checkbox会将button的caption内容设置为tip的内容，现在去掉此功能
+	添加亮度，对比度
+	修改多线程处理的默认参数
+	
+1.4.0.486
+	List选择图片在文字上Bug
+	添加时间统计系统。定义MEPROFILE后开启
+	贴图找不到时不会绘制前次的贴图了
+	
+1.4.0.493
+	listimage播放序列帧bug
+	添加MeFreeProfile.
+	修改一些宏定义
+	
+1.5.0.499
+	Frame的FadeinFadeOut会直接作用在uirender上，会带动frame上所有控件一起渐隐渐现。FadeinFadeOut做成了object的一个属性，解决esc不能FadeOut的问题
+	SoundFileManager析构的时的内存泄露
+	uirender的workingarea使用push/pop机制
+	mapcofig存储怪物文件路径
+	
+1.6.0.507
+	可能死锁的问题
+	Edit在一些操作后应该重绘。修正了splashbar和选中前景的绘制位置
+	根据地图名取tile指针的时候，可以传国家id进去进一步判断
+	中立地图不看玩家id
+	设置工作区域(render相关)
+	
+1.6.0.531
+	tip位置偏移
+	去掉billbaord合并渲染
+	listimage图标动画检索效率优化
+	寻路算法挪到contrib
+	添加QueriesInterlock
+	没有贴图不会默认渲染上次贴图（第一张）
+	ui不渲染第二张贴图
+	List增加设置对齐方式和设置空白边缘的接口
+	点选时的一个逻辑bug
+	Frame增加左键双击回调
+	新的水面渲染，添加normal运算。没有贴图时关闭。
+	字体描边变淡
+	添加下滑线
+	Frame添加m_pRenderNeedRedraw回调函数，支持客户端使用uirender按需重绘2d图元
+	smartanimation逻辑修正
+	text支持npc语法类型，点击后返回data数据。
+	shadowmap矩阵大小变小，提高精度
+	
+1.6.0.539
+	添加获得行间距函数
+	bbox与射线相交增强
+	ControlList下划线使用字体高度计算，不使用矩形区域同时添加移动到超链接上有颜色变化
+	ICON下面的"N/A"显示不对齐
+	鼠标从一个装备栏或者技能栏移开的时候边缘蓝框没有消失 
+	修正Tip
+	
+1.6.0.549
+	button加mouseon的响应
+	smartanimation加接口
+	frame支持在render后调用renderneedredraw的回调函数
+	当ControlEdit控件是单行时，增加Tips显示
+	当文本超出限高时，修正删除逻辑
+	.noshadow
+	shimmer特效不渲染雾
+	字体都有影子了
+	interlock可能死循环的bug
+	list修改选中条为可配置
+	
+1.6.0.555
+	UI渲染回调的设置可以同时优先于UI渲染和后于UI渲染2种
+	拿掉了和contib重复的文件SingleTon.h。修改了一些内存泄露
+	
+1.6.0.562
+	text滚动条事件响应问题
+	List能够平滑滚动了
+	CheckBox动态创建BUG
+	修改鼠标在字上时，tips不显示的问题
+	去掉了一套重复的宏
+	
+1.6.0.569
+	状态Tip修改
+	修改text,checkbox,button,progress的Tip, 使之默认为左对齐，使文字到Tip框左右两边距离相等
+	tip中text不再人为左偏移14像素
+	list增加接口
+	list添加二级支持
+	鼠标进入区域就显示tip
+	
+1.6.0.578
+	SmartAni增加redraw接口
+	2级菜单Bug
+	进度条增加特效接口
+	调整Text下划线计算方法
+	ListImage能够平滑移动了
+	uirender增加接口;SmartAnimation使用uirender进行slice;List加接口
+	tip文字的颜色标识，由"<"改为"{"
+	List当机Bug
+	
+1.6.0.582
+	List增加了显示tip的回调；一个当机的bug
+	由于有的tip颜色在程序中配置，标识改为"<"或者"{"
+	动画BUG；Tip BUG
+	
+1.6.0.590
+	checkbox的disable状态不再响应点击
+	List使用新的回调函数机制
+	+-号居中
+	注释掉了语法解析相关旧代码
+	特效可能存在的BUG
+	clear image的时候停自己的动画;text控件设置新字串后，滚动条重置
+	list选中bar显示的一个bug
+	地图信息添加脚本路径
+	
+2.0.0.595
+	*支持关键帧动画
+	女特效声音bug
+	删除超链接
+	
+2.1.0.642
+	修改多行文本的flashbar高度计算错误
+	移除Icon时，增加重绘
+	多级层次点击整行响应
+	Hiberarchy == 0 时，无论有没有子项，总是显示加减号
+	在.Zoon中加入美术字对应的Rect坐标
+	防止tip当机
+	添加设置下滑线函数，可以自由设置是否需要设置下划线
+	新加载的ui出现在同层次ui的最上面;置顶ui的顺序改变不导致现有的ui顺序变化
+	解决tip野指针当机问题（listimage中）
+	新加载的ui出现在同层次ui的最上面;
+	更好的支持多行多列2d动画
+	刀光添加清空接口
+	Tip显示，只有在字体上的时候才显示Tip
+	settip后mousemove需要return true
+	人物身上特效不连续播放问题(QL)
+	ListImage加了一个刷新tip的接口
+	卓萌添加停止进度条特效功能
+	整理renderstate
+	添加attachment接口（QL）
+	nosort后缀的chunk绘制，param列表没有正确被清空
+	没有贴图的时候不进行渲染
+	text控件改变文字颜色的bug
+	与JIRA的任务ID弱结合，可以在log查看信息，可以提交bug信息。
+	listimage加接口用来控制在item为空的时候是否显示鼠标移动选择框
+	UiManager里面的Capture机制拿掉。
+	【道具系统】吃消耗品带来其他地方冷却问题
+	关键帧更新
+	
+2.1.0.652
+	2D特效——>编辑器
+	去掉profile
+	下拉列表中List消息响应BUG
+	关键帧更改
+		
+2.1.0.657
+	去掉blendvertex中的inline
+	queries的死循环，不兼容问题
+	避免blendvertex当机
+	
+2.1.0.660
+	querires防死循环放大次数。只是防止永久死循环
+	
+2.1.0.682
+	滚动条添加多加2为了显示下划线
+	表情和文字在Text控件里的对齐
+	Decal卸载贴图资源逻辑不正确
+	物件锁的逻辑改进
+	树的碰撞使用bbox
+	icondrag添加野指针保护
+	提高decal的距离从0.035->0.8
+	聊天窗口加入信息内容锁定功能,NEXT-868
+	GIF使用D3DTEXF_POINT采样参数
+	整理代码，进度条支持横竖正反
+	
+2.1.0.688
+	UpdateLocalBBox空判
+	RECT->RECTF
+	美术需求：骨骼动画半透
+	
+2.1.0.695
+	骨骼半透时没双面的BUG
+	控件Tip长度增加
+	骨骼半透存储当机
+	公告板增加向前偏移
+	草的绘制支持DestBlendOne
+	
+2.1.0.701
+	增加一种公告板形式以解决旋转相机时公告板不正常旋转问题
+	粒子是否跟随发射器的变换而旋转增加开关
+	防止除以0
+	关键帧的判断错误
+
+3.0.0.730
+	*支持Lightmap，预渲染
+	粒子随机生命，随机大小，添加反色选项；修正粒子关闭自转引起的BUG；将粒子的版本提升到3
+	ControlText与ControlList控件增加将ScrollBar设为开始位置时接口
+	粒子尾长度渐变由定值改为可渐变
+	粒子随机角度发射时，纹理角度也可相对应地改变
+	
+3.0.0.740
+	场景物件半透渐变处理
+	物件光照图从"lightmap"子目录下读，向前兼容
+	修改TObjectInfo Render接口
+	点光源
+	武器刀光圆滑，四元组函数修正
+	单独物件投影bug修正
+	切地图注销光照图
+
+2013 5 9
+        添加后置处理 hdr 
+
+2013 6 21
+1：增加效果 地形贴图的凹凸纹理映射
+2:地形编辑器 添加 地形凹凸纹理映射效果开关 
+3：修改 terrainblend.fx ， 修改 雾效在 sm3.0中不显示的问题 ，让shader直接处理雾效。并兼容 sm2.0 
+
+2013 12 9 
+1:添加播放视频 左上角 按esc退出 的图片，图片规格为 宽度256  高度为 128 ，命名为EscMovie.dds

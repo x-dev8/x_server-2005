@@ -1,0 +1,32 @@
+
+class ControlCheckBox : public ControlObject
+{
+public:
+	//typedef void (*funOnCheck)( OUT ControlObject* pSender, OUT IN bool* pbChecked );
+
+public:	/*Virtual Function*/
+	void Render();
+	void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+
+	bool OnMouseMove( UINT nFlags, const int nX, const int nY);
+
+public:
+	// 设置回调函数
+	void SetCheckFun_2lua( const char* luaTable, const char* funName );
+	// 是否选中
+	bool IsChecked() { return ((S_CheckBoxData*)m_pstData)->m_bChecked; }
+	// 设置是否被选中
+	void SetCheck( const bool bCheck );
+
+	void SetShowTip(bool bShow = true)		{ m_bShowTip = bShow; }
+	bool GetShowTip()						{ return m_bShowTip;  }
+	void SetCaption(const char *szText)		{ if(!szText) strcpy(m_pstData->m_szCaption, szText);}
+//private:
+	void OnCheck();
+
+
+public:
+	ControlCheckBox(void);
+	~ControlCheckBox(void);
+};

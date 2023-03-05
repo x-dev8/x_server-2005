@@ -1,0 +1,17 @@
+bin\Debug\CombinedServiceTool.exe
+bin\Debug\CombinedServiceTool.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\CombinedServiceTool.Form1.resources
+obj\Debug\CombinedServiceTool.Properties.Resources.resources
+obj\Debug\CombinedServiceTool.csproj.GenerateResource.Cache
+obj\Debug\CombinedServiceTool.exe
+obj\Debug\CombinedServiceTool.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\CombinedServiceTool.Form1.resources
+obj\Release\CombinedServiceTool.Properties.Resources.resources
+obj\Release\CombinedServiceTool.csproj.GenerateResource.Cache
+bin\Release\CombinedServiceTool.exe
+bin\Release\CombinedServiceTool.pdb
+obj\Release\CombinedServiceTool.exe
+obj\Release\CombinedServiceTool.pdb
+bin\Debug\MySql.Data.dll

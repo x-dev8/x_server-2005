@@ -1,0 +1,541 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        POPUP "&Add Control"
+        BEGIN
+            MENUITEM "Point",                       ID_EDIT_ADD_POINT
+            MENUITEM "Button",                      ID_EDIT_ADD_BUTTON
+            MENUITEM "CheckBox",                    ID_EDIT_ADD_CHECKBOX
+            MENUITEM "Edit",                        ID_EDIT_ADD_EDIT
+            MENUITEM "Text",                        ID_EDIT_ADD_TEXT
+            MENUITEM "List",                        ID_EDIT_ADD_LIST
+            MENUITEM "ListEx",                      ID_EDIT_ADD_LISTEX
+            MENUITEM "ListImg",                     ID_EDIT_ADD_LISTIMG
+            MENUITEM "ScrollBar",                   ID_EDIT_ADD_SCROLLBAR
+            MENUITEM "ScrollBarEx",                 ID_EDIT_ADD_SCROLLBAREX
+            MENUITEM "ComboBox",                    ID_EDIT_ADD_COMBO_BOX
+            MENUITEM "Picture",                     ID_EDIT_ADD_PICTURE
+            MENUITEM "Progress",                    ID_EDIT_ADD_PROGRESS
+            MENUITEM "Tab",                         ID_EDIT_ADD_TAB
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Test",                       ID_EDIT_TESTDLG
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Property",                   ID_VIEW_PROPERTY
+        MENUITEM "&Object",                     ID_VIEW_OBJECT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Ui Editor...",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About UIEditor"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "UI Editor 1.0",IDC_STATIC,37,14,92,8,SS_NOPREFIX
+    RTEXT           "Copyright (C) 2008",IDC_STATIC,31,40,197,8
+    DEFPUSHBUTTON   "Ok",IDOK,178,6,50,16,WS_GROUP
+END
+
+IDD_DIALOG_PROPERTY DIALOGEX 0, 0, 104, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_PROPERTY,6,6,92,238,LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_UI_OBJECT DIALOGEX 0, 0, 91, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TREE_UI_OBJECT,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | WS_TABSTOP,7,7,77,236,WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_PIC_EDITOR DIALOGEX 0, 0, 400, 300
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "PicEditor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,294,284,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,345,284,50,14
+    CTEXT           "Select Resource",IDC_STATIC,5,7,88,11,SS_SUNKEN
+    COMBOBOX        IDC_COMBO_FILE_NAME,96,5,299,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "?????",IDC_STATIC,5,22,88,81
+    RTEXT           "Left:",IDC_STATIC,10,41,26,8
+    RTEXT           "Top:",IDC_STATIC,10,57,26,8
+    RTEXT           "Right:",IDC_STATIC,10,70,26,8
+    RTEXT           "Bottom:",IDC_STATIC,10,86,26,8
+    EDITTEXT        IDC_EDIT_SELECTION_LEFT,38,34,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_SELECTION_LEFT,"msctls_updown32",UDS_ARROWKEYS,79,34,10,15
+    EDITTEXT        IDC_EDIT_SELECTION_TOP,38,50,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_SELECTION_TOP,"msctls_updown32",UDS_ARROWKEYS,79,50,10,15
+    EDITTEXT        IDC_EDIT_SELECTION_RIGHT,38,66,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_SELECTION_RIGHT,"msctls_updown32",UDS_ARROWKEYS,79,66,10,15
+    EDITTEXT        IDC_EDIT_SELECTION_BOTTOM,38,82,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_SELECTION_BOTTOM,"msctls_updown32",UDS_ARROWKEYS,79,82,10,15
+    GROUPBOX        "?????",IDC_STATIC,5,105,88,81
+    RTEXT           "Left:",IDC_STATIC,10,124,26,8
+    RTEXT           "Top:",IDC_STATIC,10,140,26,8
+    RTEXT           "Right:",IDC_STATIC,10,153,26,8
+    RTEXT           "Bottom:",IDC_STATIC,10,169,26,8
+    EDITTEXT        IDC_EDIT_MARGINS_LEFT,38,117,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_MARGINS_LEFT,"msctls_updown32",UDS_ARROWKEYS,79,117,8,15
+    EDITTEXT        IDC_EDIT_MARGINS_TOP,38,133,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_MARGINS_TOP,"msctls_updown32",UDS_ARROWKEYS,79,133,8,15
+    EDITTEXT        IDC_EDIT_MARGINS_RIGHT,38,149,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_MARGINS_RIGHT,"msctls_updown32",UDS_ARROWKEYS,79,149,8,15
+    EDITTEXT        IDC_EDIT_MARGINS_BOTTOM,38,165,41,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_MARGINS_BOTTOM,"msctls_updown32",UDS_ARROWKEYS,79,165,8,15
+    CONTROL         "",IDC_STATIC_PIC,"Static",SS_GRAYFRAME,96,22,289,248
+    SCROLLBAR       IDC_SCROLLBAR_H,96,270,289,11,SBS_RIGHTALIGN
+    SCROLLBAR       IDC_SCROLLBAR_V,385,22,10,247,SBS_VERT
+    LTEXT           "??:\n???????(*.tga)????UI??(*.UI)???????????""Common""?!\n??:\nUI??:test.UI\nTga??:pic.tga\n""test\\pic.tga""?""common\\pic.tga""????!""Common""??""test""",IDC_STATIC,5,189,88,92,SS_SUNKEN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ui_editor.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "ui_editor.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG_PROPERTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 98
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 244
+    END
+
+    IDD_DIALOG_UI_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 84
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_DIALOG_PIC_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 395
+        VERTGUIDE, 10
+        VERTGUIDE, 93
+        VERTGUIDE, 96
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 298
+        HORZGUIDE, 22
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ui_editor\n\nui_editor\n\n\nuieditor.Document\nui_editor.Document"
+    ID_VIEW_PROPERTY        "Show Property Window"
+    ID_VIEW_OBJECT          "Show Object Window"
+    ID_EDIT_ADD_BUTTON      "Button\nButton"
+    ID_EDIT_ADD_CHECKBOX    "CheckBox\nCheckBox"
+    ID_EDIT_ADD_EDIT        "EditBox\nEditBox"
+    ID_EDIT_ADD_TEXT        "TextBox\nTextBox"
+    ID_EDIT_ADD_LIST        "ListBox\nListBox"
+	ID_EDIT_ADD_LISTEX		"ListBoxEx\nListBoxEx"
+	ID_EDIT_ADD_TAB			"Tab\nTab"
+    ID_EDIT_ADD_LISTIMG     "ListImage\nListImage"
+    ID_EDIT_ADD_FRAME       "Frame\nFrame"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "ui_editor"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_ADD_SCROLLBAR   "Scroll Bar\nScroll Bar"
+	ID_EDIT_ADD_SCROLLBAREX "Scroll BarEx\nScroll BarEx"
+    ID_EDIT_ADD_COMBO_BOX   "ComboBox\nComboBox"
+    ID_EDIT_ADD_PICTURE     "Picture\nPicture"
+    ID_EDIT_ADD_PROGRESS    "Progress\nProgress"
+	ID_EDIT_ADD_TREE		"Tree\nTree"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_TESTDLG         "Test\n Test Dialog"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "ui_editor.ico"
+IDR_UIEDITORTYPE        ICON                    "ui_editor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_ADD_POINT
+    BUTTON      ID_EDIT_ADD_BUTTON
+    BUTTON      ID_EDIT_ADD_CHECKBOX
+    BUTTON      ID_EDIT_ADD_EDIT
+    BUTTON      ID_EDIT_ADD_TEXT
+    BUTTON      ID_EDIT_ADD_LIST
+    BUTTON      ID_EDIT_ADD_LISTEX
+    BUTTON      ID_EDIT_ADD_LISTIMG
+    BUTTON      ID_EDIT_ADD_SCROLLBAR
+    BUTTON      ID_EDIT_ADD_SCROLLBAREX
+    BUTTON      ID_EDIT_ADD_COMBO_BOX
+    BUTTON      ID_EDIT_ADD_PICTURE
+    BUTTON      ID_EDIT_ADD_PROGRESS
+    BUTTON      ID_EDIT_ADD_TAB
+    SEPARATOR
+    BUTTON      ID_EDIT_TESTDLG
+    BUTTON      ID_EDIT_ADD_TREE
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

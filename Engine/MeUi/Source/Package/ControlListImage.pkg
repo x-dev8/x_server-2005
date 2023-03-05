@@ -1,0 +1,38 @@
+
+class ControlListImage : public ControlIconDrag
+{
+public:
+	INT m_nCurLvl;
+    INT m_nMaxLvl;
+
+	bool	_bOrder;	//排列顺序 从右向左 还是从左右向 默认false从左向右添加。
+
+public:	/*Virtual Function by ControlObject*/
+	void Render();
+	void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+
+public: /*Virtual Function by ControlIconDrag*/
+	// 取得Icon的大小
+	int	 GetIconSize(){ return ((S_ListImgData*)m_pstData)->m_nIconSize; }
+	// 取得指定坐标的格子坐标
+	bool GetTilePt( const int nX, const int nY, OUT POINT *ptTile );
+	bool CanbePick(){ return ((S_ListImgData*)m_pstData)->m_bCanbePick; }
+	void SetCanbePick( const bool b ){ ((S_ListImgData*)m_pstData)->m_bCanbePick = b; }
+
+	void SetLvlInfo( INT nCurLvl, INT nMaxLvl );
+
+	void SetScrollValue(int nValue);
+
+	void setOrderType(bool bBeginRight) { _bOrder = bBeginRight; }
+
+
+public:
+	// 移除指定坐标项
+//	bool RemoveItem( const int nIndex, const int nCount );				// nCount为'-1'时全删
+	// 取得鼠标所在项格子坐标
+	POINT GetMouseOnSel(){ return m_ptMouseOnSel; }
+
+public:
+	ControlListImage(void);
+	~ControlListImage(void);
+};

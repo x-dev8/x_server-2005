@@ -1,0 +1,103 @@
+
+$#include "GlobalDef.h"
+
+//定义一些全局的数据结构，无实际功能
+//namespace More
+//{
+    #define ErrorUnsignedShortID 0xfff;
+    
+	struct SCharItem
+	{
+		enum EConstDefine
+		{
+			EConstDefine_GemHoleMaxCount = 10,
+			e_RandMaxCount = 5,
+		};
+
+		enum ELockState
+		{
+			e_NonLock = 0,
+			e_Locking = 1,
+			e_Locked = 2,
+		};
+
+		struct SItemBaseInfo
+		{
+			unsigned short ustItemID;    // 物品ID
+			__int64        nOnlyInt;     // 物品世界唯一ID
+			short          stPacketIdx;  // 背包的位置
+			unsigned short ustItemCount; // 个数
+			uint32         value1;       // 数值
+			__int64        n64UseTime;   // 使用时间
+			uint32         value2;       // 数值，可以改变，如HP,MP
+			unsigned char  useType;      // 使用类型 0 无类型 1 激活自动使用 2 以后用
+			char  szCreaterName[dr_MaxNameString];
+		};
+
+		struct SEquipData
+		{   // 物品的扩展属性 装备时，是物体的特殊属性 道具时，是物体的个数
+			//  每个道具的属性只能由7项目  special0 ~ special6 (unsigned char )
+			//  针对不同的道具，不同的道具有不同的属性说明
+			//  (武器, 衣服, 鞋子, 手套, 头盔, 饰品 )
+			//  如果该项数值为0表示该项目无效!!
+			short specials[EConstDefine_GemHoleMaxCount];
+			int   usHP;                            // 装备的HP
+			int   usHpMax;                         // 装备的HPMax
+			unsigned short usRand[e_RandMaxCount]; // 随机属性5   			
+			bool  bIsCanIntensify;                 // 是否能被强化			
+			bool  bIsSoulBounded;                  // 是否被绑定
+			short stIntensifyType;                 // 锁强化类型
+		};
+
+		struct StorageInfo
+		{   
+			bool bIsLocked;     // 物品是否加锁
+			int  nStorageNpcId; // NPCid   仓库存储之用
+			int  nWhoIs;        // 物品存储DSC 0 :pack 1:storage  归属背包
+		};
+
+		SCharItem()
+		{
+			memset( this, 0, sizeof(SCharItem) );
+			itembaseinfo.ustItemID =  ErrorUnsignedShortID;
+			bCanUse = TRUE;
+		}
+
+		const bool operator==( const SCharItem& stItem ) const
+		{
+			if( memcmp( this, &stItem, sizeof(SCharItem) ) == 0 )
+				return true;
+			return false;
+		}
+
+		const bool operator!=( const SCharItem& stItem ) const
+		{
+			if( memcmp( this, &stItem, sizeof(SCharItem) ) != 0 )
+				return true;
+			return false;
+		}
+
+		const bool Included( const SCharItem& stItem ) const 
+		{
+			if( itembaseinfo.ustItemID == stItem.itembaseinfo.ustItemID )
+			{
+				if( itembaseinfo.ustItemCount >= stItem.itembaseinfo.ustItemCount )
+					return true;
+			}
+			return false;
+		}     
+
+		void Write(CDataChunkWriter *w);
+		void Read(BYTE* bybuff,DWORD dwsize/*,CDataChunkLoader *l*/);
+		void ReadItemBaseInfo(ReadData inP,int nSize);
+		void ReadEquipInfo(ReadData inP,int nSize);
+		void ReadStorgeInfo(ReadData inP,int nSize);
+	    
+		bool IsOverdue();   
+
+		BOOL          bCanUse;     // 只做为逻辑，不作为存储
+		SItemBaseInfo itembaseinfo;
+		SEquipData    equipdata;
+		StorageInfo   storageinfo;
+	};
+//}

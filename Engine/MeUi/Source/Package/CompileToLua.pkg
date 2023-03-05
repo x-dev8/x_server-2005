@@ -1,0 +1,26 @@
+//$pfile "./Source/Package/FontManager.pkg"
+//$pfile "./Source/Package/GridMap.pkg"
+
+$pfile "./Source/Package/ControlButton.pkg"
+$pfile "./Source/Package/ControlObject.pkg"
+$pfile "./Source/Package/ControlCheckBox.pkg"
+$pfile "./Source/Package/ControlComboBox.pkg"
+$pfile "./Source/Package/ControlEdit.pkg"
+$pfile "./Source/Package/ControlFrame.pkg"
+$pfile "./Source/Package/IconManager.pkg"
+$pfile "./Source/Package/ControlIconDrag.pkg"
+$pfile "./Source/Package/ControlIconDragManager.pkg"
+$pfile "./Source/Package/ControlList.pkg"
+$pfile "./Source/Package/ControlListEx.pkg"
+$pfile "./Source/Package/ControlListImage.pkg"
+$pfile "./Source/Package/ControlPicture.pkg"
+$pfile "./Source/Package/ControlProgress.pkg"
+$pfile "./Source/Package/ControlScrollBar.pkg"
+$pfile "./Source/Package/ControlScrollBarEx.pkg"
+$pfile "./Source/Package/ControlTab.pkg"
+$pfile "./Source/Package/ControlText.pkg"`
+$pfile "./Source/Package/MouseManager.pkg"
+
+$pfile "./Source/Package/UiManager.pkg"
+
+//$pfile "./Source/Package/UiPicture.pkg"

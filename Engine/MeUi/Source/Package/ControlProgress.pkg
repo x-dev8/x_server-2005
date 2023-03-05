@@ -1,0 +1,32 @@
+
+class ControlProgress : public ControlObject
+{
+public:/*Virtual Function*/
+	bool UseFocus()	{ return false; }
+	void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	void SetVisable( const bool bVisable, const bool bFadeInorFadeOut = false );
+
+	bool OnMouseMove( UINT nFlags, const int nX, const int nY);
+
+public:
+	int		GetValue(){ return m_nValue; }
+	void	SetValue( const int n );	// 0~1000
+	int		GetMaxValue(){ return m_nMaxValue; }
+	void	SetMaxValue( int n ){ m_nMaxValue = n; }
+	int		GetRealWidth(){ return m_nRealWidth; }
+	// ´´½¨
+	void	Create( IN const RECT* pRect, const D3DCOLOR colBack );
+	void	Render( );
+
+	void	setTipName(const char* ch);
+	//const char* getTipName() const		{ return TipName.c_str(); }
+
+	bool	IsShowTip() { return m_bShowTip; }
+	void	setShowTip(bool bShow)	{ m_bShowTip = bShow; }
+
+
+
+public:
+	ControlProgress();
+	~ControlProgress();
+};

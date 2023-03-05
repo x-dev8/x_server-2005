@@ -1,0 +1,30 @@
+
+class ControlPicture : public ControlObject
+{
+public:
+
+public:
+	bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+    bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	bool OnMouseLeave( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonDBClick( UINT nFlags, const int nX, const int nY );
+
+public:
+	// 设置回调函数
+	void SetPicClickFun_2lua( const char* luaTable, const char* funName );
+	void SetOnMouseOn_2lua( const char* luaTable, const char* funName );
+	void SetOnMouseLeave_2lua( const char* luaTable, const char* funName );
+	void SetOnLDBClickFun_2lua( const char* luaTable, const char* funName );
+
+    void setTip(const char* data);
+    void setShowTip(bool show = true);
+    bool IsShowTip();
+//private:
+	bool OnClick(void);
+
+
+
+public:
+	ControlPicture(void);
+	~ControlPicture(void);
+};

@@ -1,0 +1,13 @@
+//
+
+//$pfile "More.pkg"
+
+//$pfile "PlayerEquip.pkg"
+
+//$pfile "StdCharSkeleton.pkg"
+
+//$pfile "PlayerAnimCtrl.pkg"
+
+$pfile "Rank.pkg"
+
+//

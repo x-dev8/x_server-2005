@@ -1,0 +1,14 @@
+
+class ControlScrollBarEx : public ControlScrollBar
+{
+public:
+	virtual bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	virtual bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+
+protected:
+	virtual void OnUpdatePos();
+
+public:
+	ControlScrollBarEx(void);
+	virtual ~ControlScrollBarEx(void);
+};

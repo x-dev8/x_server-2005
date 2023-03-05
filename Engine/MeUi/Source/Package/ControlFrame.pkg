@@ -1,0 +1,61 @@
+
+class ControlFrame : public ControlObject
+{
+public:
+
+
+public:	/*Virtual Function*/
+	void Render();
+	void Run();
+	bool UseFocus()	{ return false; }
+	bool PtInObject( const int nX, const int nY );
+	bool PtInOnlyFrame( const int x, const int y);
+	void StartFlash( const int nFlashCount,
+					const bool bAutoClose = false, const bool bFadeIn = false );
+	int  GetArrayMode(){ return ((S_FrameData*)m_pstData)->m_nArrayMode; }
+	bool IsChild( IN const ControlObject* pChild );
+	void ReleaseUI();
+	ControlObject*	FindControl( IN const char* szControlID,
+									IN const char* szFrameID = NULL );
+	ControlObject* FindFrame( IN const char *szFrameID );
+	bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	bool OnMouseWheel( bool bUp, const int nX, const int nY );
+	bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonUp( UINT nFlags, const int nX, const int nY );
+	bool OnLButtonDBClick( UINT nFlags, const int nX, const int nY );
+	bool OnRButtonDown( UINT nFlags, const int nX, const int nY );
+	bool OnRButtonUp( UINT nFlags, const int nX, const int nY );
+	bool OnRButtonDBClick( UINT nFlags, const int nX, const int nY );
+	bool OnMouseLeave();
+	bool OnKeyDown( UINT nChar );
+	bool OnKeyUp( UINT nChar );
+	bool OnChar( UINT nChar );
+	bool IsLButtonDrag(){ return m_bLButtonDrag; }
+
+public:
+	//------- 载入文件    (By   at 2004-6-2)
+	DWORD	LoadUIFormFile( IN const char* szFileName, IN ControlObject* pFather = NULL );
+	void	SetArrayMode( const int nMode ) { ((S_FrameData*)m_pstData)->m_nArrayMode = nMode; }
+	void	SetRunFun_2lua( const char* luaTable, const char* funName );
+	void	SetRenderFun_2lua( const char* luaTable, const char* funName );
+	void	SetOnClickFun_2lua( const char* luaTable, const char* funName );
+	void	SetOnRBtnDown_2lua( const char* luaTable, const char* funName );
+	void	SetMouseMoveOn_2lua( const char* luaTable, const char* funName );
+	void	SetMouseMoveLevel_2lua( const char* luaTable, const char* funName );
+	void	SetOnTab_2lua( const char* luaTable, const char* funName );
+	void	SetFrameMove_2lua( const char* luaTable, const char* funName );
+	// 创建
+	//void	Create( IN const RECT* pRect, const D3DCOLOR colBack = 0,
+	//				IN funRun pRunFun = NULL,
+	//				IN funRender pRenderFun = NULL );
+// 	void	SetAllVisable( const bool bVisable);
+// 	void	SetAllFadeVal( const int nMaxFade, const int nMinFade );
+// 	void	SetAllBlendColor( const int nColor );
+
+	void	AppendChild(ControlObject* pChlid);
+
+
+public:
+	ControlFrame(void);
+	~ControlFrame(void);
+};

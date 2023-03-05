@@ -1,0 +1,222 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "IconEditor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ICONEDITOR_DIALOG DIALOGEX 0, 0, 790, 534
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IconEditor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,682,512,59,15
+    GROUPBOX        "属性",IDC_STATIC,3,165,134,366
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,496,45,289,462
+    CONTROL         "",IDC_STATIC_IMAGE,"Static",SS_GRAYFRAME | SS_NOTIFY,144,67,342,316
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,69,126,86
+    LTEXT           "",IDC_STATIC_INFO,146,390,337,9
+    GROUPBOX        "",IDC_STATIC_ICONNAME,140,0,350,531
+    EDITTEXT        IDC_EDIT1,6,52,89,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON1,97,52,37,14
+    GROUPBOX        "",IDC_STATIC,493,0,294,531
+    EDITTEXT        IDC_EDIT2,497,11,205,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON2,707,11,41,14
+    PUSHBUTTON      "&Load Xml",IDC_BUTTON3,571,28,57,15
+    PUSHBUTTON      "&Save Xml",IDC_BUTTON4,645,28,57,15
+    GROUPBOX        "Icon图片文件",IDC_STATIC,3,0,134,160
+    LTEXT           "道具ID:",IDC_STATIC,7,181,35,8
+    EDITTEXT        IDC_EDIT3,46,179,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "道具名称:",IDC_STATIC,7,197,36,8
+    EDITTEXT        IDC_EDIT4,46,195,61,12,ES_AUTOHSCROLL
+    LTEXT           "道具ID范围:",IDC_STATIC,6,267,43,8
+    LTEXT           "图片名称:",IDC_STATIC,6,215,36,8
+    EDITTEXT        IDC_EDIT5,46,212,70,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "行:",IDC_STATIC,7,231,14,8
+    EDITTEXT        IDC_EDIT6,22,228,29,12,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    LTEXT           "列:",IDC_STATIC,68,230,14,8
+    EDITTEXT        IDC_EDIT7,83,228,29,12,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    EDITTEXT        IDC_EDIT8,50,265,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT9,97,265,34,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "->",IDC_STATIC,86,266,8,8
+    PUSHBUTTON      "&Add Icon",IDC_BUTTON7,71,247,59,14
+    PUSHBUTTON      "&Edit Icon",IDC_BUTTON8,498,28,55,14,WS_DISABLED
+    PUSHBUTTON      "&Batch Add",IDC_BUTTON9,10,285,56,14
+    LTEXT           "相对路径:",IDC_STATIC,5,307,39,8
+    EDITTEXT        IDC_EDIT10,42,305,92,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "",IDC_STATIC_COUNT,497,515,145,8
+    PUSHBUTTON      "&Find Icon",IDC_BUTTON10,90,178,43,14
+    PUSHBUTTON      "Batch &Delete",IDC_BUTTON11,73,285,56,14
+    PUSHBUTTON      "&Open ",IDC_BUTTON12,706,28,42,14
+    GROUPBOX        "选择类型",IDC_STATIC,6,342,128,59
+    CONTROL         "战将",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_GROUP,151,15,32,10
+    CONTROL         "阴阳师",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,192,15,40,10
+    CONTROL         "舞娘",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,236,15,32,10
+    CONTROL         "剑侠",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,279,15,32,10
+    CONTROL         "飞将",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,324,15,32,10
+    CONTROL         "锤兵",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,368,15,32,10
+    LTEXT           "背景图片:",IDC_STATIC,5,325,39,8
+    EDITTEXT        IDC_EDIT11,42,323,92,12,ES_AUTOHSCROLL
+    CONTROL         "职业技能",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON | WS_GROUP,151,41,44,10
+    CONTROL         "通用技能",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,213,41,44,10
+    CONTROL         "生产技能",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,281,41,44,10
+    GROUPBOX        "",IDC_STATIC,145,31,192,25
+    GROUPBOX        "",IDC_STATIC,145,5,294,25
+    LTEXT           "Icon规格:",IDC_STATIC,8,12,37,8
+    EDITTEXT        IDC_EDIT12,61,10,24,13,ES_AUTOHSCROLL
+    LTEXT           "宽:",IDC_STATIC,46,12,12,8
+    EDITTEXT        IDC_EDIT13,106,10,24,13,ES_AUTOHSCROLL
+    LTEXT           "高:",IDC_STATIC,90,12,12,8
+    GROUPBOX        "",IDC_STATIC,6,24,127,25
+    CONTROL         "加载文件",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,34,46,10
+    CONTROL         "加载文件夹",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,65,34,50,10
+    CONTROL         "物品Icon",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,358,44,10
+    CONTROL         "技能Icon",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON,15,374,44,10
+    CONTROL         "装备Icon",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON,76,358,44,10
+    CONTROL         "武器Icon",IDC_RADIO17,"Button",BS_AUTORADIOBUTTON,76,374,44,10
+    CONTROL         "心法Icon",IDC_RADIO18,"Button",BS_AUTORADIOBUTTON,15,389,44,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "杭州拓乐网络"
+            VALUE "FileDescription", "IconEditor"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Icon编辑器.exe"
+            VALUE "LegalCopyright", "(c) <杭州拓乐网络>.  All rights reserved."
+            VALUE "OriginalFilename", "IconEditor.exe"
+            VALUE "ProductName", "IconEditor"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUDELETE MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Delete",                     ID_DELETE
+    END
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

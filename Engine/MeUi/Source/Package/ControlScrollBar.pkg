@@ -1,0 +1,51 @@
+
+class ControlScrollBar : public ControlObject
+{
+public:
+	//typedef void (*funUpdatePos)( OUT ControlObject* pSender, int n );
+
+public:	/*Virtual Function*/
+	virtual void Render();
+	virtual void InitUIData( IN ControlObject* pFather, IN S_BaseData* pData );
+	virtual bool OnMouseMove( UINT nFlags, const int nX, const int nY );
+	virtual bool OnLButtonDown( UINT nFlags, const int nX, const int nY );
+	virtual bool OnLButtonUp( UINT nFlags, const int nX, const int nY );
+
+public:
+	//void SetUpdatePosFun( IN funUpdatePos pFun )	{ m_pFunUpdatePos = pFun; }
+	int  GetValue(){ return m_nValue; }
+	void SetValue( const int n ){ m_nValue = n; OnUpdatePos(); }
+	bool IsDrag(){ return m_bLButtonDrag; }
+	void ClearDrag()	{ m_bLButtonDrag = false; }
+	void SetEnable( bool bEnable = true)		{ m_bEnable = bEnable; }
+	bool GetEnable()							{ return m_bEnable; }
+	void SetUIScrollBarBlend( int nBlend ) 
+	{
+		this->SetBlendColor( nBlend );
+		 m_btnUp.SetBlendColor( nBlend );
+		 m_btnDonw.SetBlendColor( nBlend );
+		 m_btnBar.SetBlendColor( nBlend );
+	}
+	void SetScrollHeight( const int nHeight )
+	{
+		RECT rt = {0};
+		GetRealRect( &rt );
+		this->SetHeight( nHeight );
+		m_btnUp.SetPos( rt.left, rt.top );
+		m_btnBar.SetPos( rt.left, rt.top-( (rt.top-rt.bottom)/2) );
+		m_btnDonw.SetPos( rt.left, rt.top+nHeight-m_btnDonw.GetHeight() );
+	//	nUp = nHeight;
+	}
+	int		GetMaxValue()			{ return m_nMaxValue; }
+	void	SetMaxValue(int nMax)	{ m_nMaxValue = nMax; }
+	void	SetStepValue(int nStep)	{ m_nStepValue = nStep; }
+
+//protected:
+	virtual void OnUpdatePos();
+
+
+
+public:
+	ControlScrollBar(void);
+	virtual ~ControlScrollBar(void);
+};

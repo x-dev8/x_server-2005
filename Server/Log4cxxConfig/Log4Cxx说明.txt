@@ -1,0 +1,154 @@
+log4cxx说明
+一、按照一定时间产生日志文件,配置文件如下： 
+    # Set root logger level to ERROR and its only appender to A1. 
+    log4j.rootLogger=ERROR,R 
+
+    # R is set to be a DailyRollingFileAppender. 
+    log4j.appender.R.log=org.apache.log4j.DailyRollingFileAppender 
+
+    log4j.appender.R.File=backup.log 
+    log4j.appender.R.DatePattern = '.'yyyy-MM-dd 
+    log4j.appender.R.layout=org.apache.log4j.PatternLayout 
+    log4j.appender.R.layout.ConversionPattern=%-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] %m%n 
+    
+    以上配置是每天产生一个备份文件。其中备份文件的名字叫backup.log。 
+    具体的效果是这样：当天的日志信息记录在backup.log文件中，前一天的记录在名称为  backup.log.yyyy-mm-dd 的文件中。 
+    类似的，如果需要每月产生一个文件可以修改上面的配置： 
+    将 
+      log4j.appender.R.DatePattern = '.'yyyy-MM-dd 
+    改为 
+        log4j.appender.R.DatePattern = '.'yyyy-MM 
+
+二、根据日志文件大小自动产生新日志文件 
+    配置文件内容如下： 
+
+# Set root logger level to ERROR and its only appender to A1. 
+log4j.rootLogger=ERROR,R 
+
+# R is set to be a RollingFileAppender. 
+log4j.appender.R=org.apache.log4j.RollingFileAppender 
+
+log4j.appender.R.File=backup.log 
+#log4j.appender.R.MaxFileSize=100KB 
+
+# Keep one backup file 
+log4j.appender.R.MaxBackupIndex=1 
+log4j.appender.R.layout=org.apache.log4j.PatternLayout 
+log4j.appender.R.layout.ConversionPattern=%-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] %m%n 
+
+
+其中： 
+#日志文件的大小 
+log4j.appender.R.MaxFileSize=100KB 
+# 保存一个备份文件 
+log4j.appender.R.MaxBackupIndex=1 
+
+
+
+
+
+log4j.rootLogger=DEBUG,CONSOLE,A1,im 
+log4j.addivity.org.apache=true 
+
+
+
+# 应用于控制台 
+
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender 
+log4j.appender.Threshold=DEBUG 
+log4j.appender.CONSOLE.Target=System.out 
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout 
+log4j.appender.CONSOLE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n 
+#log4j.appender.CONSOLE.layout.ConversionPattern=[start]%d{DATE}[DATE]%n%p[PRIORITY]%n%x[NDC]%n%t[THREAD] n%c[CATEGORY]%n%m[MESSAGE]%n%n 
+
+
+#应用于文件 
+
+log4j.appender.FILE=org.apache.log4j.FileAppender 
+log4j.appender.FILE.File=file.log 
+log4j.appender.FILE.Append=false 
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout 
+log4j.appender.FILE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n 
+# Use this layout for LogFactor 5 analysis 
+
+
+# 应用于文件回滚 
+
+log4j.appender.ROLLING_FILE=org.apache.log4j.RollingFileAppender 
+log4j.appender.ROLLING_FILE.Threshold=ERROR 
+log4j.appender.ROLLING_FILE.File=rolling.log 
+log4j.appender.ROLLING_FILE.Append=true 
+log4j.appender.ROLLING_FILE.MaxFileSize=10KB 
+log4j.appender.ROLLING_FILE.MaxBackupIndex=1 
+log4j.appender.ROLLING_FILE.layout=org.apache.log4j.PatternLayout 
+log4j.appender.ROLLING_FILE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n 
+
+
+#应用于socket 
+log4j.appender.SOCKET=org.apache.log4j.RollingFileAppender 
+log4j.appender.SOCKET.RemoteHost=localhost 
+log4j.appender.SOCKET.Port=5001 
+log4j.appender.SOCKET.LocationInfo=true 
+# Set up for Log Facter 5 
+log4j.appender.SOCKET.layout=org.apache.log4j.PatternLayout 
+log4j.appender.SOCET.layout.ConversionPattern=[start]%d{DATE}[DATE]%n%p[PRIORITY]%n%x[NDC]%n%t[THREAD]%n%c[CATEGORY]%n%m[MESSAGE]%n%n 
+
+
+# Log Factor 5 Appender 
+log4j.appender.LF5_APPENDER=org.apache.log4j.lf5.LF5Appender 
+log4j.appender.LF5_APPENDER.MaxNumberOfRecords=2000 
+
+
+# 发送日志给邮件 
+
+log4j.appender.MAIL=org.apache.log4j.net.SMTPAppender 
+log4j.appender.MAIL.Threshold=FATAL 
+log4j.appender.MAIL.BufferSize=10 
+log4j.appender.MAIL.From=web@www.wuset.com 
+log4j.appender.MAIL.SMTPHost=www.wusetu.com 
+log4j.appender.MAIL.Subject=Log4J Message 
+log4j.appender.MAIL.To=web@www.wusetu.com 
+log4j.appender.MAIL.layout=org.apache.log4j.PatternLayout 
+log4j.appender.MAIL.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n 
+
+
+# 用于数据库 
+log4j.appender.DATABASE=org.apache.log4j.jdbc.JDBCAppender 
+log4j.appender.DATABASE.URL=jdbc:mysql://localhost:3306/test 
+log4j.appender.DATABASE.driver=com.mysql.jdbc.Driver 
+log4j.appender.DATABASE.user=root 
+log4j.appender.DATABASE.password= 
+log4j.appender.DATABASE.sql=INSERT INTO LOG4J (Message) VALUES ('[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n') 
+log4j.appender.DATABASE.layout=org.apache.log4j.PatternLayout 
+log4j.appender.DATABASE.layout.ConversionPattern=[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n 
+
+
+log4j.appender.A1=org.apache.log4j.DailyRollingFileAppender 
+log4j.appender.A1.File=SampleMessages.log4j 
+log4j.appender.A1.DatePattern=yyyyMMdd-HH'.log4j' 
+log4j.appender.A1.layout=org.apache.log4j.xml.XMLLayout 
+
+#自定义Appender 
+
+log4j.appender.im = net.cybercorlin.util.logger.appender.IMAppender 
+
+log4j.appender.im.host = mail.cybercorlin.net 
+log4j.appender.im.username = username 
+log4j.appender.im.password = password 
+log4j.appender.im.recipient = corlin@cybercorlin.net 
+
+log4j.appender.im.layout=org.apache.log4j.PatternLayout 
+log4j.appender.im.layout.ConversionPattern =[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n 
+
+
+################### 
+#每天产生一个日志文件 
+################### 
+
+log4j.appender.file=org.apache.log4j.DailyRollingFileAppender 
+log4j.appender.file.DatePattern='.'yyyy-MM-dd 
+log4j.appender.file.File= logs/run.log 
+log4j.appender.file.Append=true 
+log4j.appender.file.Threshold=INFO 
+log4j.appender.file.layout=org.apache.log4j.PatternLayout 
+log4j.appender.file.layout.ConversionPattern=%c %x - %m%n   

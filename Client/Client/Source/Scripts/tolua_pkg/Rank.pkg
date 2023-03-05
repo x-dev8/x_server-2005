@@ -1,0 +1,78 @@
+
+$#include "ui\RankList.h"
+
+#include "UiBase.h"
+class CUI_ID_FRAME_RankList :public CUIBase
+{
+	// Member
+public:	
+	CUI_ID_FRAME_RankList();
+	
+	//bool LoadRank(const std::string& filename);
+
+	void LoadFrame(const std::string& filename, const char* frameName);
+	void UnLoadFrame(const std::string& filename);
+
+	void SetFrameVisible(const char* frameName, bool visible);
+
+	void SetRankSortFunc(const char* frameName, const char* relativeControlId, const char* relativeArrowControlId, const char* luaFunc, const char* key);
+
+	void SetControlCheckBoxText(const char* frameName, const char* controlId, const char* text);
+	void SetControlText(const char* frameName, const char* controlId, const char* text);
+	void SetControlButtonText(const char* frameName, const char* controlId, const char* text);
+
+	/* 设置List父子关系，窗口ID_FRAME_RankChild1里的多列List(子)对应一个List(父)，
+	   这样滚动条事件和选中时间只有父List才有，然后传给每一个子List
+	*/
+	void AssociateList(const char* frameName, const char* fatherControlId, const char* childControlId, int drawFormat);
+	
+	void AssociateListImg(const char* frameName, const char* fatherControlId, const char* controlId, int drawFormat);
+	// 添加一行List数据
+	void AddListItem(const char* frameName, const char* controlId, const char* text, unsigned int color, const char* data, bool bMiddle);
+	//添加数据到ListImage
+	void AddListImageItem(const char* frameName, const char* controlId, const char* text, unsigned int color, const char* data);
+	void AddListImageCharItem(const char* frameName, const char* controlId, const char* text, unsigned int color, const char* data/*, int nRow, int nCol*/);
+	// 删除List数据
+	void ClearList(const char* frameName, const char* controlId);
+	//删除ListImage数据
+	void ClearListImage(const char* frameName, const char* controlId);
+
+	// 得到type类型的排行榜行数
+	int GetRankRowSize(const char* type);
+	// 得到type类型第row行，第column列（Rank.config对应的数据，如column为Rank，PlayerName等等）内容
+	const char* GetRankContent(const char* type, int row,  const char* column);
+
+	// 得到职业名称
+	const char* GetProfessionName(int type);
+
+	const char* GetCountryName(int nCountryId);
+	// 得到玩家名称
+	const char* GetMeName();
+
+	// 得到公会名称
+	const char* GetGuildName();
+	
+	void Log(const std::string& log);
+	
+	//得到当前的页数
+	int GetCurrentPageIndex();
+	
+	//得到每页显示的行数
+	int GetShowNumPerPage();
+	
+	// 设置排行榜描述
+	void SetExplain(int nStringIndex);
+	
+	//设置自己等级说明
+	void SetInfomation(const char* szType);
+	
+	//设置类型标题
+	void SetTileText(const char* szText);
+	
+};
+
+namespace Rank 
+{
+	CUI_ID_FRAME_RankList* GetRank();
+}
+

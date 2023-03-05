@@ -1,0 +1,59 @@
+
+$#include "..\PlayerEquip.h"
+$#include "..\PlayerAnimCtrl.h"
+
+class CPlayerAnimParam
+{
+public:
+	CPlayerAnimParam()
+	{
+		szSkin = DEFAULT_AVATARSETTING_NAME;
+		nSpecularTextureID = -1;
+		nColor = -1;
+        nIntensifyTime = -1;
+        pEquips = NULL;
+	}
+
+    // 通过部位得到CPlayer_SEquipment。
+//     CPlayer_SEquipment* getEquipByPart(CStdCharSkeleton::EPartId part)
+//     {
+//         return &pEquips[part];
+//     }
+// 
+//     // 得到当前要装备的CPlayer_SEquipment。
+//     CPlayer_SEquipment* getCurrentEquip()
+//     {
+//         return &pEquips[nPart];
+//     }
+
+	int nModelId;
+	int nSex;
+	int nPart;              // 装备部位。
+
+    // 装备强化等级，不同强化等级可以显示不同特效 [6/5/2008 whu]
+    int nIntensifyTime;
+};
+
+class CPlayerAnim:public MexAnimCtrl
+{
+public:
+	CPlayerAnim();
+	~CPlayerAnim();
+	
+    /** 设置装备特效，
+    @param part 装备部位。
+    @param texFilename 特效贴图文件名。
+    */
+    void setEquipEffect( int part, const char* texFilename );
+
+    /** 设置装备模型特效
+    @param MEXFilename 特效模型文件名。
+    */
+    void setEquipModelEffect( const char* MEXFilename );
+};
+  
+namespace Equip
+{
+    CPlayerAnimParam* getCurrentEquipParam();
+    CPlayerAnim* getCurrentEquipPlayerAnim();
+}

@@ -1,0 +1,152 @@
+
+enum UI_Render_Layer
+{
+	UI_Render_LayerFirst = 0,
+	UI_Render_LayerSecond,
+	UI_Render_LayerThree,
+
+	UI_Render_LayerMax
+};
+
+class UiManager
+{
+public:
+	//typedef bool (*funPlaySound)( const char *name, D3DXVECTOR3* vPos );
+	//typedef void (*funLogInfo)( const char *name );
+
+public:
+	struct S_UI
+	{
+		S_UI()
+		{
+			m_pUI = NULL;
+			m_bNeedRelease = true;
+		}
+
+		void Release()
+		{
+			if ( ( m_bNeedRelease == true ) && m_pUI )
+			{
+				delete m_pUI;
+				m_pUI = NULL;
+			}
+		}
+
+		std::string		m_strFileName;
+		ControlFrame	*m_pUI;
+		bool			m_bNeedRelease;
+	};
+
+public:
+	// 与D3D框架接口一样
+	/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+	void	FrameMove();
+	void	Render();
+	void	RenderTips();
+	//void	InitDeviceObjects( IN UiDrawer::funRegisterTexture pRegisterTexture,
+	//							IN UiDrawer::funUnregisterTexture pUnregisterTexture,
+	//							IN UiDrawer::funBlt pBlt,
+	//							IN UiDrawer::funDrawRect2D pDrawRect2D,
+	//							IN UiDrawer::funFillRect2DEx pFillRect2D,
+	//							IN UiDrawer::funDrawProgressRect pDrawProgressRect,
+	//							IN FontSystem::funCreateFont pCreateFont,
+	//							IN FontSystem::funReleaseFonts pReleaseFonts,
+	//							IN FontSystem::funDrawTextARGB pDrawTextARGB,
+	//							IN FontSystem::funDrawTextARGBEx pDrawTextARGBEx );
+	//void	InitDeviceObjects( IN UiDrawer::funRegisterTexture pRegisterTexture,
+    //                          IN UiDrawer::funRegisterTextureFromFileMem pRegisterTextureFromFileMem,
+	//							IN UiDrawer::funUnregisterTexture pUnregisterTexture,
+	//							IN UiDrawer::funBlt pBlt,
+	//							IN UiDrawer::funDrawRect2D pDrawRect2D,
+	//							IN UiDrawer::funFillRect2DEx pFillRect2D,
+	//							IN UiDrawer::funDrawProgressRect pDrawProgressRect );
+	void	InvalidateDeviceObjects();
+	void	RestoreDeviceObjects();
+	bool	MsgProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam );
+	/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+	void    SetPlaySoundFun_2lua( const char* luaTable, const char* funName );
+	bool	PlaySound( std::string& strFileName );
+
+	//DWORD	ReAddTopFrame();	//接口变了 要用这个函数 需实现新的
+	DWORD	AddFrame( IN const char* szFileName, bool bAllVisable = false, UI_Render_Layer layer = UI_Render_LayerFirst );
+	bool	RemoveFrame( IN const char* szFileName );
+	bool	AddFrame( IN ControlFrame* pObject, bool bAllVisable = false, UI_Render_Layer layer = UI_Render_LayerFirst );
+	bool	RemoveFrame( IN const ControlFrame* pObject );
+
+	// 是否有模式窗口
+	bool	HasModalWindow(int layer);	//需要判断哪一层有没有modalwindow
+
+	// Frame
+	bool OnFrameRun( IN const char *szFrameID, IN ControlFrame::funRun pFun );
+	bool OnFrameRender( IN const char *szFrameID,
+								IN ControlFrame::funRender pFun,
+								const bool bBeforeRender = false );
+	// Button
+	bool	OnButtonClick( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlButton::funOnButtonClick pFun );
+	// Edit
+	bool OnEditEnter( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlEdit::funOnEnter pFun );
+	// CheckBox
+	bool OnCheckBoxCheck( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlCheckBox::funOnCheck pFun );
+	// List
+	bool OnListSelectChange( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlList::funSelectChange pFun );
+	bool OnListLDBClick( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlList::funLDBClick pFun );
+	// ListImg / ListEx
+	bool OnIconDragOn( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlIconDrag::funDragOn pFun );
+	//static bool OnIconDragOff( IN const char *szFrameID, IN const char *szControlID,
+	//								IN ControlIconDrag::funDragOff pFun );
+	bool OnIconLDBClick( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlIconDrag::funLDBClick pFun );
+	bool OnIconRButtonUp( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlIconDrag::funRButtonUp pFun );
+	// ScrollBar
+	bool OnScrollBarUpdatePos( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlScrollBar::funUpdatePos pFun );
+	// ScrollBar
+	bool OnScrollBarExUpdatePos( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlScrollBar::funUpdatePos pFun );
+	// ComboBox
+	bool OnComboBoxChange( IN const char *szFrameID, IN const char *szControlID,
+									IN ControlComboBox::funOnChange pFun );
+	//text hyber click
+	bool OnTextHyberClick( IN const char *szFrameID, IN const char *szControlID,	IN ControlText::funHyberClick pFun);
+	ControlObject* FindControl( IN const char *szFrameID, IN const char *szControlID );
+	ControlObject* FindFrame( IN const char *szFrameID );
+
+	//创建控件 目的用于 支持动态创建控件
+	ControlObject* CreateWidget( S_BaseData* sBaseData, ControlObject* pFather);
+
+public:
+	void Compositor();									// 排序
+	ControlObject* ToTop( IN const ControlObject* pObject, ControlObject* pObjectPos = NULL, int toIndex = 0 );
+	ControlObject* ToBottom( IN const ControlObject* pObject );
+	//
+	bool IsMouseInUI(){ return m_bIsMouseInUI; }
+	//
+	ControlObject* GetFrameFocus();
+
+	bool HideDlg();	//to zizi ： 这里处理esc关闭一个界面的操作 返回false说明没有界面可以关闭 则弹出system界面（不包括AllVisable界面）
+	void SetFocus(ControlObject* pObj);
+	ControlObject* GetFocus()	{ return m_pFocus; }
+
+	bool	isInUI( int x, int y );
+//private:
+	void UpdataFrame( const int nX, const int nY );
+	void Cover();
+	void Destroy();
+
+public:
+	UiManager();
+	~UiManager();
+	
+};
+
+namespace irr
+{
+	UiManager*	UiManagerInstance();
+};
