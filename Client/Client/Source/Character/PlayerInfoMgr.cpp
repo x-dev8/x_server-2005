@@ -3,7 +3,7 @@
 #include "Common.h"
 #include "Player.h"
 //#include "Launcher/DataLauncher.h"
-#include "../filepacket/packet_interface.h"
+#include "packet_interface.h"
 PlayerInfoMgr::PlayerInfoMgr()
 {
 

@@ -4,7 +4,7 @@
 #include "GameMain.h"
 #include "PlayerMgr.h"
 #include <MeFoundation/MeLoopThreadMan.h>
-#include "MeUtility/FilePath.h"
+#include "FilePath.h"
 #include "Mex2LoadReq.h"
 //////////////////////////////////////////////////////////////////////////
 extern BOOL g_bIsShowSceneAndPlayer;

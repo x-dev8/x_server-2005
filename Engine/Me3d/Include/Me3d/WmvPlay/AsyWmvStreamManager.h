@@ -5,7 +5,7 @@
 #pragma once
 
 #include "Me3d/WmvPlay/WmvStreamBase.h"
-#include "MeUtility/Singleton.h"
+#include "Singleton.h"
 #include "Me3d/WmvPlay/Reader.h"
 #include <deque>
 
